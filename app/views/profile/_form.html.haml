@@ -1,0 +1,561 @@
+#content.rc5
+  .simple-text
+    %h1 New Registration Form for ALL PEMEXANs Worldwide
+    %form#regform{:action => "/profile/", :enctype => "multipart/form-data", :method => "post", :name => "regform"}
+      %table
+        %tbody
+          / <tr><td colspan="2">Custom Fields</td></tr>
+          %tr
+            %td{:colspan => "2"}
+              %table{:cellpadding => "0", :cellspacing => "0", :width => "100%"}
+                %tr
+                  %td.inputs
+                    .reg-col Personal Information
+                    #field1
+                      First Name:
+                      %span.starrequired *
+                      %br/
+                      %script{:src => "/bitrix/components/bitrix/system.field.edit/templates/string/script.js?1313200664", :type => "text/javascript"}
+                      #main_UF_FIRST.fields.string
+                        .fields.string
+                          %input.fields.string{:name => "UF_FIRST", :size => "20", :type => "text", :value => ""}/
+                      %br/
+                    #field3
+                      Middle Name:
+                      %br/
+                      %script{:src => "/bitrix/components/bitrix/system.field.edit/templates/string/script.js?1313200664", :type => "text/javascript"}
+                      #main_UF_MIDDLE.fields.string
+                        .fields.string
+                          %input.fields.string{:name => "UF_MIDDLE", :size => "20", :type => "text", :value => ""}/
+                      %br/
+                    #field4
+                      Last (or Surname) Name (PSS):
+                      %span.starrequired *
+                      %br/
+                      %script{:src => "/bitrix/components/bitrix/system.field.edit/templates/string/script.js?1313200664", :type => "text/javascript"}
+                      #main_UF_LAST_PSS.fields.string
+                        .fields.string
+                          %input.fields.string{:name => "UF_LAST_PSS", :size => "20", :type => "text", :value => ""}/
+                      %br/
+                    #field5
+                      Last /Surname Name (now):
+                      %span.starrequired *
+                      %br/
+                      %script{:src => "/bitrix/components/bitrix/system.field.edit/templates/string/script.js?1313200664", :type => "text/javascript"}
+                      #main_UF_LAST_NOW.fields.string
+                        .fields.string
+                          %input.fields.string{:name => "UF_LAST_NOW", :size => "20", :type => "text", :value => ""}/
+                      %br/
+                    #field18
+                      Class of:
+                      %br/
+                      %select{:name => "UF_CLASS"}
+                        %option{:value => ""} no
+                        %option{:value => "270"} 1983
+                        %option{:value => "271"} 1984
+                        %option{:value => "272"} 1985
+                        %option{:value => "273"} 1986
+                        %option{:value => "274"} 1987
+                        %option{:value => "275"} 1988
+                        %option{:value => "276"} 1989
+                        %option{:value => "277"} 1990
+                        %option{:value => "278"} 1991
+                        %option{:value => "279"} 1992
+                        %option{:value => "280"} 1993
+                        %option{:value => "281"} 1994
+                        %option{:value => "282"} 1995
+                        %option{:value => "283"} 1996
+                        %option{:value => "284"} 1997
+                        %option{:value => "285"} 1998
+                        %option{:value => "286"} 1999
+                        %option{:value => "287"} 2000
+                        %option{:value => "288"} 2001
+                        %option{:value => "289"} 2002
+                        %option{:value => "290"} 2003
+                        %option{:value => "291"} 2004
+                        %option{:value => "292"} 2005
+                        %option{:value => "293"} 2006
+                        %option{:value => "294"} 2007
+                        %option{:value => "295"} 2008
+                        %option{:value => "296"} 2009
+                        %option{:value => "297"} 2010
+                        %option{:value => "298"} 2011
+                      %br/
+                    #field7
+                      Sex:
+                      %span.starrequired *
+                      %br/
+                      %select{:name => "UF_SEX"}
+                        %option{:value => ""} no
+                        %option{:value => "1"} Male
+                        %option{:value => "2"} Female
+                      %br/
+                  %td.inputs
+                    .reg-col Contact Information
+                    #field13
+                      Country:
+                      %span.starrequired *
+                      %br/
+                      %select{:name => "UF_COUNTRY"}
+                        %option{:value => ""} no
+                        %option{:value => "10"} Afghanistan
+                        %option{:value => "11"} Akrotiri
+                        %option{:value => "12"} Albania
+                        %option{:value => "13"} Algeria
+                        %option{:value => "14"} American Samoa
+                        %option{:value => "15"} Andorra
+                        %option{:value => "16"} Angola
+                        %option{:value => "17"} Anguilla
+                        %option{:value => "18"} Antarctica
+                        %option{:value => "19"} Antigua and Barbuda
+                        %option{:value => "20"} Argentina
+                        %option{:value => "21"} Armenia
+                        %option{:value => "22"} Aruba
+                        %option{:value => "23"} Ashmore and Cartier Islands
+                        %option{:value => "24"} Australia
+                        %option{:value => "25"} Austria
+                        %option{:value => "26"} Azerbaijan
+                        %option{:value => "27"} Bahamas, The
+                        %option{:value => "28"} Bahrain
+                        %option{:value => "29"} Bangladesh
+                        %option{:value => "30"} Barbados
+                        %option{:value => "31"} Bassas da India
+                        %option{:value => "32"} Belarus
+                        %option{:value => "33"} Belgium
+                        %option{:value => "34"} Belize
+                        %option{:value => "35"} Benin
+                        %option{:value => "36"} Bermuda
+                        %option{:value => "37"} Bhutan
+                        %option{:value => "38"} Bolivia
+                        %option{:value => "39"} Bosnia and Herzegovina
+                        %option{:value => "40"} Botswana
+                        %option{:value => "41"} Bouvet Island
+                        %option{:value => "42"} Brazil
+                        %option{:value => "43"} British Indian Ocean Territory
+                        %option{:value => "44"} British Virgin Islands
+                        %option{:value => "45"} Brunei
+                        %option{:value => "46"} Bulgaria
+                        %option{:value => "47"} Burkina Faso
+                        %option{:value => "48"} Burma
+                        %option{:value => "49"} Burundi
+                        %option{:value => "50"} Cambodia
+                        %option{:value => "51"} Cameroon
+                        %option{:value => "52"} Canada
+                        %option{:value => "53"} Cape Verde
+                        %option{:value => "54"} Cayman Islands
+                        %option{:value => "55"} Central African Republic
+                        %option{:value => "56"} Chad
+                        %option{:value => "57"} Chile
+                        %option{:value => "58"} China
+                        %option{:value => "59"} Christmas Island
+                        %option{:value => "60"} Clipperton Island
+                        %option{:value => "61"} Cocos (Keeling) Islands
+                        %option{:value => "62"} Colombia
+                        %option{:value => "63"} Comoros
+                        %option{:value => "64"} Congo, Democratic Republic of the
+                        %option{:value => "65"} Congo, Republic of the
+                        %option{:value => "66"} Cook Islands
+                        %option{:value => "67"} Coral Sea Islands
+                        %option{:value => "68"} Costa Rica
+                        %option{:value => "69"} Cote d'Ivoire
+                        %option{:value => "70"} Croatia
+                        %option{:value => "71"} Cuba
+                        %option{:value => "72"} Cyprus
+                        %option{:value => "73"} Czech Republic
+                        %option{:value => "74"} Denmark
+                        %option{:value => "75"} Dhekelia
+                        %option{:value => "76"} Djibouti
+                        %option{:value => "77"} Dominica
+                        %option{:value => "78"} Dominican Republic
+                        %option{:value => "79"} Ecuador
+                        %option{:value => "80"} Egypt
+                        %option{:value => "81"} El Salvador
+                        %option{:value => "82"} Equatorial Guinea
+                        %option{:value => "83"} Eritrea
+                        %option{:value => "84"} Estonia
+                        %option{:value => "85"} Ethiopia
+                        %option{:value => "86"} Europa Island
+                        %option{:value => "87"} Falkland Islands (Islas Malvinas)
+                        %option{:value => "88"} Faroe Islands
+                        %option{:value => "89"} Fiji
+                        %option{:value => "90"} Finland
+                        %option{:value => "91"} France
+                        %option{:value => "92"} French Guiana
+                        %option{:value => "93"} French Polynesia
+                        %option{:value => "94"} French Southern and Antarctic Lands
+                        %option{:value => "95"} Gabon
+                        %option{:value => "96"} Gambia, The
+                        %option{:value => "97"} Gaza Strip
+                        %option{:value => "98"} Georgia
+                        %option{:value => "99"} Germany
+                        %option{:value => "100"} Ghana
+                        %option{:value => "101"} Gibraltar
+                        %option{:value => "102"} Glorioso Islands
+                        %option{:value => "103"} Greece
+                        %option{:value => "104"} Greenland
+                        %option{:value => "105"} Grenada
+                        %option{:value => "106"} Guadeloupe
+                        %option{:value => "107"} Guam
+                        %option{:value => "108"} Guatemala
+                        %option{:value => "109"} Guernsey
+                        %option{:value => "110"} Guinea
+                        %option{:value => "111"} Guinea-Bissau
+                        %option{:value => "112"} Guyana
+                        %option{:value => "113"} Haiti
+                        %option{:value => "114"} Heard Island and McDonald Islands
+                        %option{:value => "115"} Holy See (Vatican City)
+                        %option{:value => "116"} Honduras
+                        %option{:value => "117"} Hong Kong
+                        %option{:value => "118"} Hungary
+                        %option{:value => "119"} Iceland
+                        %option{:value => "120"} India
+                        %option{:value => "121"} Indonesia
+                        %option{:value => "122"} Iran
+                        %option{:value => "123"} Iraq
+                        %option{:value => "124"} Ireland
+                        %option{:value => "125"} Isle of Man
+                        %option{:value => "126"} Israel
+                        %option{:value => "127"} Italy
+                        %option{:value => "128"} Jamaica
+                        %option{:value => "129"} Jan Mayen
+                        %option{:value => "130"} Japan
+                        %option{:value => "131"} Jersey
+                        %option{:value => "132"} Jordan
+                        %option{:value => "133"} Juan de Nova Island
+                        %option{:value => "134"} Kazakhstan
+                        %option{:value => "135"} Kenya
+                        %option{:value => "136"} Kiribati
+                        %option{:value => "137"} Korea, North
+                        %option{:value => "138"} Korea, South
+                        %option{:value => "139"} Kuwait
+                        %option{:value => "140"} Kyrgyzstan
+                        %option{:value => "141"} Laos
+                        %option{:value => "142"} Latvia
+                        %option{:value => "143"} Lebanon
+                        %option{:value => "144"} Lesotho
+                        %option{:value => "145"} Liberia
+                        %option{:value => "146"} Libya
+                        %option{:value => "147"} Liechtenstein
+                        %option{:value => "148"} Lithuania
+                        %option{:value => "149"} Luxembourg
+                        %option{:value => "150"} Macau
+                        %option{:value => "151"} Macedonia
+                        %option{:value => "152"} Madagascar
+                        %option{:value => "153"} Malawi
+                        %option{:value => "154"} Malaysia
+                        %option{:value => "155"} Maldives
+                        %option{:value => "156"} Mali
+                        %option{:value => "157"} Malta
+                        %option{:value => "158"} Marshall Islands
+                        %option{:value => "159"} Martinique
+                        %option{:value => "160"} Mauritania
+                        %option{:value => "161"} Mauritius
+                        %option{:value => "162"} Mayotte
+                        %option{:value => "163"} Mexico
+                        %option{:value => "164"} Micronesia, Federated States of
+                        %option{:value => "165"} Moldova
+                        %option{:value => "166"} Monaco
+                        %option{:value => "167"} Mongolia
+                        %option{:value => "168"} Montserrat
+                        %option{:value => "169"} Morocco
+                        %option{:value => "170"} Mozambique
+                        %option{:value => "171"} Namibia
+                        %option{:value => "172"} Nauru
+                        %option{:value => "173"} Navassa Island
+                        %option{:value => "174"} Nepal
+                        %option{:value => "175"} Netherlands
+                        %option{:value => "176"} Netherlands Antilles
+                        %option{:value => "177"} New Caledonia
+                        %option{:value => "178"} New Zealand
+                        %option{:value => "179"} Nicaragua
+                        %option{:value => "180"} Niger
+                        %option{:value => "181"} Nigeria
+                        %option{:value => "182"} Niue
+                        %option{:value => "183"} Norfolk Island
+                        %option{:value => "184"} Norway
+                        %option{:value => "185"} Oman
+                        %option{:value => "186"} Pakistan
+                        %option{:value => "187"} Palau
+                        %option{:value => "188"} Panama
+                        %option{:value => "189"} Papua New Guinea
+                        %option{:value => "190"} Paracel Islands
+                        %option{:value => "191"} Paraguay
+                        %option{:value => "192"} Peru
+                        %option{:value => "193"} Philippines
+                        %option{:value => "194"} Pitcairn Islands
+                        %option{:value => "195"} Poland
+                        %option{:value => "196"} Portugal
+                        %option{:value => "197"} Puerto Rico
+                        %option{:value => "198"} Qatar
+                        %option{:value => "199"} Reunion
+                        %option{:value => "200"} Romania
+                        %option{:value => "201"} Russia
+                        %option{:value => "202"} Rwanda
+                        %option{:value => "203"} Saint Helena
+                        %option{:value => "204"} Saint Kitts and Nevis
+                        %option{:value => "205"} Saint Lucia
+                        %option{:value => "206"} Saint Pierre and Miquelon
+                        %option{:value => "207"} Saint Vincent and the Grenadines
+                        %option{:value => "208"} Samoa
+                        %option{:value => "209"} San Marino
+                        %option{:value => "210"} Sao Tome and Principe
+                        %option{:value => "211"} Saudi Arabia
+                        %option{:value => "212"} Senegal
+                        %option{:value => "213"} Serbia and Montenegro
+                        %option{:value => "214"} Seychelles
+                        %option{:value => "215"} Sierra Leone
+                        %option{:value => "216"} Singapore
+                        %option{:value => "217"} Slovakia
+                        %option{:value => "218"} Slovenia
+                        %option{:value => "219"} Solomon Islands
+                        %option{:value => "220"} Somalia
+                        %option{:value => "221"} South Africa
+                        %option{:value => "222"} South Georgia and the South Sandwich Islands
+                        %option{:value => "223"} Spain
+                        %option{:value => "224"} Spratly Islands
+                        %option{:value => "225"} Sri Lanka
+                        %option{:value => "226"} Sudan
+                        %option{:value => "227"} Suriname
+                        %option{:value => "228"} Svalbard
+                        %option{:value => "229"} Swaziland
+                        %option{:value => "230"} Sweden
+                        %option{:value => "231"} Switzerland
+                        %option{:value => "232"} Syria
+                        %option{:value => "233"} Taiwan
+                        %option{:value => "234"} Tajikistan
+                        %option{:value => "235"} Tanzania
+                        %option{:value => "236"} Thailand
+                        %option{:value => "237"} Timor-Leste
+                        %option{:value => "238"} Togo
+                        %option{:value => "239"} Tokelau
+                        %option{:value => "240"} Tonga
+                        %option{:value => "241"} Trinidad and Tobago
+                        %option{:value => "242"} Tromelin Island
+                        %option{:value => "243"} Tunisia
+                        %option{:value => "244"} Turkey
+                        %option{:value => "245"} Turkmenistan
+                        %option{:value => "246"} Turks and Caicos Islands
+                        %option{:value => "247"} Tuvalu
+                        %option{:value => "248"} Uganda
+                        %option{:value => "249"} Ukraine
+                        %option{:value => "250"} United Arab Emirates
+                        %option{:value => "251"} United Kingdom
+                        %option{:selected => "", :value => "252"} United States
+                        %option{:value => "253"} Uruguay
+                        %option{:value => "254"} Uzbekistan
+                        %option{:value => "255"} Vanuatu
+                        %option{:value => "256"} Venezuela
+                        %option{:value => "257"} Vietnam
+                        %option{:value => "258"} Virgin Islands
+                        %option{:value => "259"} Wake Island
+                        %option{:value => "260"} Wallis and Futuna
+                        %option{:value => "261"} West Bank
+                        %option{:value => "262"} Western Sahara
+                        %option{:value => "263"} Yemen
+                        %option{:value => "264"} Zambia
+                        %option{:value => "265"} Zimbabwe
+                      %br/
+                    #field8
+                      Address Line 1:
+                      %span.starrequired *
+                      %br/
+                      %script{:src => "/bitrix/components/bitrix/system.field.edit/templates/string/script.js?1313200664", :type => "text/javascript"}
+                      #main_UF_ADRESS1.fields.string
+                        .fields.string
+                          %input.fields.string{:name => "UF_ADRESS1", :size => "20", :type => "text", :value => ""}/
+                      %br/
+                    #field9
+                      Address Line 2:
+                      %br/
+                      %script{:src => "/bitrix/components/bitrix/system.field.edit/templates/string/script.js?1313200664", :type => "text/javascript"}
+                      #main_UF_ADRESS2.fields.string
+                        .fields.string
+                          %input.fields.string{:name => "UF_ADRESS2", :size => "20", :type => "text", :value => ""}/
+                      %br/
+                    #field10
+                      City:
+                      %span.starrequired *
+                      %br/
+                      %script{:src => "/bitrix/components/bitrix/system.field.edit/templates/string/script.js?1313200664", :type => "text/javascript"}
+                      #main_UF_CITY.fields.string
+                        .fields.string
+                          %input.fields.string{:name => "UF_CITY", :size => "20", :type => "text", :value => ""}/
+                      %br/
+                    #field11
+                      State:
+                      %span.starrequired *
+                      %br/
+                      %select{:name => "UF_STATE"}
+                        %option{:value => ""} no
+                        %option{:value => "3"} Alabama
+                        %option{:value => "4"} Alaska
+                        %option{:value => "299"} Arizona
+                        %option{:value => "300"} Arkansas
+                        %option{:value => "301"} California
+                        %option{:value => "302"} Colorado
+                        %option{:value => "303"} Connecticut
+                        %option{:value => "304"} Delaware
+                        %option{:value => "305"} Florida
+                        %option{:value => "306"} Georgia
+                        %option{:value => "307"} Hawaii
+                        %option{:value => "308"} Idaho
+                        %option{:value => "309"} Illinois
+                        %option{:value => "310"} Indiana
+                        %option{:value => "311"} Iowa
+                        %option{:value => "312"} Kansas
+                        %option{:value => "313"} Kentucky
+                        %option{:value => "314"} Louisiana
+                        %option{:value => "315"} Maine
+                        %option{:value => "316"} Maryland
+                        %option{:value => "317"} Massachusetts
+                        %option{:value => "318"} Michigan
+                        %option{:value => "319"} Minnesota
+                        %option{:value => "320"} Mississippi
+                        %option{:value => "321"} Missouri
+                        %option{:value => "322"} Montana
+                        %option{:value => "323"} Nebraska
+                        %option{:value => "324"} Nevada
+                        %option{:value => "325"} New Hampshire
+                        %option{:value => "326"} New Jersey
+                        %option{:value => "327"} New Mexico
+                        %option{:value => "328"} New York
+                        %option{:value => "329"} North Carolina
+                        %option{:value => "330"} North Dakota
+                        %option{:value => "331"} Ohio
+                        %option{:value => "332"} Oklahoma
+                        %option{:value => "333"} Oregon
+                        %option{:value => "334"} Pennsylvania
+                        %option{:value => "335"} Rhode Island
+                        %option{:value => "336"} South Carolina
+                        %option{:value => "337"} South Dakota
+                        %option{:value => "338"} Tennessee
+                        %option{:value => "339"} Texas
+                        %option{:value => "340"} Utah
+                        %option{:value => "341"} Vermont
+                        %option{:value => "342"} Virginia
+                        %option{:value => "343"} Washington
+                        %option{:value => "344"} West Virginia
+                        %option{:value => "345"} Wisconsin
+                        %option{:value => "346"} Wyoming
+                      %br/
+                    #field12
+                      Zip Code:
+                      %span.starrequired *
+                      %br/
+                      %script{:src => "/bitrix/components/bitrix/system.field.edit/templates/string/script.js?1313200664", :type => "text/javascript"}
+                      #main_UF_ZIP.fields.string
+                        .fields.string
+                          %input.fields.string{:name => "UF_ZIP", :size => "20", :type => "text", :value => ""}/
+                      %br/
+                  %td.inputs
+                    .reg-col Membership Information
+                    #field22
+                      Cell Phone:
+                      %br/
+                      %script{:src => "/bitrix/components/bitrix/system.field.edit/templates/string/script.js?1313200664", :type => "text/javascript"}
+                      #main_UF_PHONE.fields.string
+                        .fields.string
+                          %input.fields.string{:name => "UF_PHONE", :size => "20", :type => "text", :value => ""}/
+                      %br/
+                    #field16
+                      Full Time Students:
+                      %span.starrequired *
+                      %br/
+                      %select{:name => "UF_TIME"}
+                        %option{:value => ""} no
+                        %option{:value => "8"} Yes
+                        %option{:value => "9"} No
+                      %br/
+                    #field17
+                      Profession:
+                      %br/
+                      %script{:src => "/bitrix/components/bitrix/system.field.edit/templates/string/script.js?1313200664", :type => "text/javascript"}
+                      #main_UF_MORE.fields.string
+                        .fields.string
+                          %textarea.fields.string{:cols => "20", :name => "UF_MORE", :rows => "5"} tell us about your profession
+                      %br/
+                    %br/
+                    Login (min. 3 characters):
+                    %span.starrequired *
+                    %input{:name => "REGISTER[LOGIN]", :size => "30", :type => "text", :value => ""}/
+                    %br/
+                    Password (min. 6 characters):
+                    %span.starrequired *
+                    %input{:name => "REGISTER[PASSWORD]", :size => "30", :type => "password"}/
+                    %br/
+                    Password confirmation:
+                    %span.starrequired *
+                    %input{:name => "REGISTER[CONFIRM_PASSWORD]", :size => "30", :type => "password"}/
+                    %br/
+                    E-mail:
+                    %span.starrequired *
+                    %input{:name => "REGISTER[EMAIL]", :size => "30", :type => "text", :value => ""}/
+        %tfoot
+          %tr
+            %td{:align => "center", :colspan => "2"}
+              %input{:name => "register_submit_button", :type => "submit", :value => "Register Now"}/
+              %br/
+              %br/
+    :javascript
+      $('#main_UF_FIRST div input,#main_UF_LAST_PSS div input, #main_UF_LAST_NOW div input, #main_UF_ADRESS1 div input, #main_UF_CITY div input, #main_UF_ZIP div input, input[name$="REGISTER[LOGIN]"], input[name$="REGISTER[PASSWORD]"], input[name$="REGISTER[CONFIRM_PASSWORD]"], input[name$="REGISTER[EMAIL]"] ').addClass("required");
+      
+      
+      
+      
+      var id1 = $('select[name$="UF_SEX"]').attr("name");
+      var id2 = $('select[name$="UF_STATE"]').attr("name");
+      var id3 = $('select[name$="UF_COUNTRY"]').attr("name");
+      var id4 = $('select[name$="UF_TIME"]').attr("name");
+      var id5 = $('select[name$="UF_CLASS"]').attr("name");
+      
+      
+      $('select[name$="UF_SEX"]').attr("id", id1);
+      $('select[name$="UF_STATE"]').attr("id", id2);
+      $('select[name$="UF_COUNTRY"]').attr("id", id3);
+      $('select[name$="UF_COUNTRY"]').attr("onChange", "change()");
+      $('select[name$="UF_TIME"]').attr("id", id4);
+      $('select[name$="UF_CLASS"]').attr("id", id5);
+      
+      $('select[name$="UF_SEX"] option:first-child, select[name$="UF_STATE"] option:first-child, select[name$="UF_COUNTRY"] option:first-child, select[name$="UF_TIME"] option:first-child, select[name$="UF_CLASS"] option:first-child').remove();
+      
+      
+      
+      
+      function change(){    
+      	var str = $("#cuselFrame-UF_COUNTRY .cuselText").text();
+         	if (str == "United States") {
+         		$("#field8, #field9,#field11, #field12").show();
+          	$('#main_UF_ADRESS1 div input,#main_UF_ZIP div input').addClass('required');
+          	$('#UF_STATE').val('3');
+        	 } else {
+          	$("#field8, #field9, #field11, #field12").hide();
+          	$('#main_UF_ADRESS1 div input,#main_UF_ZIP div input').removeClass('required');
+          	$('#UF_STATE').val('');
+          	$('input[name$="UF_ADRESS1"]').val('');
+          	$('input[name$="UF_ADRESS2"]').val('');
+          	$('input[name$="UF_ZIP"]').val('');
+          	
+         }
+      }
+      
+      $(document).ready(function() {
+      	$("#regform").validate();
+          $("#main_UF_PHONE div input, #main_UF_ZIP div input").keydown(function(event) {
+              if ( event.keyCode == 46 || event.keyCode == 8 ) {
+              }
+              else {
+                  if (event.keyCode < 48 || event.keyCode > 57 ) {
+                      event.preventDefault(); 
+                  }   
+              }
+          });
+      });
+      
+      
+    :css
+      .errortext {
+      display: inline !important;
+      }
+      #field20 {
+      display: none !important;
+      }

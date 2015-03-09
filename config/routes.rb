@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
    root 'welcome#index'
    get '/', to: 'welcome#:index', as: :home
+   get '/profile', to: 'profile#new', as: :profile
    get '/:action', to: 'welcome#:action'
 
   # Example of regular route:
