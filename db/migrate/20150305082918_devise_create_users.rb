@@ -7,9 +7,13 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :encrypted_password, null: false
 			t.string :first_name
 			t.string :last_name
+			t.string :middle_name
 			t.integer :class_year
 			t.integer :role_id
 			t.integer :chapter_id
+			t.string	:gender
+			t.string	:phone
+			t.text		:profession
 			t.boolean :active, default: true
       ## Recoverable
       t.string   :reset_password_token
@@ -33,6 +37,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.timestamps null: false
     end
 
+    add_index :users, :username,             unique: true
     add_index :users, :email,                unique: true
     add_index :users, :reset_password_token, unique: true
   end

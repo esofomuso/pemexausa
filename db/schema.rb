@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150306060128) do
+ActiveRecord::Schema.define(version: 20150307062235) do
 
   create_table "addresses", force: :cascade do |t|
     t.string   "street1"
@@ -49,6 +49,15 @@ ActiveRecord::Schema.define(version: 20150306060128) do
     t.string   "name"
     t.string   "code2"
     t.string   "code3"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "members", force: :cascade do |t|
+    t.integer  "user_id"
+    t.datetime "expires_at"
+    t.boolean  "active"
+    t.integer  "chapter_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -93,9 +102,13 @@ ActiveRecord::Schema.define(version: 20150306060128) do
     t.string   "encrypted_password",                    null: false
     t.string   "first_name"
     t.string   "last_name"
+    t.string   "middle_name"
     t.integer  "class_year"
     t.integer  "role_id"
     t.integer  "chapter_id"
+    t.string   "gender"
+    t.string   "phone"
+    t.text     "profession"
     t.boolean  "active",                 default: true
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
@@ -114,6 +127,7 @@ ActiveRecord::Schema.define(version: 20150306060128) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["username"], name: "index_users_on_username", unique: true
 
   create_table "zips", force: :cascade do |t|
     t.integer  "code"

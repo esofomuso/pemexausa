@@ -4,7 +4,7 @@ Rails.cache.clear
 	Role.where( name: r, description: r).first_or_create
 end
 
-{'Birmingham' =>	'Birmingham, AL', 'Dallas' =>	'Dallas, Tx', 'Houston' =>	'Houston, Tx', 'Michigan' =>	'Detroit, MI', 'The Carolinas' =>	'Charlotte, NC', 'WMA' =>	'Washignton D.C.' }.each do |key, value|
+{'Atlanta - No chapter' => 'Atlanta, GA', 'Birmingham' =>	'Birmingham, AL', 'Dallas' =>	'Dallas, TX', 'Houston' =>	'Houston, TX', 'Michigan' =>	'Detroit, MI', 'The Carolinas' =>	'Charlotte, NC', 'WMA' =>	'Washignton D.C.' }.each do |key, value|
 	Chapter.where( name: key, description: key, headquarters: value).first_or_create
 end
 
@@ -18,6 +18,8 @@ super_admin = User.where(
   first_name: 'Esona',
   last_name: 'Fomuso',
   class_year: 1995,
+  gender: 'female',
+  profession: 'Software Engineer',
   role_id: Role.super_admin.id
 ).first_or_create!
 

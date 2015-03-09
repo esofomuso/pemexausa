@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   belongs_to :role
   belongs_to :chapter
   has_one :address
+  has_one :member
   has_one :ruling_chapter, class_name: Chapter, foreign_key: :president_id
   has_many :payments
 end

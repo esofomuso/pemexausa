@@ -1,0 +1,44 @@
+#autoComplete { border: thin solid #CCCCCC; margin: 3px 7px;  padding: 0 4px; position: absolute; width: 192px; background:#fcfcfc;  -moz-box-shadow: 1px 1px 5px 2px #CCCCCC; -webkit-box-shadow: 1px 1px 5px 2px #CCCCCC; box-shadow: 1px 1px 5px 2px #CCCCCC; }
+#autoComplete ul, #nameAutoComplete ul { }
+#autoComplete ul li, #nameAutoComplete ul li { list-style: none outside none; text-transform:capitalize; padding: 3px 0; vertical-align:middle; line-height:17px; border-bottom:solid thin #eeeeee; }
+#autoComplete ul li:hover, #nameAutoComplete ul li:hover { cursor:pointer; padding:3px 0 3px 5px; background-color: #f1f1f1; font-weight:bold; }
+#autoComplete ul li:last-child, #nameAutoComplete ul li:last-child { border-bottom:none; } 
+#paypalform tr { height: 22px; }
+
+#content { overflow: hidden; //height: 673px !important; }
+#content .leftwrapper table { width:100%; }
+#content .leftwrapper table:first-child td:first-child { text-align:center; width:150px; }
+#content .leftwrapper table td:first-child div { border: thin solid #333333; height: 30px; line-height: 30px; margin: 5px; vertical-align: middle; width: 92%;  text-align: center;
+	-moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border-radius: 5px 5px 5px 5px; }
+#content .leftwrapper table tr:nth-child(odd) { background-color:#fff; }
+#content .leftwrapper table tr:nth-child(even) { background-color:#eee; }
+#content .leftwrapper table th, #content .leftwrapper table td { border: solid thin #ccc; }
+#content .leftwrapper table td { border-top:none; border-left:none; vertical-align: middle; }
+#content .leftwrapper table th { border-left:none; color:#555; }
+#content .leftwrapper table th:first-child, #content .leftwrapper table td:first-child { border-left: solid thin #ccc; }
+#content .leftwrapper table td:last-child { text-align:center; }
+#content .leftwrapper table td:nth-child(2) { text-align:center; padding-right:5px; }
+#content .leftwrapper table td:nth-child(1) { padding-left:5px; width:160px; }
+#content .leftwrapper table th {
+	background-image: linear-gradient(center bottom , #999 1%, #ccc 80%, #fff 100%);
+	background-image: -o-linear-gradient(center bottom , #999 1%, #ccc 80%, #fff 100%);
+	background-image: -moz-linear-gradient(center bottom , #999 1%, #ccc 80%, #fff 100%);
+	background-image: -webkit-linear-gradient(center bottom , #999 1%, #ccc 80%, #fff 100%);
+	background-image: -ms-linear-gradient(center bottom , #999 1%, #ccc 80%, #fff 100%);
+	background-image: -webkit-gradient(linear, center bottom, center top, color-stop(1%, #999), color-stop(80%, #ccc), color-stop(100%, #fff));
+	text-shadow: 0 -1px 1px #fff;
+}
+
+#ValidationMessage p { padding:0 !important; }
+#ValidationMessage { background: url("exclamation.png") no-repeat scroll 7px center #FFFFCC; border: 2px solid #FF0000; clear: both; color: #FF0000; font-size: 14px; text-align: left; width: 205px;
+	-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; margin:34px auto 0 auto; padding: 3px 3px 3px 29px; }
+
+.ExecPlatinum { background:URL('ExecPlatinum.jpg') center center no-repeat; font-weight:bold; color:#fff; text-shadow: 0 -1px 0 #333333; }
+.Platinum { background:URL('Platinum.jpg') center center no-repeat; font-weight:bold; text-shadow: 0 1px 0 #fff; }
+.Gold { background:URL('Gold.jpg') center center no-repeat; font-weight:bold; text-shadow: 0 1px 0 #fff;  }
+.Silver { background:URL('Silver.jpg') center center no-repeat; font-weight:bold; text-shadow: 0 1px 0 #fff;  }
+.Bronze { background:URL('Bronze.jpg') center center no-repeat; font-weight:bold; text-shadow: 0 1px 0 #fff;  }
+.White { background: color: #FFFFFF center center no-repeat; font-weight:bold; text-shadow: 0 1px 0 #fff;  }
+
+.donation_levels_link {/*color: #0B59C3; border-bottom: 1px dashed; cursor: pointer;*/}
+#donations_levels {//display: none;}

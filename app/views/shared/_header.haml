@@ -1,0 +1,77 @@
+#header
+	.time-auth-search
+		.left-tas.fleft
+			.pss-time.fleft
+				- Time.use_zone("West Central Africa") do |z|
+					= Time.zone.now.strftime('%I:%M %p %Z')
+				,
+				%b PSS
+			.usa-time.fleft
+				= Time.now.strftime('%I:%M %p %Z')
+				,
+				%b USA
+			.clear
+		.search.fright
+			.auth.fleft
+				%a#show_login_form.login-link{:href => "javascript:void(0)"} Login
+				%form#login_form.rc5{:action => "/?login=yes", :method => "post", :target => "_top"}
+					%input{:name => "backurl", :type => "hidden", :value => "/"}/
+					%input{:name => "AUTH_FORM", :type => "hidden", :value => "Y"}/
+					%input{:name => "TYPE", :type => "hidden", :value => "AUTH"}/
+					%table{:width => "100%"}
+						%tr
+							%td{:colspan => "2", :style => "vertical-align:top"}
+								#close.fright
+									%a{:href => "javascript:void(0)"} X
+								Login:
+								%br/
+								%input{:maxlength => "50", :name => "USER_LOGIN", :size => "17", :type => "text", :value => ""}/
+						%tr
+							%td{:colspan => "2"}
+								Password:
+								%br/
+								%input{:maxlength => "50", :name => "USER_PASSWORD", :size => "17", :type => "password"}/
+						%tr
+							%td{:style => "padding-top:5px"}
+								%input{:name => "Login", :type => "submit", :value => "Login"}/
+							%td{:style => "padding-top:5px"}
+								%noindex
+									%a{:href => "/auth/?forgot_password=yes&amp;backurl=%2F", :rel => "nofollow"} Forgot your password?
+			.fleft
+				%form{:action => "/search/index.php"}
+					%input.search-input.fleft{:name => "q", :onblur => "javascript:if(this.value=='')this.value='Search'", :onfocus => "javascript:if(this.value=='Search')this.value=''", :type => "text", :value => "Search"}/
+					%input.search-submit.fleft{:name => "s", :type => "submit", :value => "Search"}/
+					.clear
+			.clear
+		.clear
+	.top-menu
+		%table{:cellpadding => "0", :cellspacing => "0", :width => "100%"}
+			%tr
+				%td{:width => "117"}
+					%a.selected{:href => "/"} Home
+				%td
+					%a{:href => "/about_us/"} About us
+				%td
+					%a{:href => "/membership/"} MEMBERSHIP
+				%td
+					%a{:href => "/chapters/"} Chapters
+				%td
+					%a{:href => "/projects/"} Projects
+				%td
+					%a{:href => "/events/"} Events
+				%td
+					%a{:href => "/gallery/"} Gallery
+				%td{class: 'donation'}
+					%a{:href => "/donations/"} Donations
+				%td
+					%a{:href => "/map/"} Map
+				%td
+					%a{:href => "/profile/"} Profile
+				%td{:width => "105"}
+					%a.last{:href => "/convention/"} convention
+	.slide
+		%table{:cellpadding => "0", :cellspacing => "0"}
+			%tr
+				%td.left-slide
+					%img{:src => "/assets/logo.jpg"}/
+				%td.right-gallery
