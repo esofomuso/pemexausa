@@ -1,0 +1,44 @@
+#header
+	Logged in as: 
+	= link_to current_user.name, admin_user_path(current_user)
+	= link_to 'logout', logout_path
+	.time-auth-search
+		.left-tas.fleft
+			.pss-time.fleft
+				- Time.use_zone("West Central Africa") do |z|
+					= Time.zone.now.strftime('%I:%M %p %Z')
+				,
+				%b PSS
+			.usa-time.fleft
+				= Time.now.strftime('%I:%M %p %Z')
+				,
+				%b USA
+				.clear
+				.fleft
+			.clear
+		.clear
+	.admin_top-menu
+		%table{:cellpadding => "0", :cellspacing => "0", :width => "100%"}
+			%tr
+				%td{:width => "117"}
+					%a.selected{:href => "/"} Home
+				%td
+					%a{:href => "/admin/users/"} Users
+				%td
+					%a{:href => "/admin/members/"} Members
+				%td
+					%a{:href => "/admin/chapters/"} Chapters
+				%td
+					%a{:href => "/admin/projects/"} Projects
+				%td
+					%a{:href => "/admin/payment_purposes/"} Payments Purposes
+				%td
+					%a{:href => "/admin/payments/"} Payments
+				%td
+					%a{:href => "/admin/photos/"} Photos
+				%td
+					%a{:href => "/admin/countries/"} Countries
+				%td
+					%a{:href => "/profile/"} Profile
+				%td{:width => "105"}
+					%a.last{:href => "/admin/convention_events/"} Convention Events

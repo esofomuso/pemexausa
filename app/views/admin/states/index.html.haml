@@ -1,0 +1,19 @@
+%h1 Listing admin_states
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+      
+  %tbody
+    - @admin_states.each do |admin_state|
+      %tr
+        %td= link_to 'Show', admin_state
+        %td= link_to 'Edit', edit_admin_state_path(admin_state)
+        %td= link_to 'Destroy', admin_state, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New State', new_admin_state_path

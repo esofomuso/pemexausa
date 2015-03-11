@@ -10,4 +10,16 @@ class User < ActiveRecord::Base
   has_one :member
   has_one :ruling_chapter, class_name: Chapter, foreign_key: :president_id
   has_many :payments
+  
+  def is_super_admin
+  	self.role == Role.super_admin
+  end
+  
+  def is_admin
+  	self.role == Role.admin
+  end
+  
+  def name
+   "#{self.first_name} #{self.last_name}"
+  end
 end

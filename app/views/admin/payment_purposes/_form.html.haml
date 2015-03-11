@@ -1,0 +1,10 @@
+= form_for @admin_payment_purpose do |f|
+  - if @admin_payment_purpose.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@admin_payment_purpose.errors.count, "error")} prohibited this admin_payment_purpose from being saved:"
+      %ul
+        - @admin_payment_purpose.errors.full_messages.each do |msg|
+          %li= msg
+
+  .actions
+    = f.submit 'Save'

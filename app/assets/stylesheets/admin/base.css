@@ -1,0 +1,49 @@
+.admin_top-menu {
+background: teal;
+height: 45px;
+width: 1000px;
+}
+
+.admin_top-menu table tr td a {
+text-transform: uppercase;
+	font: small-caps 13px Myriad Pro;
+	color:#fff;
+text-decoration: none;
+display: block;
+height: 45px;
+line-height: 45px;
+border-left: 1px solid #024aac;
+border-right: 1px solid #0b59c3;
+text-align: center;
+background: teal;
+}
+.admin_top-menu table tr td a[href="/donations/"] {
+background: teal !important;
+background-position: left 0px;
+}
+
+.admin_top-menu table tr td a:hover {
+background-position: left -45px;
+}
+
+.admin_top-menu table tr td:first-child a {
+background: teal;
+background-repeat: no-repeat;
+background-position: left 0px;
+	text-align: left;
+padding-left: 55px
+	border-left-style: ridge;
+}
+.admin_top-menu table tr td:first-child a:hover, .admin_top-menu table tr td:first-child a.selected {
+background-position: left -45px;
+}
+.admin_top-menu table tr td a.last {
+background: teal;
+background-repeat: no-repeat;
+background-position: right 0px;
+	border-right-style: ridge;
+}
+.admin_top-menu table tr td a.last:hover, .admin_top-menu table tr td a.selected {
+background-position: right -45px;
+}
+

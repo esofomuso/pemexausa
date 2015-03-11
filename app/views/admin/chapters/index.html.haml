@@ -1,0 +1,23 @@
+%h1 Listing admin_chapters
+
+%table
+  %thead
+    %tr
+      %th= 'Name'
+      %th= 'Headquarters'
+      %th= 'President'
+      %th= 'Action'
+      
+  %tbody
+    - all_chapters.each do |admin_chapter|
+      %tr
+        %td= admin_chapter.name
+        %td= admin_chapter.headquarters
+        %td= link_to "#{admin_chapter.president.name rescue ''}", admin_user_path(admin_chapter.president) rescue ''
+        %td= link_to 'Show', admin_chapter_path(admin_chapter)
+        %td= link_to 'Edit', edit_admin_chapter_path(admin_chapter)
+        %td= link_to 'Destroy', admin_chapter_path(admin_chapter), :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Chapter', new_admin_chapter_path

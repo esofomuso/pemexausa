@@ -1,0 +1,10 @@
+= form_for @admin_zip do |f|
+  - if @admin_zip.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@admin_zip.errors.count, "error")} prohibited this admin_zip from being saved:"
+      %ul
+        - @admin_zip.errors.full_messages.each do |msg|
+          %li= msg
+
+  .actions
+    = f.submit 'Save'

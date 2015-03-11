@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150314230539) do
+ActiveRecord::Schema.define(version: 20150314230543) do
 
   create_table "addresses", force: :cascade do |t|
     t.string   "street1"
@@ -25,6 +25,18 @@ ActiveRecord::Schema.define(version: 20150314230539) do
     t.boolean  "active",     default: true
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+  end
+
+  create_table "albums", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "password"
+    t.integer  "user_id"
+    t.datetime "event_date"
+    t.boolean  "set_password"
+    t.integer  "chapter_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "chapters", force: :cascade do |t|
@@ -43,6 +55,17 @@ ActiveRecord::Schema.define(version: 20150314230539) do
     t.integer  "state_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "convention_events", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "event_time"
+    t.string   "period"
+    t.string   "location"
+    t.integer  "year"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "countries", force: :cascade do |t|
@@ -75,6 +98,26 @@ ActiveRecord::Schema.define(version: 20150314230539) do
     t.integer  "fiscal_year"
     t.integer  "user_id",     null: false
     t.integer  "referer_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.string   "name"
+    t.string   "file_path"
+    t.string   "image_size"
+    t.integer  "album_id"
+    t.boolean  "notify"
+    t.boolean  "main_photo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "event_date"
+    t.string   "image"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

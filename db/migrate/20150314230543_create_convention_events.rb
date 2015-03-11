@@ -6,6 +6,7 @@ class CreateConventionEvents < ActiveRecord::Migration
       t.datetime :event_time
       t.string :period
       t.string :location
+      t.integer :year
 
       t.timestamps null: false
     end

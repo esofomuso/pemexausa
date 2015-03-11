@@ -2,6 +2,11 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {
     users: 'sessions'
   }
+  devise_scope :user do 
+	  get '/auth', to: 'devise/sessions#new', as: :auth
+	  get '/login', to: 'devise/sessions#new', as: :login
+	  get '/logout', to: 'devise/sessions#destroy', as: :logout
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -10,7 +15,7 @@ Rails.application.routes.draw do
    get '/', to: 'welcome#:index', as: :home
    get '/profile', to: 'profile#new', as: :profile
    get '/:action', to: 'welcome#:action'
-
+   
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
@@ -54,9 +59,17 @@ Rails.application.routes.draw do
   #   resources :photos, concerns: :toggleable
 
   # Example resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
+   namespace :admin do
+     resources :chapters
+     resources :convention_events
+     resources :countries
+     resources :members
+     resources :payment_purposes
+     resources :payments
+     resources :photos
+     resources :projects
+     resources :states
+     resources :users
+     resources :zips
+   end
 end
