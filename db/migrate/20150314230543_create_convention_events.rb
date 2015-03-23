@@ -8,6 +8,7 @@ class CreateConventionEvents < ActiveRecord::Migration
       t.string :location
       t.integer :year
 
+      t.integer	:updated_by, null: false, default: 1
       t.timestamps null: false
     end
   end

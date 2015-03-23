@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20150314230543) do
     t.boolean  "active",     default: true
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+    t.integer  "updated_by", default: 1,    null: false
   end
 
   create_table "albums", force: :cascade do |t|
@@ -47,6 +48,7 @@ ActiveRecord::Schema.define(version: 20150314230543) do
     t.boolean  "active",       default: true
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
+    t.integer  "updated_by",   default: 1,    null: false
   end
 
   create_table "cities", force: :cascade do |t|
@@ -64,8 +66,9 @@ ActiveRecord::Schema.define(version: 20150314230543) do
     t.string   "period"
     t.string   "location"
     t.integer  "year"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.integer  "updated_by",  default: 1, null: false
   end
 
   create_table "countries", force: :cascade do |t|
@@ -81,8 +84,9 @@ ActiveRecord::Schema.define(version: 20150314230543) do
     t.datetime "expires_at"
     t.boolean  "active"
     t.integer  "chapter_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.integer  "updated_by", default: 1, null: false
   end
 
   create_table "payment_purposes", force: :cascade do |t|
@@ -94,12 +98,13 @@ ActiveRecord::Schema.define(version: 20150314230543) do
   end
 
   create_table "payments", force: :cascade do |t|
-    t.integer  "purpose_id",  null: false
+    t.integer  "purpose_id",              null: false
     t.integer  "fiscal_year"
-    t.integer  "user_id",     null: false
+    t.integer  "user_id",                 null: false
     t.integer  "referer_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.integer  "updated_by",  default: 1, null: false
   end
 
   create_table "photos", force: :cascade do |t|
@@ -109,8 +114,10 @@ ActiveRecord::Schema.define(version: 20150314230543) do
     t.integer  "album_id"
     t.boolean  "notify"
     t.boolean  "main_photo"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.integer  "updated_by", default: 1,    null: false
+    t.boolean  "active",     default: true, null: false
   end
 
   create_table "projects", force: :cascade do |t|
@@ -118,8 +125,9 @@ ActiveRecord::Schema.define(version: 20150314230543) do
     t.text     "description"
     t.datetime "event_date"
     t.string   "image"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.integer  "updated_by",  default: 1, null: false
   end
 
   create_table "roles", force: :cascade do |t|
@@ -139,24 +147,24 @@ ActiveRecord::Schema.define(version: 20150314230543) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "username",                               null: false
-    t.string   "email",                                  null: false
+    t.string   "username",                                             null: false
+    t.string   "email",                                                null: false
     t.string   "password"
-    t.string   "encrypted_password",                     null: false
-    t.string   "first_name"
-    t.string   "last_name"
+    t.string   "encrypted_password",                                   null: false
+    t.string   "first_name",                                           null: false
+    t.string   "last_name_now",                                        null: false
     t.string   "middle_name"
     t.integer  "class_year"
     t.integer  "role_id"
     t.integer  "chapter_id"
-    t.string   "gender"
+    t.string   "gender",                                               null: false
     t.string   "phone"
     t.text     "profession"
     t.boolean  "active",                 default: true
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,     null: false
+    t.integer  "sign_in_count",          default: 0,                   null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
@@ -164,9 +172,11 @@ ActiveRecord::Schema.define(version: 20150314230543) do
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
-    t.datetime "created_at",                             null: false
-    t.datetime "updated_at",                             null: false
-    t.boolean  "full_time_student",      default: false, null: false
+    t.datetime "created_at",                                           null: false
+    t.datetime "updated_at",                                           null: false
+    t.boolean  "full_time_student",      default: false,               null: false
+    t.string   "last_name_pss",          default: "Current Last Name", null: false
+    t.integer  "updated_by",             default: 1,                   null: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

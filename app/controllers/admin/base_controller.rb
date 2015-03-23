@@ -19,4 +19,8 @@ class Admin::BaseController < ApplicationController
   		redirect_to '/'
   	end
   end
+  
+  def index
+  end
+  
 end

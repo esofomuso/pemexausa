@@ -6,6 +6,7 @@ class CreateMembers < ActiveRecord::Migration
       t.boolean :active
       t.integer :chapter_id
 
+      t.integer	:updated_by, null: false, default: 1
       t.timestamps null: false
     end
   end

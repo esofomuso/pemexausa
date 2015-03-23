@@ -1,0 +1,19 @@
+.row-fluid
+	.center-panel
+		= form_for current_user, url: admin_user_path(current_user) do |f|
+			.span12{style: "margin: 0px; width:96%"}
+				.admin_panel
+					.admin_panel_header
+						Welcome Admin 
+						= current_user.name
+					.admin_panel_inner
+						.control-group
+							.controls
+								%b
+									Email :  
+								= current_user.email
+						.control-group
+							.controls
+								%b
+									Role :  
+								= current_user.role.name

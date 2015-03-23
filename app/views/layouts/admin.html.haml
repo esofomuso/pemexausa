@@ -1,25 +1,7 @@
-!!! Strict
-%html{"xml:lang" => "ru", :xmlns => "http://www.w3.org/1999/xhtml"}
-	%head
-		%meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-		%meta{:content => "PEMEXA, PEMEXA-USA, PSS, PSS Mankon, Mankon, PCC", :name => "keywords"}/
-		%meta{:content => "Presbyterian Secondary School Mankon", :name => "description"}/
-		%title Pemexausa
-		%link{:rel => 'icon', :type => 'image/jpeg', :href => '/favicon.ico'}
-		= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-		= javascript_include_tag 'application', 'data-turbolinks-track' => true
-		:javascript
-			var _gaq = _gaq || [];
-			_gaq.push(['_setAccount', 'UA-26147658-1']);
-			_gaq.push(['_trackPageview']);
-			(function() {
-				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-			})();
-			= csrf_meta_tags
-	%body
-		#main
-			#content.rc5
-				= render 'shared/admin_header'
+= render 'shared/main_header'
+%body
+	#main
+		#content.rc5
+			= render 'shared/admin_header'
+			.admin_body
 				= yield

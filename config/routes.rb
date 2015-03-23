@@ -14,7 +14,6 @@ Rails.application.routes.draw do
    root 'welcome#index'
    get '/', to: 'welcome#:index', as: :home
    get '/profile', to: 'profile#new', as: :profile
-   get '/:action', to: 'welcome#:action'
    
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -60,6 +59,7 @@ Rails.application.routes.draw do
 
   # Example resource route within a namespace:
    namespace :admin do
+   	 get '/', to: 'base#index', as: :home
      resources :chapters
      resources :convention_events
      resources :countries
@@ -72,4 +72,6 @@ Rails.application.routes.draw do
      resources :users
      resources :zips
    end
+   get '/:action', to: 'welcome#:action'
+   
 end

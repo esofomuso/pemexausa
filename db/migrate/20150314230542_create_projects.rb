@@ -6,6 +6,7 @@ class CreateProjects < ActiveRecord::Migration
       t.datetime :event_date
       t.string :image
 
+      t.integer	:updated_by, null: false, default: 1
       t.timestamps null: false
     end
   end

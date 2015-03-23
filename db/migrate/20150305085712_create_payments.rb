@@ -6,6 +6,7 @@ class CreatePayments < ActiveRecord::Migration
       t.integer :user_id, null: false
       t.integer :referer_id
 
+      t.integer	:updated_by, null: false, default: 1
       t.timestamps null: false
     end
   end

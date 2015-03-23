@@ -11,6 +11,7 @@ class CreateAddresses < ActiveRecord::Migration
       t.string	:longitude
       t.boolean :active, default: true
 
+      t.integer	:updated_by, null: false, default: 1
       t.timestamps null: false
     end
   end

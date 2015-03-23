@@ -1,0 +1,56 @@
+/*Banners Slider with jquery tools tabs*/
+.banners{
+	position: relative;
+	//margin: 20px 0 50px 28px;
+	}
+.tabsbanner{
+	position:relative;	
+	width:208px;
+        height:260px;
+	float:left;	
+	}
+	
+/* single slide */
+.tabsbanner div {
+	display:none;
+	position:absolute;
+	top:0;
+	left:0;		
+	margin: ;
+	padding: ;
+	height:260px;
+	font-size: ;
+}
+
+/* tabs (those little circles below slides) */
+.tabsbanner_buttons {
+	clear:both;
+	//margin-left:50px;
+        text-align: center;
+}
+
+/* single tab */
+.tabsbanner_buttons a {
+	width:8px;
+	height:8px;
+	//float:left;
+	margin:8px 3px;
+	background:url(img/navigator.png) 0 0 no-repeat;
+	display:-moz-inline-stack; /* for FF2*/
+        display:inline-block; /* normal browsers */
+        zoom:1; /* for IE (hasLayout true) */
+        *display:inline; /* for IE */
+	font-size:1px;		
+}
+
+/* mouseover state */
+.tabsbanner_buttons a:hover {
+	background-position:0 -8px;      
+}
+
+/* active state (current page state) */
+.tabsbanner_buttons a.current {
+	background-position:0 -16px;     
+} 	
+
+/*Banners Slider with jquery tools tabs END*/

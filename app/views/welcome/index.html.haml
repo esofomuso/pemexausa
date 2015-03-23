@@ -2,191 +2,25 @@
 	%h1.yellow Welcome to Pemexa-USA
 	%div
 		.calendar.fright
-			%table.cal{:align => "center"}
-				%tr
-					%th{:colspan => "7"}
-						.month
-							%a.cal-left.fleft{:href => "index.php?month=2&year=2015&clear_cache=Y&bxajaxid=&bxajaxid="}
-							March 2015
-							%a.cal-right.fright{:href => "index.php?month=4&year=2015&clear_cache=Y&bxajaxid=&bxajaxid="}
-				%tr.days
-					%td.NewsCalHeader Mon
-					%td.NewsCalHeader Tue
-					%td.NewsCalHeader Wed
-					%td.NewsCalHeader Thu
-					%td.NewsCalHeader Fri
-					%td.NewsCalHeader Sat
-					%td.NewsCalHeader Sun
-				%tr.cells
-					%td.NewsCalOtherMonth
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/23/2015"} 23
-					%td.NewsCalOtherMonth
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/24/2015"} 24
-					%td.NewsCalOtherMonth
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/25/2015"} 25
-					%td.NewsCalOtherMonth
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/26/2015"} 26
-					%td.NewsCalOtherMonth
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/27/2015"} 27
-					%td.NewsCalOtherMonth
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/28/2015"} 28
-					%td.NewsCalWeekend
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/1/2015"} 1
-				%tr.cells
-					%td.NewsCalDefault
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/2/2015"} 2
-					%td.NewsCalDefault
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/3/2015"} 3
-					%td.NewsCalDefault
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/4/2015"} 4
-					%td.NewsCalDefault
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/5/2015"} 5
-					%td.NewsCalDefault
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/6/2015"} 6
-					%td.NewsCalToday
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/7/2015"} 7
-					%td.NewsCalWeekend
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/8/2015"} 8
-				%tr.cells
-					%td.NewsCalDefault
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/9/2015"} 9
-					%td.NewsCalDefault
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/10/2015"} 10
-					%td.NewsCalDefault
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/11/2015"} 11
-					%td.NewsCalDefault
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/12/2015"} 12
-					%td.NewsCalDefault
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/13/2015"} 13
-					%td.NewsCalWeekend
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/14/2015"} 14
-					%td.NewsCalWeekend
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/15/2015"} 15
-				%tr.cells
-					%td.NewsCalDefault
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/16/2015"} 16
-					%td.NewsCalDefault
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/17/2015"} 17
-					%td.NewsCalDefault
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/18/2015"} 18
-					%td.NewsCalDefault
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/19/2015"} 19
-					%td.NewsCalDefault
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/20/2015"} 20
-					%td.NewsCalWeekend
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/21/2015"} 21
-					%td.NewsCalWeekend
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/22/2015"} 22
-				%tr.cells
-					%td.NewsCalDefault
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/23/2015"} 23
-					%td.NewsCalDefault
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/24/2015"} 24
-					%td.NewsCalDefault
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/25/2015"} 25
-					%td.NewsCalDefault
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/26/2015"} 26
-					%td.NewsCalDefault
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/27/2015"} 27
-					%td.NewsCalWeekend
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/28/2015"} 28
-					%td.NewsCalWeekend
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/29/2015"} 29
-				%tr.cells
-					%td.NewsCalDefault
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/30/2015"} 30
-					%td.NewsCalDefault
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/31/2015"} 31
-					%td.NewsCalOtherMonth
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/1/2015"} 1
-					%td.NewsCalOtherMonth
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/2/2015"} 2
-					%td.NewsCalOtherMonth
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/3/2015"} 3
-					%td.NewsCalOtherMonth
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/4/2015"} 4
-					%td.NewsCalOtherMonth
-						%a.link-red-ul{:href => "/events/index.php?DATE=3/5/2015"} 5
-		.banners-holder
-			%h2.yellow Pemexa Friends and Patrons
-			%script{:src => "/bitrix/templates/pemexausa/components/bitrix/news.list/banners_1/script.js?1329750451", :type => "text/javascript"}
-			.banners
-				.tabsbanner
-					#bx_1914200112_419
-						%a{:href => "https://www.zabtalk.com/customer", :target => "_blank", :title => "zabtalk"}
-							%img{:alt => "zabtalk", :height => "258", :src => "/upload/iblock/d54/zabtalk_pemexa.png", :width => "208"}/
-					#bx_1914200112_416
-						%a{:href => "http://www.pethersolutions.com", :target => "_blank", :title => "Pether Solutions Banner"}
-							%img{:alt => "Pether Solutions Banner", :height => "260", :src => "/upload/iblock/dda/pethersolutions_banner.jpg", :width => "208"}/
-				.tabsbanner_buttons
-					%a{:href => "#"}
-					%a{:href => "#"}
+			= month_calendar do |date|
+				= date.day
+	%div
 		%p
 			PEMEXA-USA comprises ex-studens of P.S.S. Mankon resident in USA. In keeping with the overall mission of
 			= succeed "," do
 				%a{:href => "http://www.pemexa.net", :target => "_blank"} PEMEXA
 			members of PEMEXA-USA come together to share their common heritage, harness their resources, seek avenues to create new visions for P.S.S. Mankon, and carry out projects geared towards maintaining the status of P.S.S. Mankon as one of the best educational institutions in Cameroon, thereby giving back to an institution that laid a solid foundation and re-enforced in them the discipline, knowledge, and survival skills that have contributed in making them the responsible citizens they are today.
 		%p
-		%br/
-		%br/
+		%br
 		%p Members of PEMEXA-USA also provide support to each other, serve as mentors to students presently at P.S.S. Mankon, and also to alumni upon arrival in the United States. They use their varied expertise to make their presence felt in the various communities in the United States in which they live, thereby contributing to nation building by, among other things, participating in community service projects that foster unity in diversity.
-		%p     %br/
-		%br/
+		%p     
+		%br
 		%p Funding for PEMEXA-USA activities is generated from membership contributions, fundraising activities, and charitable donations from friends and affiliates.
-		%p{:align => "center"}
+	%div
 		%p
-		%a.twitter-timeline{:href => "https://twitter.com/PEMEXAUSA"} Tweets by @PEMEXAUSA
-		:javascript
-			!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");    %p
-			%br/
-	.links.fleft
-		#fb-root
-		:javascript
-			(function(d, s, id) {
-				var js, fjs = d.getElementsByTagName(s)[0];
-				if (d.getElementById(id)) return;
-				js = d.createElement(s); js.id = id;
-				js.src = "//connect.facebook.net/en_EN/all.js#xfbml=1";
-				fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));    .fb-like-box{"data-header" => "true", "data-href" => "https://www.facebook.com/PEMEXA", "data-show-faces" => "true", "data-stream" => "true", "data-width" => "770", :style => "padding-right: 30px; float: left;"}
-		.fb-facepile{"data-href" => "http://pemexausa.org/", "data-max-rows" => "1", "data-width" => "700"}
-		.fb-follow{"data-href" => "https://www.facebook.com/PEMEXA", "data-show-faces" => "true", "data-width" => "540", :style => "float: left;"}
-	.fleft{:style => "width: 225px;"}
-		%div
-			%script{:charset => "utf-8", :src => "http://widgets.twimg.com/j/2/widget.js"}
-			:javascript
-				new TWTR.Widget({
-					version: 2,
-					type: 'faves',
-					rpp: 10,
-					interval: 30000,
-					title: 'PEMEXANs & friends...',
-					subject: 'PEMEXA-USA',
-					width: 225,
-					height: 300,
-					theme: {
-						shell: {
-							background: '#405ac2',
-							color: '#ffffff'
-						},
-						tweets: {
-							background: '#c6f2f2',
-							color: '#030a96',
-							links: '#b5072a'
-						}
-					},
-					features: {
-						scrollbar: true,
-						loop: false,
-						live: true,
-						behavior: 'all'
-					}
-				}).render().setUser('PEMEXAUSA').start();
-			%br/
-			%p{:align => "right"}
-				%a.twitter-follow-button{:href => "https://twitter.com/PEMEXAUSA"} Follow @PEMEXAUSA
-				:javascript
-					!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");      %br/
-		.calendar.fright
-			%br/
-	%p.clear{:align => "right"}
+			%a.twitter-timeline{:href => "https://twitter.com/PEMEXAUSA"} Tweets by @PEMEXAUSA
+		%p
+			%a.twitter-follow-button{:href => "https://twitter.com/PEMEXAUSA"} Follow @PEMEXAUSA
+		%br
+		%br
+		%br

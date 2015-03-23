@@ -1,5 +1,6 @@
 class Admin::ChaptersController < Admin::BaseController
   expose(:chapter) { Chapter.find(params[:id]) || Chapter.new }
+  expose(:chapters) { Chapter.all }
 	
   # POST /admin/chapters
   # POST /admin/chapters.json

@@ -11,6 +11,9 @@
 				,
 				%b USA
 			.clear
+			- if current_user && (current_user.is_admin || current_user.is_super_admin)
+				.fleft
+					= link_to 'Admin', admin_home_path
 		.search.fright
 			.auth.fleft
 				%a#show_login_form.login-link{:href => "javascript:void(0)"} Login
@@ -44,7 +47,8 @@
 					.clear
 			.clear
 		.clear
-	.top-menu
+	- menu_class = current_user ? 'auth-menu' : 'top-menu'
+	%div{class: menu_class }
 		%table{:cellpadding => "0", :cellspacing => "0", :width => "100%"}
 			%tr
 				%td{:width => "117"}
@@ -75,3 +79,15 @@
 				%td.left-slide
 					%img{:src => "/assets/logo.jpg"}/
 				%td.right-gallery
+					#owl-carousel.owl-carousel{style: 'width: 800px;'}
+						.item
+							%img{:src => "/assets/gallery.jpg"}
+						.item
+							%img{:src => "/assets/1.jpg"}
+						.item
+							%img{:src => "/assets/carolinas1.jpg"}
+						.item
+							%img{:src => "/assets/2.JPG"}
+						.item
+							%img{:src => "/assets/3.JPG"}
+				.clear

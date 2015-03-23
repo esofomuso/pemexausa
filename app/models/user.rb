@@ -11,6 +11,9 @@ class User < ActiveRecord::Base
   has_one :ruling_chapter, class_name: Chapter, foreign_key: :president_id
   has_many :payments
   
+  validates :email, :username, :first_name, :last_name_now, :last_name_pss, :gender, presence: true
+  
+  
   def is_super_admin
   	self.role == Role.super_admin
   end
@@ -20,6 +23,6 @@ class User < ActiveRecord::Base
   end
   
   def name
-   "#{self.first_name} #{self.last_name}"
+   "#{self.first_name} #{self.last_name_now}"
   end
 end

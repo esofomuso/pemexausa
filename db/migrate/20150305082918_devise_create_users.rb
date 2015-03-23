@@ -5,13 +5,14 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :email,              null: false
       t.string :password
       t.string :encrypted_password, null: false
-			t.string :first_name
-			t.string :last_name
+			t.string :first_name, null: false
+			t.string :last_name_now, null: false
+			t.string :last_name_pss, null: false
 			t.string :middle_name
 			t.integer :class_year
 			t.integer :role_id
 			t.integer :chapter_id
-			t.string	:gender
+			t.string	:gender, null: false
 			t.string	:phone
 			t.text		:profession
 			t.boolean :active, default: true
@@ -34,6 +35,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.datetime :confirmed_at
       t.datetime :confirmation_sent_at
 
+      t.integer	:updated_by, null: false, default: 1
       t.timestamps null: false
     end
 
