@@ -4,7 +4,7 @@ class Admin::ZipsController < Admin::BaseController
   # GET /admin/zips
   # GET /admin/zips.json
   def index
-    @admin_zips = Admin::Zip.all
+    zips = Zip.all
   end
 
   # GET /admin/zips/1
@@ -14,7 +14,7 @@ class Admin::ZipsController < Admin::BaseController
 
   # GET /admin/zips/new
   def new
-    @admin_zip = Admin::Zip.new
+    zip = Zip.new
   end
 
   # GET /admin/zips/1/edit
@@ -24,15 +24,15 @@ class Admin::ZipsController < Admin::BaseController
   # POST /admin/zips
   # POST /admin/zips.json
   def create
-    @admin_zip = Admin::Zip.new(admin_zip_params)
+    zip = Zip.new(admin_zip_params)
 
     respond_to do |format|
-      if @admin_zip.save
-        format.html { redirect_to @admin_zip, notice: 'Zip was successfully created.' }
-        format.json { render :show, status: :created, location: @admin_zip }
+      if zip.save
+        format.html { redirect_to zip, notice: 'Zip was successfully created.' }
+        format.json { render :show, status: :created, location: zip }
       else
         format.html { render :new }
-        format.json { render json: @admin_zip.errors, status: :unprocessable_entity }
+        format.json { render json: zip.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -41,12 +41,12 @@ class Admin::ZipsController < Admin::BaseController
   # PATCH/PUT /admin/zips/1.json
   def update
     respond_to do |format|
-      if @admin_zip.update(admin_zip_params)
-        format.html { redirect_to @admin_zip, notice: 'Zip was successfully updated.' }
-        format.json { render :show, status: :ok, location: @admin_zip }
+      if zip.update(admin_zip_params)
+        format.html { redirect_to zip, notice: 'Zip was successfully updated.' }
+        format.json { render :show, status: :ok, location: zip }
       else
         format.html { render :edit }
-        format.json { render json: @admin_zip.errors, status: :unprocessable_entity }
+        format.json { render json: zip.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -54,7 +54,7 @@ class Admin::ZipsController < Admin::BaseController
   # DELETE /admin/zips/1
   # DELETE /admin/zips/1.json
   def destroy
-    @admin_zip.destroy
+    zip.destroy
     respond_to do |format|
       format.html { redirect_to admin_zips_url, notice: 'Zip was successfully destroyed.' }
       format.json { head :no_content }
@@ -64,7 +64,7 @@ class Admin::ZipsController < Admin::BaseController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_admin_zip
-      @admin_zip = Admin::Zip.find(params[:id])
+      zip = Zip.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

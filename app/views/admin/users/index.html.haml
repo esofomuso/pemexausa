@@ -1,31 +1,32 @@
-%h1 Listing Users
-
-%table{ id: 'admin_users_list'}
-	%thead
-		%tr
-			%th Name
-			%th Email
-			%th Class
-			%th Role
-			%th Chapter
-			%th Active
-			%th Last Sign In
-			%th Actions
-			
-	%tbody
-		- users.each do |admin_user|
+.admin_panel_header
+	%h1 Listing Users
+.admin_panel_inner	
+	%table{ id: 'admin_users_list'}
+		%thead
 			%tr
-				%td= link_to admin_user.name, admin_user_path(admin_user)
-				%td= admin_user.email
-				%td= admin_user.class_year
-				%td= admin_user.role.name rescue ''
-				%td= admin_user.chapter.name rescue ''
-				%td= admin_user.active
-				%td= admin_user.last_sign_in_at.to_s(:long)
-				%td
-					= link_to 'Edit', edit_admin_user_path(admin_user)
-					= link_to 'Destroy', admin_user_path(admin_user), :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New User', new_admin_user_path
+				%th Name
+				%th Email
+				%th Class
+				%th Role
+				%th Chapter
+				%th Active
+				%th Last Sign In
+				%th Actions
+				
+		%tbody
+			- users.each do |admin_user|
+				%tr
+					%td= link_to admin_user.name, admin_user_path(admin_user)
+					%td= admin_user.email
+					%td= admin_user.class_year
+					%td= admin_user.role.name rescue ''
+					%td= admin_user.chapter.name rescue ''
+					%td= admin_user.active
+					%td= admin_user.last_sign_in_at.to_s(:long) rescue ''
+					%td
+						= link_to 'Edit', edit_admin_user_path(admin_user)
+						= link_to 'Destroy', admin_user_path(admin_user), :method => :delete, :data => { :confirm => 'Are you sure?' }
+	
+	%br
+	
+	= link_to 'New User', new_admin_user_path

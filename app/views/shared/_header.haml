@@ -11,7 +11,7 @@
 				,
 				%b USA
 			.clear
-			- if current_user && (current_user.is_admin || current_user.is_super_admin)
+			- if can? :read, :admin #current_user && (current_user.admin? || current_user.super_admin?)
 				.fleft
 					= link_to 'Admin', admin_home_path
 		.search.fright
@@ -52,27 +52,29 @@
 		%table{:cellpadding => "0", :cellspacing => "0", :width => "100%"}
 			%tr
 				%td{:width => "117"}
-					%a.selected{:href => "/"} Home
+					= link_to 'Home', '/', class: "#{ 'selected' if request.path == '/'}"
 				%td
-					%a{:href => "/about_us/"} About us
+					= link_to 'About us', '/about_us', class: "#{ 'selected' if request.path == '/about_us'}"
 				%td
-					%a{:href => "/membership/"} MEMBERSHIP
+					- u = current_user ? 'Members' : 'membership'
+					= link_to u, '/membership', class: "#{ 'selected' if request.path == '/membership'}"
 				%td
-					%a{:href => "/chapters/"} Chapters
+					= link_to 'chapters', '/chapters', class: "#{ 'selected' if request.path == '/chapters'}"
 				%td
-					%a{:href => "/projects/"} Projects
+					= link_to 'projects', '/projects', class: "#{ 'selected' if request.path == '/projects'}"
 				%td
-					%a{:href => "/events/"} Events
+					= link_to 'events', '/events', class: "#{ 'selected' if request.path == '/events'}"
 				%td
-					%a{:href => "/gallery/"} Gallery
+					= link_to 'gallery', '/gallery', class: "#{ 'selected' if request.path == '/gallery'}"
 				%td{class: 'donation'}
-					%a{:href => "/donations/"} Donations
+					- u = current_user ? 'Donors' : Donations
+					%a{:href => "/donations/"}= u
 				%td
-					%a{:href => "/map/"} Map
+					= link_to 'map', '/map', class: "#{ 'selected' if request.path == '/map'}"
 				%td
-					%a{:href => "/profile/"} Profile
+					= link_to 'profile', '/profile', class: "#{ 'selected' if request.path == '/profile'}"
 				%td{:width => "105"}
-					%a.last{:href => "/convention/"} convention
+					= link_to 'convention', '/convention', class: "last #{ 'selected' if request.path == '/convention'}"
 	.slide
 		%table{:cellpadding => "0", :cellspacing => "0"}
 			%tr

@@ -1,7 +1,10 @@
-%h1 Editing admin_country
-
-= render 'form'
-
-= link_to 'Show', @admin_country
-\|
-= link_to 'Back', admin_countries_path
+.admin_panel_header
+	%h1
+		= link_to 'All Countries', admin_countries_path 
+		|
+		= link_to 'Country Details', admin_country_path(country) 
+		|
+		Editing Country
+.admin_panel_inner
+	= form_for country, url: admin_country_path(country), method: :post do |f|
+		= render :partial => 'form', :locals => { :f => f }

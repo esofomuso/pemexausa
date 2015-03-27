@@ -1,10 +1,133 @@
-= form_for @admin_user do |f|
-  - if @admin_user.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@admin_user.errors.count, "error")} prohibited this admin_user from being saved:"
-      %ul
-        - @admin_user.errors.full_messages.each do |msg|
-          %li= msg
+%table{ cellpadding: '0', cellspacing: '0', width: '100%' }
+	%tbody
+		%tr{width: '100%' }
+			%td
+				.span3
+					.reg-col
+						Personal Information
+					.admin_panel_inner
+						.row-fluid
+							= f.label 'first_name', 'First Name*', class: "control-label", required: true
+							= f.text_field :first_name, tabindex: 1, class: 'span12', maxlength: 20, required: true
+						.row-fluid
+							= f.label 'middle_name', 'Middle Name', class: "control-label"
+							= f.text_field :middle_name, tabindex: 2, class: 'span12', maxlength: 20
+						.row-fluid
+							= f.label 'last_name_pss', 'Last (or Surname) Name (PSS)*', class: "control-label", required: true
+							= f.text_field :last_name_pss, tabindex: 3, class: 'span12', maxlength: 20, required: true
+						.row-fluid
+							= f.label 'last_name_now', 'Last (or Surname) Name (Now)*', class: "control-label", required: true
+							= f.text_field :last_name_now, tabindex: 4, class: 'span12', maxlength: 20, required: true
+						.row-fluid
+							= f.label 'class_year', 'Class Of', class: "control-label"
+							= f.select :class_year, (1983..Date.today.year).to_a, {selected: user.class_year, include_blank: '--Please Select--'}, tabindex: 5, class: 'span12', maxlength: 20
+						.row-fluid
+							= f.label 'gender', 'Gender*', class: "control-label", required: true
+							= f.select :gender, ['female', 'male'], {selected: user.gender, include_blank: '--Please Select--'}, tabindex: 6, class: 'span12', maxlength: 20, required: true
+			%td
+				.span3
+					.reg-col
+						Contact Information
+					= f.fields_for address do |a|
+						.admin_panel_inner
+							.row-fluid
+								= a.label 'country_id', 'Country*', class: "control-label", required: true
+								= a.select :country_d, Country.all.map{|c| [c.name, c.id]}, {include_blank: '--Please Select--'}, tabindex: 7, class: 'span12', maxlength: 20, required: true
+							.row-fluid
+								= a.label 'state_id', 'State*', class: "control-label"
+								= a.select :state_id, states.all.map{|c| [c.name, c.id]}, {include_blank: '--Please Select--'}, tabindex: 8, class: 'span12', maxlength: 20
+							.row-fluid
+								= a.label 'street1', 'Address Line 1*', class: "control-label", required: true
+								= a.text_field :street1, tabindex: 9, class: 'span12', maxlength: 30, required: true
+							.row-fluid
+								= a.label 'street2', 'Address Line 2', class: "control-label"
+								= a.text_field :street2, tabindex: 10, class: 'span12', maxlength: 20
+							.row-fluid
+								= a.label 'city', 'City*', class: "control-label", required: true
+								= a.text_field :city, tabindex: 11, class: 'span12', maxlength: 20, required: true
+							.row-fluid
+								= a.label 'zip', 'Zip*', class: "control-label", required: true
+								= a.text_field :zip, tabindex: 12, class: 'span12', maxlength: 20, required: true
+			%td
+				.span3
+					.reg-col
+						Membership Information
+					.admin_panel_inner
+						.row-fluid
+							= f.label 'phone', 'Cell Phone', class: "control-label"
+							= f.text_field :phone, tabindex: 13, class: 'span12', maxlength: 75
+						.row-fluid
+							= f.label 'full_time_student', 'Full Time Student*', class: "control-label", required: true
+							= f.select :full_time_student, [['No', false],['Yes', true]], {selected: user.full_time_student, include_blank: '--Please Select--'}, tabindex: 14, class: 'span12', maxlength: 75, required: true
+						.row-fluid
+							= f.label 'profession', 'Profession', class: "control-label"
+							= f.text_area :profession, tabindex: 15, class: 'span12', maxlength: 75
+						.row-fluid
+							= f.label 'username', 'Login (min. 3 characters)*', class: "control-label", required: true
+							= f.text_field :username, tabindex: 16, class: 'span12', minlength: 3, maxlength: 25, required: true
+						.row-fluid
+							= f.label 'password', 'Password (min. 6 characters)*', class: "control-label", required: true
+							= f.password_field :password, tabindex: 17, class: 'span12', minlength: 8, maxlength: 128, required: true
+						.row-fluid
+							= f.label 'password_confirmation', 'Password Confirmation*', class: "control-label", required: true
+							= f.password_field :password_confirmation, tabindex: 18, class: 'span12', minlength: 8, maxlength: 128, required: true
+						.row-fluid
+							= f.label 'email', 'Email*', class: "control-label", required: true
+							= f.text_field :email, tabindex: 19, class: 'span12', maxlength: 75, required: true
+	%tr{width: '100%' }
+		%td{ colspan: 2}
+		%td
+			
+					
+					
 
-  .actions
-    = f.submit 'Save'
+
+%h3
+	Personal and Membership Information : 
+%table.table.table-hover.table-condensed{style: "width:96%"}
+	%tr
+		%th.value
+			First Name
+		%td.value= user.first_name
+		%th.value
+			Middle Name
+		%td.value= user.middle_name
+	%tr
+		%th.value
+			Last (or Surname) Name (PSS)
+		%td.value= user.last_name_pss
+		%th.value
+			Last (or Surname) Name (Now)
+		%td.value= user.last_name_now
+%br
+%h3
+	Contact Information : 
+%table.table.table-hover.table-condensed{style: "width:96%"}
+	%tr
+		%th.value
+			Address Line 1
+		%td.value= address.street1
+		%th.value
+			Address Line 2
+		%td.value= address.street2
+	%tr
+		%th.value
+			City
+		%td.value= address.city
+		%th.value
+			Zip
+		%td.value= address.zip
+	%tr
+		%th.value
+			State
+		%td.value= address.state.name
+		%th.value
+			Country
+		%td.value= address.country.name
+	%tr
+		%th.value
+			Active
+		%td.value= address.active?
+		%th.value
+			Updated
+		%td.value= address.updated_at.strftime("%b %d, %Y %H:%M:%S") rescue ''			

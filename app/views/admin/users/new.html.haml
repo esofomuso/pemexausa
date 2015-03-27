@@ -1,12 +1,33 @@
-%h1 New User
-
-= form_for user, url: admin_users_path, method: :post do |f|
-	- if user.errors.any?
-		#error_explanation
-			%h2= "#{pluralize(user.errors.count, "error")} prohibited this user from being saved:"
-			%ul
-				- user.errors.full_messages.each do |msg|
-					%li= msg
-	= render :partial => 'form', :locals => { :f => f }
-
-= link_to 'Back', admin_users_path
+.admin_panel_header
+	%h1
+		= link_to 'All Users', admin_users_path 
+		|
+		New User
+.admin_panel_inner
+	= form_for user, url: admin_users_path, method: :post do |f|
+		- if user.errors.any?
+			#error_explanation
+				%h2= "#{pluralize(user.errors.count, "error")} prohibited this user from being saved:"
+				%ul
+					- user.errors.full_messages.each do |msg|
+						%li= msg
+		%table{ cellpadding: '0', cellspacing: '0', width: '100%' }
+			%tbody
+				%tr{width: '100%' }
+					= render :partial => '/shared/admin_user_form', :locals => { :f => f }
+				%tr{width: '100%' }
+					%td
+						.span3{style: "width: 100%;"}
+							.admin_panel_inner
+								.row-fluid
+									= f.label 'role_id', 'Role*', class: "control-label", required: true
+									= f.select :role_id, Role.all.map{|c| [c.description, c.id]}, {}, tabindex: 7, class: 'span12', required: true
+					%td
+						.span3{style: "width: 100%;"}
+					%td
+						.span3{style: "width: 100%;"}
+							.row-fluid
+								.buttonBar
+									= f.submit "Save", class: "btn btn-primary", tabindex: 21
+									= link_to 'Cancel', :back, :class => "btn btn-primary", tabindex: 22
+								

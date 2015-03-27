@@ -1,0 +1,85 @@
+%td
+	.span3{style: "width: 100%;"}
+		.reg-col
+			Personal Information
+		.admin_panel_inner
+			.row-fluid
+				%b First Name: 
+				= user.first_name
+			.row-fluid
+				%b Middle Name:
+				= user.middle_name
+			.row-fluid
+				%b Last (or Surname) Name (PSS):
+				= user.last_name_pss
+			.row-fluid
+				%b Last (or Surname) Name (Now):
+				= user.last_name_now
+			.row-fluid
+				%b Class Of:
+				= user.class_year
+			.row-fluid
+				%b Gender:
+				= user.gender
+			.row-fluid
+				%b Created:
+				= user.created_at.strftime("%b %d, %Y %H:%M:%S") rescue ''
+			.row-fluid
+				%b Last Updated:
+				= user.updated_at.strftime("%b %d, %Y %H:%M:%S") rescue ''
+%td
+	.span3{style: "width: 100%;"}
+		.reg-col
+			Contact Information
+		.admin_panel_inner
+			.row-fluid
+				%b Country:
+				= address.country.name
+			.row-fluid
+				%b State:
+				= address.state.name
+			.row-fluid
+				%b Address Line 1:
+				= address.street1
+			.row-fluid
+				%b Address Line 2:
+				= address.street2
+			.row-fluid
+				%b City:
+				= address.city
+			.row-fluid
+				%b Zip:
+				= address.zip
+			.row-fluid
+				%b Last Updated:
+				= address.updated_at.strftime("%b %d, %Y %H:%M:%S") rescue ''
+%td
+	.span3{style: "width: 100%;"}
+		.reg-col
+			Membership Information
+		.admin_panel_inner
+			.row-fluid
+				%b Cell Phone:
+				= user.phone
+			.row-fluid
+				%b Full Time Student:
+				= user.full_time_student ? 'Yes' : 'No'
+			.row-fluid
+				%b Profession:
+				= user.profession
+			.row-fluid
+				%b Chapter:
+				= user.chapter.name
+			.row-fluid
+				%b Login:
+				= user.username
+			.row-fluid
+				%b Email:
+				= user.email
+			.row-fluid
+				%b Current Login:
+				= user.current_sign_in_at.strftime("%b %d, %Y %H:%M:%S") rescue ''
+			.row-fluid
+				%b Last Login:
+				= user.last_sign_in_at.strftime("%b %d, %Y %H:%M:%S") rescue ''	
+

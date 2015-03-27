@@ -1,6 +1,17 @@
-%p#notice= notice
-
-
-= link_to 'Edit', edit_admin_country_path(@admin_country)
-\|
-= link_to 'Back', admin_countries_path
+.admin_panel_header
+	%h1
+		= link_to 'All Countries', admin_countries_path 
+		|
+		= link_to 'Edit Country', edit_admin_country_path(country) 
+		|
+		Country Details
+.admin_panel_inner
+	.row-fluid
+		%b Name
+		= country.name
+	.row-fluid
+		%b Code2
+		= country.code2
+	.row-fluid
+		%b Code3
+		= country.code3

@@ -3,5 +3,9 @@
 	#main
 		#content.rc5
 			= render 'shared/admin_header'
-			.admin_body
-				= yield
+			.admin_body{style: "width: 952px; padding: 0px;"}
+				.row-fluid
+					.center-panel
+						.span12{style: "margin: 0px; width:100%"}
+							.admin_panel
+								= yield

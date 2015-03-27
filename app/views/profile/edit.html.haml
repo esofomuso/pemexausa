@@ -1,0 +1,26 @@
+#content.rc5{style: "width: 972px; padding: 15px;"}
+	.simple-text
+		%h1
+			= link_to 'Change Password', change_password_path 
+			|
+			= link_to 'Profile Details', profile_path 
+			|
+			Editing Profile
+		= form_for(user, url: update_profile_path, html: { method: :put }) do |f|
+			- if user.errors.any?
+				#error_explanation
+					%h2= "#{pluralize(user.errors.count, "error")} prohibited this user from being saved:"
+					%ul
+						- user.errors.full_messages.each do |msg|
+							%li= msg
+			%table{ cellpadding: '0', cellspacing: '0', width: '100%' }
+				%tbody
+					%tr{width: '100%' }
+						= render :partial => '/shared/user_form', :locals => { :f => f }
+					%tr{width: '100%' }
+						%td{colspan: '3'}
+							.span3{width: '100%' }
+								.row-fluid
+									.buttonBar
+										= f.submit "Save", class: "btn btn-primary", tabindex: 22
+										= link_to 'Cancel', :back, :class => "btn btn-primary", tabindex: 23

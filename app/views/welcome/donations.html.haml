@@ -1,261 +1,259 @@
-#content.rc5
-	.simple-text
-		%h1 Donations
-			
-		.leftwrapper{:style => "width: 654px; padding-right: 33px; border-right-color: rgb(204, 204, 204); border-right-width: thin; border-right-style: solid; float: left;"}
-			%p
-				%b Dear PEMEXANs and Friends of PEMEXA,
-			%p
-				Thank you for your interest and continuing support of
-				%b PEMEXA-USA.
-			%p Since its creation in 2001, PEMEXA-USA and its branches have successfully raised funds to support various educational, recreational and infrastructural initiatives in Presbyterian Secondary School (PSS) Mankon. These include funding the construction of a water supply for the school, supplying medication for the school dispensary, books for library, and microscopes for high school labs, and providing scholarships to deserving students in various classes.
-			.project_phase_component
-				.gallery-block
-					%a{:href => "http://www.youtube.com/watch?v=5_h_VekNdNs", :rel => "youtube", :style => "display: block; position:relative; background: url('http://img.youtube.com/vi/5_h_VekNdNs/0.jpg') no-repeat 16px 14px; color: white;", :title => "P.S.S. Mankon Current dormitories during Inspection "}
-						%img{:height => "190", :src => "http://img.youtube.com/vi/5_h_VekNdNs/0.jpg", :style => "display: block;", :width => "231"}/
-						%img{:src => "/img/border_play.png", :style => "display: block; position: absolute; left: 0; top: 0;"}/
-						%span{:style => "position: absolute; left: 25px; top: 20px; font-size:14px; font-weight: bold; "} Show Video
-				%p.preview_text
-					%p
-						%font{:color => "#0000ff"}
-							%strong PEMEXA-USA, with your help and generous support would like to tile the floors of ALL the dormitories in PSS Mankon this summer. There are 12 dormitories (6 boys &amp; 6 girls) with a total floor area of 1,914.93m2 for boys and 1,583.89m2 for girls.
-					%p
-						%strong Please, take a moment and watch the video on the right.
-					%p
-						.clear
-			
-			:javascript
-				/*
-						$(document).ready(function(){
-								$("#donation_levels_link").addClass('donation_levels_link');
-								$("#donation_levels_link").click(function(){
-										$("#donations_levels").show();
-										$("#donation_levels_link").removeClass('donation_levels_link');
-								});
-						});
-				*/
-			%p
-			%p
-				We value what you have to donate to us to help accomplish our current project
-				%strong>
-					%font{:color => "#ff0000"} ( tiling the floors of all 12 dormitories on campus)
-				and all our other projects. As such, we have created various levels of donations to help you determine a comfortable level and help us recognize your great gesture.
-				%span#donation_levels_link.donation_levels_link Here
-				are the levels.
-			%table#donations_levels{:border => "0", :cellpading => "0", :cellspacing => "0"}
-				%thead
-					%tr
-						%th
-							%p
-							%p Recognition Level
-						%th
-							%p
-							%p Level of Donation
-				%tbody
-					%tr
-						%td{:style => "border-image: none;"}
-							.ExecPlatinum Executive Platinum
-						%td{:style => "border-image: none;"} Donations of $5000.00 or more
-					%tr
-						%td{:style => "border-image: none;"}
-							.Platinum Platinum
-						%td{:style => "border-image: none;"} Donations between $2500.00 and $4999.99
-					%tr
-						%td{:style => "border-image: none;"}
-							.Gold Gold
-						%td{:style => "border-image: none;"} Donations between $1000.00 and $2499.99
-					%tr
-						%td{:style => "border-image: none;"}
-							.Silver Silver
-						%td{:style => "border-image: none;"}
-							%p Donations between $500.00 and $999.99
-					%tr
-						%td{:style => "border-image: none;"}
-							.Bronze Bronze
-						%td{:style => "border-image: none;"}
-							%p Donations between $250.00 and $499.99
-					%tr
-						%td{:style => "border-image: none;"}
-							.White Patron
-						%td{:style => "border-image: none;"} Donations up to $249.99
-			%p We sincerely appreciate whatever financial commitment you able to make towards this project at this time. We are grateful for your generosity, your trust and most of all your continuing commitment to Pemexa and PSS Mankon. Please help us reach that goal by making a donation today.
-			%p Thanks,
-			%p
-				%b PEMEXA-USA Executive
-		:javascript
-			var arrContact = new Array();
-			var arrContactId = new Array();
-			var arrContactEmail = new Array();
-		#divAuto
-			:javascript
-				arrContact[0]='Terence Ndofor'; 	arrContactId[0]='1'; 	arrContactEmail[0]='prez@pemexausa.org';  	arrContact[1]='Peter Muluh'; 	arrContactId[1]='70'; 	arrContactEmail[1]='peter@muluh.com';  	arrContact[2]='Terence Ndofor'; 	arrContactId[2]='4'; 	arrContactEmail[2]='netterusa@hotmail.com';  	arrContact[3]='Saaghe Fogwe'; 	arrContactId[3]='43'; 	arrContactEmail[3]='sfogwe@gmail.com';  	arrContact[4]='Venan Sondo'; 	arrContactId[4]='64'; 	arrContactEmail[4]='venan.sondo@gmail.com';  	arrContact[5]='Leonard Fodje'; 	arrContactId[5]='66'; 	arrContactEmail[5]='lmfodje@gmail.com';  	arrContact[6]='Evelyn Fomuso'; 	arrContactId[6]='69'; 	arrContactEmail[6]='esonafom@yahoo.com';  	arrContact[7]='Mahwan Mundi'; 	arrContactId[7]='71'; 	arrContactEmail[7]='m.shen.mundi@gmail.com';  	arrContact[8]='Thomas  Pefok'; 	arrContactId[8]='72'; 	arrContactEmail[8]='tomlu2001@yahoo.com';  	arrContact[9]='John MOMA'; 	arrContactId[9]='73'; 	arrContactEmail[9]='johnmomajr@yahoo.com';  	arrContact[10]='Moses Tar'; 	arrContactId[10]='75'; 	arrContactEmail[10]='tarmoses@yahoo.com';  	arrContact[11]='Mercy Sack'; 	arrContactId[11]='76'; 	arrContactEmail[11]='mercyfon@yahoo.com';  	arrContact[12]='Adeline Simms'; 	arrContactId[12]='78'; 	arrContactEmail[12]='aksimms1480@yahoo.com';  	arrContact[13]='Prisca  Pungong'; 	arrContactId[13]='79'; 	arrContactEmail[13]='pnana_99@yahoo.com';  	arrContact[14]='Gilbert Muma'; 	arrContactId[14]='80'; 	arrContactEmail[14]='mumagn@yahoo.com';  	arrContact[15]='Michael Joko'; 	arrContactId[15]='81'; 	arrContactEmail[15]='mikejoko@hotmail.com';  	arrContact[16]='Yvonne  Pefok'; 	arrContactId[16]='95'; 	arrContactEmail[16]='paps_lulu@yahoo.com';  	arrContact[17]='Asongechwi BUJUNG'; 	arrContactId[17]='94'; 	arrContactEmail[17]='cbujung@yahoo.com';  	arrContact[18]='Gina Nana'; 	arrContactId[18]='96'; 	arrContactEmail[18]='g_nana70@hotmail.com';  	arrContact[19]='Bertha Nsekpong'; 	arrContactId[19]='97'; 	arrContactEmail[19]='bnjinda@yahoo.com';  	arrContact[20]='Emmanuel Ndamukong'; 	arrContactId[20]='98'; 	arrContactEmail[20]='ejndamukong@yahoo.com';  	arrContact[21]='Adah Gana'; 	arrContactId[21]='99'; 	arrContactEmail[21]='andin15222@yahoo.com';  	arrContact[22]='Hermann Ndofor'; 	arrContactId[22]='100'; 	arrContactEmail[22]='hermann@ndofor.com';  	arrContact[23]='Chi Ndah'; 	arrContactId[23]='101'; 	arrContactEmail[23]='chihaddison@hotmail.de';  	arrContact[24]='RUTH NYANG'; 	arrContactId[24]='102'; 	arrContactEmail[24]='ruthnyang@yahoo.com';  	arrContact[25]='Katheryne Amba'; 	arrContactId[25]='103'; 	arrContactEmail[25]='tifuh@yahoo.com';  	arrContact[26]='Lum Ambe'; 	arrContactId[26]='105'; 	arrContactEmail[26]='dna_ambe@yahoo.com';  	arrContact[27]='Juliet Batcha'; 	arrContactId[27]='106'; 	arrContactEmail[27]='j_abiba@hotmail.com';  	arrContact[28]='Binwi Mfonyam (Mbonifor)'; 	arrContactId[28]='108'; 	arrContactEmail[28]='binoid08@yahoo.com';  	arrContact[29]='Fongong Achu'; 	arrContactId[29]='109'; 	arrContactEmail[29]='afongong@yahoo.com';  	arrContact[30]='Neh Ndingwan'; 	arrContactId[30]='111'; 	arrContactEmail[30]='nehndingwan@gmail.com';  	arrContact[31]='Jackie Anyu'; 	arrContactId[31]='112'; 	arrContactEmail[31]='jbatcha@hotmail.com';  	arrContact[32]='Rosaline Anyangwe'; 	arrContactId[32]='113'; 	arrContactEmail[32]='rbanyangwe@gmail.com';  	arrContact[33]='Tembei  Chiawah'; 	arrContactId[33]='114'; 	arrContactEmail[33]='tembei78@yahoo.com';  	arrContact[34]='Ngu Nyindem'; 	arrContactId[34]='115'; 	arrContactEmail[34]='nyindem@gmail.com';  	arrContact[35]='Ako kwamu'; 	arrContactId[35]='116'; 	arrContactEmail[35]='akokelly@gmail.com';  	arrContact[36]='Marie Ndingwan'; 	arrContactId[36]='117'; 	arrContactEmail[36]='mabindings@gmail.com';  	arrContact[37]='lionel tita'; 	arrContactId[37]='118'; 	arrContactEmail[37]='lioneltita@yahoo.fr';  	arrContact[38]='Harris Yango'; 	arrContactId[38]='119'; 	arrContactEmail[38]='hyango2002@yahoo.com';  	arrContact[39]='Judith Kibuh'; 	arrContactId[39]='120'; 	arrContactEmail[39]='kfjudith@yahoo.com';  	arrContact[40]='joy yango'; 	arrContactId[40]='121'; 	arrContactEmail[40]='joyfobanjong@yahoo.com';  	arrContact[41]='takwe yango'; 	arrContactId[41]='122'; 	arrContactEmail[41]='takweyango@yahoo.com';  	arrContact[42]='Miranda Nebane'; 	arrContactId[42]='179'; 	arrContactEmail[42]='ntsang56@yahoo.com';  	arrContact[43]='At N'; 	arrContactId[43]='180'; 	arrContactEmail[43]='atsohfn@hotmail.com';  	arrContact[44]='Myra Fai-yengo'; 	arrContactId[44]='181'; 	arrContactEmail[44]='myranebiy@gmail.com';  	arrContact[45]='Tema Pefok-Zama'; 	arrContactId[45]='182'; 	arrContactEmail[45]='tpefok@gmail.com';  	arrContact[46]='AKERE ANYANGWE'; 	arrContactId[46]='183'; 	arrContactEmail[46]='akeboy77@yahoo.com';  	arrContact[47]='Kingsley Pungong'; 	arrContactId[47]='184'; 	arrContactEmail[47]='pungong@hotmail.com';  	arrContact[48]='FUZIE NJOH'; 	arrContactId[48]='186'; 	arrContactEmail[48]='fatnjoh@yahoo.com';  	arrContact[49]='Alan Tita'; 	arrContactId[49]='187'; 	arrContactEmail[49]='alantita@yahoo.com';  	arrContact[50]='Edwin Tita'; 	arrContactId[50]='188'; 	arrContactEmail[50]='samatita@aol.com';  	arrContact[51]='Julius Fodje'; 	arrContactId[51]='189'; 	arrContactEmail[51]='julius@fodje.com';  	arrContact[52]='BROWN NDOFOR'; 	arrContactId[52]='190'; 	arrContactEmail[52]='brown_ndofor@yahoo.com';  	arrContact[53]='Lilian Fokwang'; 	arrContactId[53]='194'; 	arrContactEmail[53]='liliannyem@yahoo.co.uk';  	arrContact[54]='Jessie Mbah'; 	arrContactId[54]='196'; 	arrContactEmail[54]='jessiembah@hotmail.com';  	arrContact[55]='MARIE-CLAIRE MBUN'; 	arrContactId[55]='201'; 	arrContactEmail[55]='mczof@yahoo.com';  	arrContact[56]='Gwendoline Mbaku'; 	arrContactId[56]='204'; 	arrContactEmail[56]='kmbaku@yahoo.com';  	arrContact[57]='Anne  Ntungwen'; 	arrContactId[57]='205'; 	arrContactEmail[57]='nabisona@yahoo.com';  	arrContact[58]='yeye kometa'; 	arrContactId[58]='206'; 	arrContactEmail[58]='jkometa@hotmail.com';  	arrContact[59]='Lema Dohmanju'; 	arrContactId[59]='207'; 	arrContactEmail[59]='lema_enjema@yahoo.com';  	arrContact[60]='CORDELIA ESENI'; 	arrContactId[60]='208'; 	arrContactEmail[60]='candze@yahoo.com';  	arrContact[61]='Esaindang Umenei'; 	arrContactId[61]='210'; 	arrContactEmail[61]='esawater@gmail.com';  	arrContact[62]='Ngayi Gamnje'; 	arrContactId[62]='215'; 	arrContactEmail[62]='fankag@yahoo.com';  	arrContact[63]='Loyce Mofor'; 	arrContactId[63]='218'; 	arrContactEmail[63]='moforloyce@yahoo.com';  	arrContact[64]='Emmanuel Fai-yengo'; 	arrContactId[64]='219'; 	arrContactEmail[64]='fayengo@gmail.com';  	arrContact[65]='fergus akwar'; 	arrContactId[65]='220'; 	arrContactEmail[65]='fergus_ta@yahoo.com';  	arrContact[66]='Grace Njie'; 	arrContactId[66]='221'; 	arrContactEmail[66]='njie1108@yahoo.com';  	arrContact[67]='Emmanuel Sapel'; 	arrContactId[67]='223'; 	arrContactEmail[67]='manu_kofete@yahoo.com';  	arrContact[68]='yvonne ngwa'; 	arrContactId[68]='228'; 	arrContactEmail[68]='ms_bisiche@hotmail.com';  	arrContact[69]='PATIENCE ELANGO'; 	arrContactId[69]='230'; 	arrContactEmail[69]='patience_esstic@yahoo.com';  	arrContact[70]='TUM ABUHNGIENDO'; 	arrContactId[70]='234'; 	arrContactEmail[70]='rowlan1@yahoo.com';  	arrContact[71]='Yolanda Boma'; 	arrContactId[71]='238'; 	arrContactEmail[71]='yolandaboma@yahoo.com';  	arrContact[72]='Monique Nchotu'; 	arrContactId[72]='240'; 	arrContactEmail[72]='nikkimec@yahoo.com';  	arrContact[73]='Fildrin Ndimbo'; 	arrContactId[73]='241'; 	arrContactEmail[73]='filshade@yahoo.co.uk';  	arrContact[74]='Derick Tah'; 	arrContactId[74]='244'; 	arrContactEmail[74]='anyungderick@yahoo.com';  	arrContact[75]='Miranda Achu'; 	arrContactId[75]='245'; 	arrContactEmail[75]='mirandaachu@yahoo.com';  	arrContact[76]='NTONIFOR FUBE'; 	arrContactId[76]='246'; 	arrContactEmail[76]='cheboyf@yahoo.co.uk';  	arrContact[77]='Melissa Nwancha'; 	arrContactId[77]='248'; 	arrContactEmail[77]='m.nwancha@rocketmail.com';  	arrContact[78]='Alain Kameni'; 	arrContactId[78]='249'; 	arrContactEmail[78]='alkameni2023@yahoo.com';  	arrContact[79]='HUMFRED ESENI'; 	arrContactId[79]='250'; 	arrContactEmail[79]='humfred_eb@yahoo.com';  	arrContact[80]='Segmia Tohnya'; 	arrContactId[80]='254'; 	arrContactEmail[80]='missk1222@yahoo.com';  	arrContact[81]='Ronald Ambe'; 	arrContactId[81]='256'; 	arrContactEmail[81]='iknaw@hotmail.com';  	arrContact[82]='Syh Ambe'; 	arrContactId[82]='261'; 	arrContactEmail[82]='mbongsyh@yahoo.com';  	arrContact[83]='Ozong Tita'; 	arrContactId[83]='267'; 	arrContactEmail[83]='ozongtita@yahoo.com';  	arrContact[84]='Yvonne Ewang'; 	arrContactId[84]='270'; 	arrContactEmail[84]='yvibech@yahoo.com';  	arrContact[85]='Gillian Ndi'; 	arrContactId[85]='273'; 	arrContactEmail[85]='gill_ndi@yahoo.co.uk';  	arrContact[86]='Nelson Achu'; 	arrContactId[86]='275'; 	arrContactEmail[86]='nthrill@yahoo.com';  	arrContact[87]='Dyllis Minang'; 	arrContactId[87]='279'; 	arrContactEmail[87]='dyllismbah@yahoo.com';  	arrContact[88]='Dyllis Minang'; 	arrContactId[88]='280'; 	arrContactEmail[88]='ieuan0928@yahoo.com';  	arrContact[89]='Dyllis Minang'; 	arrContactId[89]='281'; 	arrContactEmail[89]='ieuan0928@gmail.com';  	arrContact[90]='Marceline Nkwenti'; 	arrContactId[90]='282'; 	arrContactEmail[90]='lumnkwenti@yahoo.com';  	arrContact[91]='Emmanuel Nkepah'; 	arrContactId[91]='286'; 	arrContactEmail[91]='nkepah@yahoo.co.uk';  	arrContact[92]='Richard Nkwenti'; 	arrContactId[92]='289'; 	arrContactEmail[92]='nkwenti@hotmail.com';  	arrContact[93]='Samuel Fomum-Tanee'; 	arrContactId[93]='290'; 	arrContactEmail[93]='fomumpj@yahoo.com';  	arrContact[94]='SAMUEL FOMUM'; 	arrContactId[94]='291'; 	arrContactEmail[94]='stfomum@hotmail.com';  	arrContact[95]='Peter Alomepe'; 	arrContactId[95]='294'; 	arrContactEmail[95]='alomepeter@gmail.com';  	arrContact[96]='Kate Jabea'; 	arrContactId[96]='296'; 	arrContactEmail[96]='katejabea@hotmail.com';  	arrContact[97]='Kielley Fon-Ndikum'; 	arrContactId[97]='297'; 	arrContactEmail[97]='emunio@netscape.net';  	arrContact[98]='Laura Enonjang'; 	arrContactId[98]='300'; 	arrContactEmail[98]='lforsac@yahoo.com';  	arrContact[99]='CLIFFORD NDECHAM'; 	arrContactId[99]='301'; 	arrContactEmail[99]='ndecham01@gmail.com';  	arrContact[100]='Raymond Sama'; 	arrContactId[100]='302'; 	arrContactEmail[100]='raymond_sama@yahoo.com';  	arrContact[101]='Juliette Atanga'; 	arrContactId[101]='308'; 	arrContactEmail[101]='juatanga@yahoo.com';  	arrContact[102]='DANIEL GWANFOGBE'; 	arrContactId[102]='309'; 	arrContactEmail[102]='fombit@yahoo.com';  	arrContact[103]='Pauline Mancho'; 	arrContactId[103]='311'; 	arrContactEmail[103]='manchongum@yahoo.com';  	arrContact[104]='Rannibele Nju'; 	arrContactId[104]='328'; 	arrContactEmail[104]='nrannibelle@yahoo.com';  	arrContact[105]='Petra Ndiangang '; 	arrContactId[105]='336'; 	arrContactEmail[105]='123petra@pemexausa.org';  	arrContact[106]='Siri Atogho'; 	arrContactId[106]='322'; 	arrContactEmail[106]='info@pemexausa.org';  	arrContact[107]='Valentine Jideofor'; 	arrContactId[107]='349'; 	arrContactEmail[107]='vally_awa_00@yahoo.co.uk';  	arrContact[108]='Petula Kwende'; 	arrContactId[108]='324'; 	arrContactEmail[108]='info2@pemexausa.org';  	arrContact[109]='Lorna Awuro'; 	arrContactId[109]='334'; 	arrContactEmail[109]='lorna2324@yahoo.com';  	arrContact[110]='Damalice Swiri'; 	arrContactId[110]='326'; 	arrContactEmail[110]='swiridam_24@yahoo.com';  	arrContact[111]='DOH TITA'; 	arrContactId[111]='321'; 	arrContactEmail[111]='tita_babila@yahoo.com';  	arrContact[112]='Flora Nusta'; 	arrContactId[112]='329'; 	arrContactEmail[112]='fnusta@yahoo.com';  	arrContact[113]='Ejenyi Anyangwe'; 	arrContactId[113]='330'; 	arrContactEmail[113]='ejenyi.anyangwe@yahoo.com';  	arrContact[114]='Emmanuel Ndingwan'; 	arrContactId[114]='331'; 	arrContactEmail[114]='endingwan@hotmail.com';  	arrContact[115]='Helen Ashuntantang'; 	arrContactId[115]='332'; 	arrContactEmail[115]='helenayuk@hotmail.com';  	arrContact[116]='Lembe Zamcho'; 	arrContactId[116]='333'; 	arrContactEmail[116]='lembe62@yahoo.com';  	arrContact[117]='KUKO NDIFUANJA'; 	arrContactId[117]='348'; 	arrContactEmail[117]='kuko_bm@yahoo.co.uk';  	arrContact[118]='William Munji'; 	arrContactId[118]='340'; 	arrContactEmail[118]='wmunji@gmail.com';  	arrContact[119]='Carlson Tayong'; 	arrContactId[119]='341'; 	arrContactEmail[119]='cntayong@gmail.com';  	arrContact[120]='Ruth '; 	arrContactId[120]='342'; 	arrContactEmail[120]='njiruth@yahoo.com';  	arrContact[121]='Paul Tendoh'; 	arrContactId[121]='343'; 	arrContactEmail[121]='paultendoh@yahoo.com';  	arrContact[122]='Joshua NA'; 	arrContactId[122]='345'; 	arrContactEmail[122]='joeamaya87@yahoo.com';  	arrContact[123]='Evans Fomuso'; 	arrContactId[123]='346'; 	arrContactEmail[123]='emboti75@gmail.com';  	arrContact[124]='Olivia Ayuketah(Bolima)'; 	arrContactId[124]='379'; 	arrContactEmail[124]='ekie72@yahoo.co.uk';  	arrContact[125]='Glory Ngwa'; 	arrContactId[125]='353'; 	arrContactEmail[125]='mbong4ever@yahoo.com';  	arrContact[126]='FEH BONGNWI'; 	arrContactId[126]='360'; 	arrContactEmail[126]='sirrifeh@gmail.com';  	arrContact[127]='Tina Ndi'; 	arrContactId[127]='362'; 	arrContactEmail[127]='lumndi@yahoo.com';  	arrContact[128]='GRACE FONGOD'; 	arrContactId[128]='363'; 	arrContactEmail[128]='gfongod@gmail.com';  	arrContact[129]='Gilbert Ngwa'; 	arrContactId[129]='364'; 	arrContactEmail[129]='gilbertneba2000@yahoo.com';  	arrContact[130]='Angela Atia'; 	arrContactId[130]='365'; 	arrContactEmail[130]='angelaatia@yahoo.co.uk';  	arrContact[131]='Hippolyte Asah'; 	arrContactId[131]='366'; 	arrContactEmail[131]='hfasah@hotmail.com';  	arrContact[132]='Liza Ekole'; 	arrContactId[132]='367'; 	arrContactEmail[132]='fomumliza@yahoo.com';  	arrContact[133]='Valentine Ndakwah'; 	arrContactId[133]='381'; 	arrContactEmail[133]='vn8@chrysler.com';  	arrContact[134]='Besi Fube Ndakwah'; 	arrContactId[134]='369'; 	arrContactEmail[134]='ndakwah@sbcglobal.net';  	arrContact[135]='Sylvia Lambiv'; 	arrContactId[135]='370'; 	arrContactEmail[135]='sammakuna@yahoo.com';  	arrContact[136]='Patience Akenji'; 	arrContactId[136]='371'; 	arrContactEmail[136]='pakenji@yahoo.com';  	arrContact[137]='Pascal L Kingah'; 	arrContactId[137]='380'; 	arrContactEmail[137]='kingolio10@yahoo.com';  	arrContact[138]='EGBETABI  EYONG'; 	arrContactId[138]='373'; 	arrContactEmail[138]='enowegbetabi@yahoo.es';  	arrContact[139]='Roseline Ambe'; 	arrContactId[139]='378'; 	arrContactEmail[139]='manefor07@hotmail.com';  	arrContact[140]='Cromwell Zama'; 	arrContactId[140]='383'; 	arrContactEmail[140]='cnzama@gmail.com';  	arrContact[141]='Vivian Ngang '; 	arrContactId[141]='384'; 	arrContactEmail[141]='vivingang55@hotmail.com';  	arrContact[142]='Stanley Batcha'; 	arrContactId[142]='395'; 	arrContactEmail[142]='stanleybatcha@gmail.com';  	arrContact[143]='sharon sama'; 	arrContactId[143]='77'; 	arrContactEmail[143]='sharon8703@yahoo.com';  	arrContact[144]='Rita Sondengam'; 	arrContactId[144]='104'; 	arrContactEmail[144]='ritasonden@hotmail.com';  	arrContact[145]='Stanley Batcha'; 	arrContactId[145]='107'; 	arrContactEmail[145]='stanleybatcha@yahoo.com';  	arrContact[146]='LENNA NDOKO'; 	arrContactId[146]='185'; 	arrContactEmail[146]='lendoko@yahoo.com';  	arrContact[147]='Forkwa  Tembei'; 	arrContactId[147]='197'; 	arrContactEmail[147]='forkwakieran@yahoo.com';  	arrContact[148]='Marie Obara'; 	arrContactId[148]='198'; 	arrContactEmail[148]='mayukayah@yahoo.com';  	arrContact[149]='Denis Nyeango'; 	arrContactId[149]='199'; 	arrContactEmail[149]='nyeango@yahoo.com';  	arrContact[150]='SAMUEL FONTEH'; 	arrContactId[150]='200'; 	arrContactEmail[150]='samuelfonteh@yahoo.fr';  	arrContact[151]='Kengjiseh Sondo'; 	arrContactId[151]='202'; 	arrContactEmail[151]='ksondo@yahoo.com';  	arrContact[152]='Henry  Ayeah'; 	arrContactId[152]='203'; 	arrContactEmail[152]='ahenrynde@yahoo.fr';  	arrContact[153]='John Abam'; 	arrContactId[153]='209'; 	arrContactEmail[153]='balioldboy@yahoo.com';  	arrContact[154]='divine divine'; 	arrContactId[154]='211'; 	arrContactEmail[154]='divymaster@hotmail.com';  	arrContact[155]='Ngieh ngiehnunus'; 	arrContactId[155]='212'; 	arrContactEmail[155]='ngiehnunus@yahoo.ca';  	arrContact[156]='ESENI  Humfred'; 	arrContactId[156]='213'; 	arrContactEmail[156]='humfred.eseni@nfcbanksa.com';  	arrContact[157]='Delphine SAB'; 	arrContactId[157]='214'; 	arrContactEmail[157]='delphinesab@yahoo.com';  	arrContact[158]='Beatrice Wanji'; 	arrContactId[158]='216'; 	arrContactEmail[158]='wanjibea@yahoo.com';  	arrContact[159]='MUDOH MUDOH'; 	arrContactId[159]='217'; 	arrContactEmail[159]='cencom2001@yahoo.com';  	arrContact[160]='Charles Anyangwe'; 	arrContactId[160]='222'; 	arrContactEmail[160]='charlesndako@yahoo.com';  	arrContact[161]='Ango Fomuso Ekellem'; 	arrContactId[161]='224'; 	arrContactEmail[161]='afomuso@yahoo.com';  	arrContact[162]='Stanley Ndi'; 	arrContactId[162]='225'; 	arrContactEmail[162]='stanleyndi@yahoo.com';  	arrContact[163]='Eyong Ayuk Eyong Chris'; 	arrContactId[163]='226'; 	arrContactEmail[163]='eyongchris2002@yahoo.fr';  	arrContact[164]='Valmy Awasom'; 	arrContactId[164]='227'; 	arrContactEmail[164]='vawasom@yahoo.com';  	arrContact[165]='FON NSOH'; 	arrContactId[165]='229'; 	arrContactEmail[165]='mfonsoh@yahoo.com';  	arrContact[166]='Karin Nji'; 	arrContactId[166]='231'; 	arrContactEmail[166]='njikarin@yahoo.com';  	arrContact[167]='Vivian  Saningong'; 	arrContactId[167]='232'; 	arrContactEmail[167]='vivian.ndzi@yahoo.com';  	arrContact[168]='TRUDY NGAKO'; 	arrContactId[168]='233'; 	arrContactEmail[168]='trudytoh2002@yahoo.com';  	arrContact[169]='Ndagha ekiambere'; 	arrContactId[169]='235'; 	arrContactEmail[169]='esndagha@yahoo.com';  	arrContact[170]='ZAUMU Zaumu'; 	arrContactId[170]='236'; 	arrContactEmail[170]='jzaumu@yahoo.co.uk';  	arrContact[171]='Chick Tah'; 	arrContactId[171]='237'; 	arrContactEmail[171]='chickfelix@yahoo.com';  	arrContact[172]='priscilia wara'; 	arrContactId[172]='242'; 	arrContactEmail[172]='tsoprinah731@yahoo.fr';  	arrContact[173]='Abu Monju'; 	arrContactId[173]='243'; 	arrContactEmail[173]='alonzomonju@yahoo.com';  	arrContact[174]='Suche Mfornyam'; 	arrContactId[174]='247'; 	arrContactEmail[174]='suche20032003@yahoo.com';  	arrContact[175]='prince ndimbo'; 	arrContactId[175]='251'; 	arrContactEmail[175]='princecraig2000@yahoo.fr';  	arrContact[176]='FOUONDO none'; 	arrContactId[176]='252'; 	arrContactEmail[176]='nsv12003@yahoo.fr';  	arrContact[177]='Akwa Angwafo'; 	arrContactId[177]='253'; 	arrContactEmail[177]='akwanancy@yahoo.com';  	arrContact[178]='NCHOTEBAH JEROME'; 	arrContactId[178]='255'; 	arrContactEmail[178]='jnchotebah@yahoo.com';  	arrContact[179]='Derrick Tawah'; 	arrContactId[179]='257'; 	arrContactEmail[179]='tawahngwa@yahoo.de';  	arrContact[180]='Bamun Tata'; 	arrContactId[180]='258'; 	arrContactEmail[180]='bamuntata@gmail.com';  	arrContact[181]='Mercy Ngum-Chebe'; 	arrContactId[181]='259'; 	arrContactEmail[181]='ngummy@yahoo.com';  	arrContact[182]='Tantoh Louis '; 	arrContactId[182]='260'; 	arrContactEmail[182]='nditah2004@yahoo.com';  	arrContact[183]='William Fonbah'; 	arrContactId[183]='262'; 	arrContactEmail[183]='samax05@hotmail.com';  	arrContact[184]='Colett Asombang'; 	arrContactId[184]='263'; 	arrContactEmail[184]='casombang@yahoo.com';  	arrContact[185]='Nguh Asanji'; 	arrContactId[185]='264'; 	arrContactEmail[185]='asanjinguh@yahoo.com';  	arrContact[186]='Emmanuel Chenny'; 	arrContactId[186]='265'; 	arrContactEmail[186]='emachenny@yahoo.com';  	arrContact[187]='Jackson Atanga'; 	arrContactId[187]='266'; 	arrContactEmail[187]='jatanga@yahoo.com';  	arrContact[188]='Munang Chiandim'; 	arrContactId[188]='268'; 	arrContactEmail[188]='munangmc@yahoo.com';  	arrContact[189]='RASHE Asombang'; 	arrContactId[189]='269'; 	arrContactEmail[189]='azirash2000@yahoo.com';  	arrContact[190]='TEBOH Teboh'; 	arrContactId[190]='271'; 	arrContactEmail[190]='akompikin@yahoo.org';  	arrContact[191]='Nju Rannibelle'; 	arrContactId[191]='272'; 	arrContactEmail[191]='lady_belle15@yahoo.co.uk';  	arrContact[192]='Enow Ayukegba'; 	arrContactId[192]='274'; 	arrContactEmail[192]='enowshilton@yahoo.com';  	arrContact[193]='Jessica Ngwafor'; 	arrContactId[193]='276'; 	arrContactEmail[193]='spiceytwinkle@yahoo.co.uk';  	arrContact[194]='Julia Connemann'; 	arrContactId[194]='277'; 	arrContactEmail[194]='julia.connemann@uni-ulm.de';  	arrContact[195]='Consoler Teboh'; 	arrContactId[195]='278'; 	arrContactEmail[195]='sunnytebs@hotmail.com';  	arrContact[196]='Courage Ning-Kum'; 	arrContactId[196]='283'; 	arrContactEmail[196]='kauraje@yahoo.com';  	arrContact[197]='Donald Shey'; 	arrContactId[197]='284'; 	arrContactEmail[197]='donafoss@yahoo.fr';  	arrContact[198]='HELEN ACHA'; 	arrContactId[198]='285'; 	arrContactEmail[198]='ahelena2003@yahoo.com';  	arrContact[199]='MERCY  TEZOCK'; 	arrContactId[199]='287'; 	arrContactEmail[199]='mmtezock@gmail.com';  	arrContact[200]='giselle wirlen'; 	arrContactId[200]='288'; 	arrContactEmail[200]='boigha@yahoo.com';  	arrContact[201]='Pamela Kukwa'; 	arrContactId[201]='292'; 	arrContactEmail[201]='dibosona@yahoo.com';  	arrContact[202]=' fri moriah ngu- njwe'; 	arrContactId[202]='293'; 	arrContactEmail[202]='frimoriah@yahoo.com';  	arrContact[203]='JOYCE AKWE'; 	arrContactId[203]='295'; 	arrContactEmail[203]='joyceakwe@yahoo.com';  	arrContact[204]='nelson fomulu'; 	arrContactId[204]='298'; 	arrContactEmail[204]='nelsonjunior4u@yahoo.com';  	arrContact[205]='Joyce Forlemu'; 	arrContactId[205]='299'; 	arrContactEmail[205]='fbjoyce2001@yahoo.com';  	arrContact[206]='NJI  fru'; 	arrContactId[206]='354'; 	arrContactEmail[206]='njikingsly@gmail.com';  	arrContact[207]='joineyji joineyji'; 	arrContactId[207]='310'; 	arrContactEmail[207]='tlouplnqgg@uoqyxp.com';  	arrContact[208]='Damalice swiri'; 	arrContactId[208]='327'; 	arrContactEmail[208]='swiridam_24@yahoo.cm';  	arrContact[209]='Matsima Talongwa'; 	arrContactId[209]='344'; 	arrContactEmail[209]='mtalongwa@yahoo.com';  	arrContact[210]='Frinwei  Tichaawa '; 	arrContactId[210]='350'; 	arrContactEmail[210]='achufrizzy@yahoo.com';  	arrContact[211]=' '; 	arrContactId[211]='351'; 	arrContactEmail[211]='zeenakay100@yahoo.com';  	arrContact[212]=' '; 	arrContactId[212]='352'; 	arrContactEmail[212]='zeenakay100@gmail.com';  	arrContact[213]='Petula Kwende'; 	arrContactId[213]='355'; 	arrContactEmail[213]='petus75us@yahoo.com';  	arrContact[214]='Segala Tita'; 	arrContactId[214]='356'; 	arrContactEmail[214]='sigala.tita@yahoo.com';  	arrContact[215]='Collins Yango'; 	arrContactId[215]='357'; 	arrContactEmail[215]='ycollins2000@yahoo.com';  	arrContact[216]='Kangalla Pefok'; 	arrContactId[216]='358'; 	arrContactEmail[216]='dillon.pefok@gmail.com';  	arrContact[217]='mac_clay tabod'; 	arrContactId[217]='359'; 	arrContactEmail[217]='mac_clay2000@yahoo.com';  	arrContact[218]='Paula Mbah'; 	arrContactId[218]='361'; 	arrContactEmail[218]='paulambah@yahoo.com';  	arrContact[219]='Pemela Pefok'; 	arrContactId[219]='374'; 	arrContactEmail[219]='pampefok@yahoo.com';  	arrContact[220]='sema Pefok'; 	arrContactId[220]='375'; 	arrContactEmail[220]='sepepri@yahoo.ca';  	arrContact[221]='ELIAS warah'; 	arrContactId[221]='376'; 	arrContactEmail[221]='mclias2001@yahoo.com';  	arrContact[222]='cave aku'; 	arrContactId[222]='393'; 	arrContactEmail[222]='akucave@gmail.com';  	arrContact[223]='Clementine Fokam'; 	arrContactId[223]='385'; 	arrContactEmail[223]='clepet@yahoo.com';  	arrContact[224]='Jonas Nguh'; 	arrContactId[224]='386'; 	arrContactEmail[224]='jnguh20@hotmail.com';  	arrContact[225]='Hannah Ngati'; 	arrContactId[225]='387'; 	arrContactEmail[225]='hngati@yahoo.com';  	arrContact[226]='Lindzzi Ngati'; 	arrContactId[226]='388'; 	arrContactEmail[226]='lngati@yahoo.com';  	arrContact[227]='Vivian Mbangowah'; 	arrContactId[227]='389'; 	arrContactEmail[227]='vmbangowah@yahoo.com';  	arrContact[228]='Helene Tayong'; 	arrContactId[228]='390'; 	arrContactEmail[228]='htayong@yahoo.com';  	arrContact[229]='Ambo Anyangwe'; 	arrContactId[229]='391'; 	arrContactEmail[229]='aanyangwe@gmail.com';  	arrContact[230]='Kumli Anye'; 	arrContactId[230]='392'; 	arrContactEmail[230]='sirianye@gmail.com';  	arrContact[231]='Atemjong Manka'a'; 	arrContactId[231]='394'; 	arrContactEmail[231]='happie_sylvia@yahoo.com';  	arrContact[232]='Esona Fomuso'; 	arrContactId[232]='396'; 	arrContactEmail[232]='esofomuso@yahoo.com';       :javascript
-				var refer = null;
-				var nameTextBox = null;
-				var autoComplete = null;
-				var nameAutoComplete = null;
-
-				$(document).ready(function(){
-					autoComplete = $("#autoComplete ul");
-					nameAutoComplete = $("#nameAutoComplete ul");
-
-					nameTextBox = $("#Name");
-					refer = $("#refer");
-
-					refer.keypress(function(){
-						setTimeout("PopulateReferrer()", 100);
-					});  
-				});
-							
-				function PopulateName() { KeyPress(nameAutoComplete, nameTextBox, "GetName"); $("#Email").val(""); }
-
-				function PopulateReferrer() { $("#referEmail").val(""); KeyPress(autoComplete, refer, "GetReferrerName"); }
-
-				function KeyPress(autoCompleteContainer, textBox, clickEventName){
-					autoCompleteContainer.html("");
-					if (textBox.val() == "") { 
-						autoCompleteContainer.parent().fadeOut();
-						return;
-					}
-					for(var i = 0; i < arrContact.length; i++){
-						var arr = arrContact[i];
-						if (arr.substring(0,textBox.val().length).toLowerCase() == textBox.val().toLowerCase()) {
-							autoCompleteContainer.append(""+arr+"");
-						}
-					}
-					if (autoCompleteContainer.children("li").length > 0) autoCompleteContainer.parent().fadeIn();
-					else autoCompleteContainer.parent().fadeOut();
-				}
-
-				function GetReferrerName(thisE) {
-					refer.val(thisE.innerHTML);
-					$("#referEmail").val(thisE.id);
-					autoComplete.html("");
-					autoComplete.parent().fadeOut();
-				}
-
-				function GetName(thisE) {
-					nameTextBox.val(thisE.innerHTML);
-					$("#Email").val(thisE.id);
-					nameAutoComplete.html("");
-				}
-
-		/ <form id="paypalform" action="https://www.sandbox.paypal.com/us/cgi-bin/webscr?cmd=_xclick" method="post">
-		%form#paypalform{:action => "https://www.paypal.com/cgi-bin/webscr", :method => "post", :style => "float: right;"}
-			%div
-				%table
-					%tbody
-						%tr
-							%td{:style => "border-image: none;"} Amount:
-							%td{:style => "border-image: none;"}
-								%input#Amount{:name => "amount", :type => "textbox", :value => "0"}/
-						%tr
-							%td{:style => "border-image: none;"} Your Name:
-							%td{:style => "border-image: none;"}
-								%input#Name{:type => "textbox", :value => ""}/
-								#nameAutoComplete
-									%ul
-						%tr
-							%td{:style => "border-image: none;"} Your Email:
-							%td{:style => "border-image: none;"}
-								%input#Email{:type => "textbox", :value => ""}/
-						%tr
-							%td{:style => "border-image: none;"} Referrer:
-							%td{:style => "border-image: none;"}
-								%input#refer{:autocomplete => "off", :type => "text"}/
-								%input#referId{:type => "hidden"}/
-								#autoComplete{:style => "display: none;"}
-									%ul
-						%tr
-							%td{:style => "border-image: none;"} Referrer's Email:
-							%td{:style => "border-image: none;"}
-								%input#referEmail{:type => "text"}/
-			%input{:name => "cmd", :type => "hidden", :value => "_xclick"}/
-			/ <input type="hidden" name="business" value="johnch_1327857978_biz@gmail.com">
-			/ <input type="hidden" name="business" value="ieuan0_1328131572_biz@gmail.com">
-			%input{:name => "business", :type => "hidden", :value => "CMJ3UT93XD8XQ"}/
-			%input{:name => "item_name", :type => "hidden", :value => "Donation"}/
-			%input{:name => "item_number", :type => "hidden", :value => "1"}/
-			%input{:name => "no_shipping", :type => "hidden", :value => "0"}/
-			%input{:name => "no_note", :type => "hidden", :value => "1"}/
-			%input#paypalcustom{:name => "custom", :type => "hidden", :value => ""}/
-			%input{:name => "currency_code", :type => "hidden", :value => "USD"}/
-			%input{:name => "return", :type => "hidden", :value => "http://pemexausa.org/donations/thankyou.php"}/
-			%input{:name => "notify_url", :type => "hidden", :value => "http://pemexausa.org/donations/notification.php"}/
-			%input{:name => "lc", :type => "hidden", :value => "AU"}/
-			%input{:name => "bn", :type => "hidden", :value => "PP-BuyNowBF"}/
-			%br/
-			%input#submit{:alt => "PayPal - The safer, easier way to pay online.", :border => "0", :name => "submit", :src => "/img/btn_donateCC_LG.gif", :style => "float: right;", :type => "image"}/
-			%img{:border => "0", :height => "1", :src => "https://www.paypal.com/en_AU/i/scr/pixel.gif", :width => "1"}/
-			#ValidationMessage{:style => "display: none;"}
-:javascript
-	var ErrString = "";
-
-	function ValidateEmailAddress(email) {
-		var reg = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-		return reg.test(email);
-	}
-
-	function ValidateEntries() {
-		var IsSuccessful = true;
-
-		ErrString = "";
-
-		if (parseFloat($("#Amount").val()) == 0) {
-			ErrString = ErrString + "Cannot Allow 0 Payment.";
-			IsSuccessful = false;
-		}
-
-		if ($.trim($("#Name").val()).length == 0) {
-			ErrString = ErrString + "Donor's Name is Required.";
-			IsSuccessful = false;
-		}
-
-		if ($.trim($("#Email").val()).length == 0) {
-			ErrString = ErrString + "Donor's Email is Required.";
-			IsSuccessful = false;
-		}
-		else if (ValidateEmailAddress($.trim($("#Email").val())) == false) {
-			ErrString = ErrString + "Donor's Email is Invalid.";
-			IsSuccessful = false;
-		}
-
-		if ($.trim($("#refer").val()).length == 0) {
-			ErrString = ErrString + "Referrer is Required.";
-			IsSuccessful = false;
-		}
-
-		if ($.trim($("#referEmail").val()).length == 0) {
-			ErrString = ErrString + "Referrer's Email is Required.";
-			IsSuccessful = false;
-		}
-		else if (ValidateEmailAddress($.trim($("#referEmail").val())) == false) {
-			ErrString = ErrString + "Donor's Email is Invalid.";
-			IsSuccessful = false;
-		}
-
-		return IsSuccessful;
-	}
+%h1 Donations
 	
-	$("#paypalform").ready(function() {
-								$("#submit").click(function() {
-			if (ValidateEntries() == false) {
-				$("#ValidationMessage").html(ErrString);
-				$("#ValidationMessage").css("display", "block");
-			} else {
-				ErrString = "";
-				$("#ValidationMessage").html("");
-				$("#ValidationMessage").css("display", "none");
-																$.get("Serialize.php", {
-					amount: $("#Amount").val(),
-					Name: $("#Name").val(),
-					Email: $("#Email").val(),
-					Referrer: $("#referEmail").val(),
-					refereeName:$("#refer").val()
-				}, function(data) {
-					$("#paypalcustom").val(data);
-					$("#paypalform").submit();
+.leftwrapper{:style => "width: 654px; padding-right: 33px; border-right-color: rgb(204, 204, 204); border-right-width: thin; border-right-style: solid; float: left;"}
+	%p
+		%b Dear PEMEXANs and Friends of PEMEXA,
+	%p
+		Thank you for your interest and continuing support of
+		%b PEMEXA-USA.
+	%p Since its creation in 2001, PEMEXA-USA and its branches have successfully raised funds to support various educational, recreational and infrastructural initiatives in Presbyterian Secondary School (PSS) Mankon. These include funding the construction of a water supply for the school, supplying medication for the school dispensary, books for library, and microscopes for high school labs, and providing scholarships to deserving students in various classes.
+	.project_phase_component
+		.gallery-block
+			%a{:href => "http://www.youtube.com/watch?v=5_h_VekNdNs", :rel => "youtube", :style => "display: block; position:relative; background: url('http://img.youtube.com/vi/5_h_VekNdNs/0.jpg') no-repeat 16px 14px; color: white;", :title => "P.S.S. Mankon Current dormitories during Inspection "}
+				%img{:height => "190", :src => "http://img.youtube.com/vi/5_h_VekNdNs/0.jpg", :style => "display: block;", :width => "231"}/
+				%img{:src => "/img/border_play.png", :style => "display: block; position: absolute; left: 0; top: 0;"}/
+				%span{:style => "position: absolute; left: 25px; top: 20px; font-size:14px; font-weight: bold; "} Show Video
+		%p.preview_text
+			%p
+				%font{:color => "#0000ff"}
+					%strong PEMEXA-USA, with your help and generous support would like to tile the floors of ALL the dormitories in PSS Mankon this summer. There are 12 dormitories (6 boys &amp; 6 girls) with a total floor area of 1,914.93m2 for boys and 1,583.89m2 for girls.
+			%p
+				%strong Please, take a moment and watch the video on the right.
+			%p
+				.clear
+	
+	:javascript
+		/*
+				$(document).ready(function(){
+						$("#donation_levels_link").addClass('donation_levels_link');
+						$("#donation_levels_link").click(function(){
+								$("#donations_levels").show();
+								$("#donation_levels_link").removeClass('donation_levels_link');
+						});
 				});
-			}
-			return false;
+		*/
+	%p
+	%p
+		We value what you have to donate to us to help accomplish our current project
+		%strong>
+			%font{:color => "#ff0000"} ( tiling the floors of all 12 dormitories on campus)
+		and all our other projects. As such, we have created various levels of donations to help you determine a comfortable level and help us recognize your great gesture.
+		%span#donation_levels_link.donation_levels_link Here
+		are the levels.
+	%table#donations_levels{:border => "0", :cellpading => "0", :cellspacing => "0"}
+		%thead
+			%tr
+				%th
+					%p
+					%p Recognition Level
+				%th
+					%p
+					%p Level of Donation
+		%tbody
+			%tr
+				%td{:style => "border-image: none;"}
+					.ExecPlatinum Executive Platinum
+				%td{:style => "border-image: none;"} Donations of $5000.00 or more
+			%tr
+				%td{:style => "border-image: none;"}
+					.Platinum Platinum
+				%td{:style => "border-image: none;"} Donations between $2500.00 and $4999.99
+			%tr
+				%td{:style => "border-image: none;"}
+					.Gold Gold
+				%td{:style => "border-image: none;"} Donations between $1000.00 and $2499.99
+			%tr
+				%td{:style => "border-image: none;"}
+					.Silver Silver
+				%td{:style => "border-image: none;"}
+					%p Donations between $500.00 and $999.99
+			%tr
+				%td{:style => "border-image: none;"}
+					.Bronze Bronze
+				%td{:style => "border-image: none;"}
+					%p Donations between $250.00 and $499.99
+			%tr
+				%td{:style => "border-image: none;"}
+					.White Patron
+				%td{:style => "border-image: none;"} Donations up to $249.99
+	%p We sincerely appreciate whatever financial commitment you able to make towards this project at this time. We are grateful for your generosity, your trust and most of all your continuing commitment to Pemexa and PSS Mankon. Please help us reach that goal by making a donation today.
+	%p Thanks,
+	%p
+		%b PEMEXA-USA Executive
+:javascript
+	var arrContact = new Array();
+	var arrContactId = new Array();
+	var arrContactEmail = new Array();
+#divAuto
+	:javascript
+		arrContact[0]='Terence Ndofor'; 	arrContactId[0]='1'; 	arrContactEmail[0]='prez@pemexausa.org';  	arrContact[1]='Peter Muluh'; 	arrContactId[1]='70'; 	arrContactEmail[1]='peter@muluh.com';  	arrContact[2]='Terence Ndofor'; 	arrContactId[2]='4'; 	arrContactEmail[2]='netterusa@hotmail.com';  	arrContact[3]='Saaghe Fogwe'; 	arrContactId[3]='43'; 	arrContactEmail[3]='sfogwe@gmail.com';  	arrContact[4]='Venan Sondo'; 	arrContactId[4]='64'; 	arrContactEmail[4]='venan.sondo@gmail.com';  	arrContact[5]='Leonard Fodje'; 	arrContactId[5]='66'; 	arrContactEmail[5]='lmfodje@gmail.com';  	arrContact[6]='Evelyn Fomuso'; 	arrContactId[6]='69'; 	arrContactEmail[6]='esonafom@yahoo.com';  	arrContact[7]='Mahwan Mundi'; 	arrContactId[7]='71'; 	arrContactEmail[7]='m.shen.mundi@gmail.com';  	arrContact[8]='Thomas  Pefok'; 	arrContactId[8]='72'; 	arrContactEmail[8]='tomlu2001@yahoo.com';  	arrContact[9]='John MOMA'; 	arrContactId[9]='73'; 	arrContactEmail[9]='johnmomajr@yahoo.com';  	arrContact[10]='Moses Tar'; 	arrContactId[10]='75'; 	arrContactEmail[10]='tarmoses@yahoo.com';  	arrContact[11]='Mercy Sack'; 	arrContactId[11]='76'; 	arrContactEmail[11]='mercyfon@yahoo.com';  	arrContact[12]='Adeline Simms'; 	arrContactId[12]='78'; 	arrContactEmail[12]='aksimms1480@yahoo.com';  	arrContact[13]='Prisca  Pungong'; 	arrContactId[13]='79'; 	arrContactEmail[13]='pnana_99@yahoo.com';  	arrContact[14]='Gilbert Muma'; 	arrContactId[14]='80'; 	arrContactEmail[14]='mumagn@yahoo.com';  	arrContact[15]='Michael Joko'; 	arrContactId[15]='81'; 	arrContactEmail[15]='mikejoko@hotmail.com';  	arrContact[16]='Yvonne  Pefok'; 	arrContactId[16]='95'; 	arrContactEmail[16]='paps_lulu@yahoo.com';  	arrContact[17]='Asongechwi BUJUNG'; 	arrContactId[17]='94'; 	arrContactEmail[17]='cbujung@yahoo.com';  	arrContact[18]='Gina Nana'; 	arrContactId[18]='96'; 	arrContactEmail[18]='g_nana70@hotmail.com';  	arrContact[19]='Bertha Nsekpong'; 	arrContactId[19]='97'; 	arrContactEmail[19]='bnjinda@yahoo.com';  	arrContact[20]='Emmanuel Ndamukong'; 	arrContactId[20]='98'; 	arrContactEmail[20]='ejndamukong@yahoo.com';  	arrContact[21]='Adah Gana'; 	arrContactId[21]='99'; 	arrContactEmail[21]='andin15222@yahoo.com';  	arrContact[22]='Hermann Ndofor'; 	arrContactId[22]='100'; 	arrContactEmail[22]='hermann@ndofor.com';  	arrContact[23]='Chi Ndah'; 	arrContactId[23]='101'; 	arrContactEmail[23]='chihaddison@hotmail.de';  	arrContact[24]='RUTH NYANG'; 	arrContactId[24]='102'; 	arrContactEmail[24]='ruthnyang@yahoo.com';  	arrContact[25]='Katheryne Amba'; 	arrContactId[25]='103'; 	arrContactEmail[25]='tifuh@yahoo.com';  	arrContact[26]='Lum Ambe'; 	arrContactId[26]='105'; 	arrContactEmail[26]='dna_ambe@yahoo.com';  	arrContact[27]='Juliet Batcha'; 	arrContactId[27]='106'; 	arrContactEmail[27]='j_abiba@hotmail.com';  	arrContact[28]='Binwi Mfonyam (Mbonifor)'; 	arrContactId[28]='108'; 	arrContactEmail[28]='binoid08@yahoo.com';  	arrContact[29]='Fongong Achu'; 	arrContactId[29]='109'; 	arrContactEmail[29]='afongong@yahoo.com';  	arrContact[30]='Neh Ndingwan'; 	arrContactId[30]='111'; 	arrContactEmail[30]='nehndingwan@gmail.com';  	arrContact[31]='Jackie Anyu'; 	arrContactId[31]='112'; 	arrContactEmail[31]='jbatcha@hotmail.com';  	arrContact[32]='Rosaline Anyangwe'; 	arrContactId[32]='113'; 	arrContactEmail[32]='rbanyangwe@gmail.com';  	arrContact[33]='Tembei  Chiawah'; 	arrContactId[33]='114'; 	arrContactEmail[33]='tembei78@yahoo.com';  	arrContact[34]='Ngu Nyindem'; 	arrContactId[34]='115'; 	arrContactEmail[34]='nyindem@gmail.com';  	arrContact[35]='Ako kwamu'; 	arrContactId[35]='116'; 	arrContactEmail[35]='akokelly@gmail.com';  	arrContact[36]='Marie Ndingwan'; 	arrContactId[36]='117'; 	arrContactEmail[36]='mabindings@gmail.com';  	arrContact[37]='lionel tita'; 	arrContactId[37]='118'; 	arrContactEmail[37]='lioneltita@yahoo.fr';  	arrContact[38]='Harris Yango'; 	arrContactId[38]='119'; 	arrContactEmail[38]='hyango2002@yahoo.com';  	arrContact[39]='Judith Kibuh'; 	arrContactId[39]='120'; 	arrContactEmail[39]='kfjudith@yahoo.com';  	arrContact[40]='joy yango'; 	arrContactId[40]='121'; 	arrContactEmail[40]='joyfobanjong@yahoo.com';  	arrContact[41]='takwe yango'; 	arrContactId[41]='122'; 	arrContactEmail[41]='takweyango@yahoo.com';  	arrContact[42]='Miranda Nebane'; 	arrContactId[42]='179'; 	arrContactEmail[42]='ntsang56@yahoo.com';  	arrContact[43]='At N'; 	arrContactId[43]='180'; 	arrContactEmail[43]='atsohfn@hotmail.com';  	arrContact[44]='Myra Fai-yengo'; 	arrContactId[44]='181'; 	arrContactEmail[44]='myranebiy@gmail.com';  	arrContact[45]='Tema Pefok-Zama'; 	arrContactId[45]='182'; 	arrContactEmail[45]='tpefok@gmail.com';  	arrContact[46]='AKERE ANYANGWE'; 	arrContactId[46]='183'; 	arrContactEmail[46]='akeboy77@yahoo.com';  	arrContact[47]='Kingsley Pungong'; 	arrContactId[47]='184'; 	arrContactEmail[47]='pungong@hotmail.com';  	arrContact[48]='FUZIE NJOH'; 	arrContactId[48]='186'; 	arrContactEmail[48]='fatnjoh@yahoo.com';  	arrContact[49]='Alan Tita'; 	arrContactId[49]='187'; 	arrContactEmail[49]='alantita@yahoo.com';  	arrContact[50]='Edwin Tita'; 	arrContactId[50]='188'; 	arrContactEmail[50]='samatita@aol.com';  	arrContact[51]='Julius Fodje'; 	arrContactId[51]='189'; 	arrContactEmail[51]='julius@fodje.com';  	arrContact[52]='BROWN NDOFOR'; 	arrContactId[52]='190'; 	arrContactEmail[52]='brown_ndofor@yahoo.com';  	arrContact[53]='Lilian Fokwang'; 	arrContactId[53]='194'; 	arrContactEmail[53]='liliannyem@yahoo.co.uk';  	arrContact[54]='Jessie Mbah'; 	arrContactId[54]='196'; 	arrContactEmail[54]='jessiembah@hotmail.com';  	arrContact[55]='MARIE-CLAIRE MBUN'; 	arrContactId[55]='201'; 	arrContactEmail[55]='mczof@yahoo.com';  	arrContact[56]='Gwendoline Mbaku'; 	arrContactId[56]='204'; 	arrContactEmail[56]='kmbaku@yahoo.com';  	arrContact[57]='Anne  Ntungwen'; 	arrContactId[57]='205'; 	arrContactEmail[57]='nabisona@yahoo.com';  	arrContact[58]='yeye kometa'; 	arrContactId[58]='206'; 	arrContactEmail[58]='jkometa@hotmail.com';  	arrContact[59]='Lema Dohmanju'; 	arrContactId[59]='207'; 	arrContactEmail[59]='lema_enjema@yahoo.com';  	arrContact[60]='CORDELIA ESENI'; 	arrContactId[60]='208'; 	arrContactEmail[60]='candze@yahoo.com';  	arrContact[61]='Esaindang Umenei'; 	arrContactId[61]='210'; 	arrContactEmail[61]='esawater@gmail.com';  	arrContact[62]='Ngayi Gamnje'; 	arrContactId[62]='215'; 	arrContactEmail[62]='fankag@yahoo.com';  	arrContact[63]='Loyce Mofor'; 	arrContactId[63]='218'; 	arrContactEmail[63]='moforloyce@yahoo.com';  	arrContact[64]='Emmanuel Fai-yengo'; 	arrContactId[64]='219'; 	arrContactEmail[64]='fayengo@gmail.com';  	arrContact[65]='fergus akwar'; 	arrContactId[65]='220'; 	arrContactEmail[65]='fergus_ta@yahoo.com';  	arrContact[66]='Grace Njie'; 	arrContactId[66]='221'; 	arrContactEmail[66]='njie1108@yahoo.com';  	arrContact[67]='Emmanuel Sapel'; 	arrContactId[67]='223'; 	arrContactEmail[67]='manu_kofete@yahoo.com';  	arrContact[68]='yvonne ngwa'; 	arrContactId[68]='228'; 	arrContactEmail[68]='ms_bisiche@hotmail.com';  	arrContact[69]='PATIENCE ELANGO'; 	arrContactId[69]='230'; 	arrContactEmail[69]='patience_esstic@yahoo.com';  	arrContact[70]='TUM ABUHNGIENDO'; 	arrContactId[70]='234'; 	arrContactEmail[70]='rowlan1@yahoo.com';  	arrContact[71]='Yolanda Boma'; 	arrContactId[71]='238'; 	arrContactEmail[71]='yolandaboma@yahoo.com';  	arrContact[72]='Monique Nchotu'; 	arrContactId[72]='240'; 	arrContactEmail[72]='nikkimec@yahoo.com';  	arrContact[73]='Fildrin Ndimbo'; 	arrContactId[73]='241'; 	arrContactEmail[73]='filshade@yahoo.co.uk';  	arrContact[74]='Derick Tah'; 	arrContactId[74]='244'; 	arrContactEmail[74]='anyungderick@yahoo.com';  	arrContact[75]='Miranda Achu'; 	arrContactId[75]='245'; 	arrContactEmail[75]='mirandaachu@yahoo.com';  	arrContact[76]='NTONIFOR FUBE'; 	arrContactId[76]='246'; 	arrContactEmail[76]='cheboyf@yahoo.co.uk';  	arrContact[77]='Melissa Nwancha'; 	arrContactId[77]='248'; 	arrContactEmail[77]='m.nwancha@rocketmail.com';  	arrContact[78]='Alain Kameni'; 	arrContactId[78]='249'; 	arrContactEmail[78]='alkameni2023@yahoo.com';  	arrContact[79]='HUMFRED ESENI'; 	arrContactId[79]='250'; 	arrContactEmail[79]='humfred_eb@yahoo.com';  	arrContact[80]='Segmia Tohnya'; 	arrContactId[80]='254'; 	arrContactEmail[80]='missk1222@yahoo.com';  	arrContact[81]='Ronald Ambe'; 	arrContactId[81]='256'; 	arrContactEmail[81]='iknaw@hotmail.com';  	arrContact[82]='Syh Ambe'; 	arrContactId[82]='261'; 	arrContactEmail[82]='mbongsyh@yahoo.com';  	arrContact[83]='Ozong Tita'; 	arrContactId[83]='267'; 	arrContactEmail[83]='ozongtita@yahoo.com';  	arrContact[84]='Yvonne Ewang'; 	arrContactId[84]='270'; 	arrContactEmail[84]='yvibech@yahoo.com';  	arrContact[85]='Gillian Ndi'; 	arrContactId[85]='273'; 	arrContactEmail[85]='gill_ndi@yahoo.co.uk';  	arrContact[86]='Nelson Achu'; 	arrContactId[86]='275'; 	arrContactEmail[86]='nthrill@yahoo.com';  	arrContact[87]='Dyllis Minang'; 	arrContactId[87]='279'; 	arrContactEmail[87]='dyllismbah@yahoo.com';  	arrContact[88]='Dyllis Minang'; 	arrContactId[88]='280'; 	arrContactEmail[88]='ieuan0928@yahoo.com';  	arrContact[89]='Dyllis Minang'; 	arrContactId[89]='281'; 	arrContactEmail[89]='ieuan0928@gmail.com';  	arrContact[90]='Marceline Nkwenti'; 	arrContactId[90]='282'; 	arrContactEmail[90]='lumnkwenti@yahoo.com';  	arrContact[91]='Emmanuel Nkepah'; 	arrContactId[91]='286'; 	arrContactEmail[91]='nkepah@yahoo.co.uk';  	arrContact[92]='Richard Nkwenti'; 	arrContactId[92]='289'; 	arrContactEmail[92]='nkwenti@hotmail.com';  	arrContact[93]='Samuel Fomum-Tanee'; 	arrContactId[93]='290'; 	arrContactEmail[93]='fomumpj@yahoo.com';  	arrContact[94]='SAMUEL FOMUM'; 	arrContactId[94]='291'; 	arrContactEmail[94]='stfomum@hotmail.com';  	arrContact[95]='Peter Alomepe'; 	arrContactId[95]='294'; 	arrContactEmail[95]='alomepeter@gmail.com';  	arrContact[96]='Kate Jabea'; 	arrContactId[96]='296'; 	arrContactEmail[96]='katejabea@hotmail.com';  	arrContact[97]='Kielley Fon-Ndikum'; 	arrContactId[97]='297'; 	arrContactEmail[97]='emunio@netscape.net';  	arrContact[98]='Laura Enonjang'; 	arrContactId[98]='300'; 	arrContactEmail[98]='lforsac@yahoo.com';  	arrContact[99]='CLIFFORD NDECHAM'; 	arrContactId[99]='301'; 	arrContactEmail[99]='ndecham01@gmail.com';  	arrContact[100]='Raymond Sama'; 	arrContactId[100]='302'; 	arrContactEmail[100]='raymond_sama@yahoo.com';  	arrContact[101]='Juliette Atanga'; 	arrContactId[101]='308'; 	arrContactEmail[101]='juatanga@yahoo.com';  	arrContact[102]='DANIEL GWANFOGBE'; 	arrContactId[102]='309'; 	arrContactEmail[102]='fombit@yahoo.com';  	arrContact[103]='Pauline Mancho'; 	arrContactId[103]='311'; 	arrContactEmail[103]='manchongum@yahoo.com';  	arrContact[104]='Rannibele Nju'; 	arrContactId[104]='328'; 	arrContactEmail[104]='nrannibelle@yahoo.com';  	arrContact[105]='Petra Ndiangang '; 	arrContactId[105]='336'; 	arrContactEmail[105]='123petra@pemexausa.org';  	arrContact[106]='Siri Atogho'; 	arrContactId[106]='322'; 	arrContactEmail[106]='info@pemexausa.org';  	arrContact[107]='Valentine Jideofor'; 	arrContactId[107]='349'; 	arrContactEmail[107]='vally_awa_00@yahoo.co.uk';  	arrContact[108]='Petula Kwende'; 	arrContactId[108]='324'; 	arrContactEmail[108]='info2@pemexausa.org';  	arrContact[109]='Lorna Awuro'; 	arrContactId[109]='334'; 	arrContactEmail[109]='lorna2324@yahoo.com';  	arrContact[110]='Damalice Swiri'; 	arrContactId[110]='326'; 	arrContactEmail[110]='swiridam_24@yahoo.com';  	arrContact[111]='DOH TITA'; 	arrContactId[111]='321'; 	arrContactEmail[111]='tita_babila@yahoo.com';  	arrContact[112]='Flora Nusta'; 	arrContactId[112]='329'; 	arrContactEmail[112]='fnusta@yahoo.com';  	arrContact[113]='Ejenyi Anyangwe'; 	arrContactId[113]='330'; 	arrContactEmail[113]='ejenyi.anyangwe@yahoo.com';  	arrContact[114]='Emmanuel Ndingwan'; 	arrContactId[114]='331'; 	arrContactEmail[114]='endingwan@hotmail.com';  	arrContact[115]='Helen Ashuntantang'; 	arrContactId[115]='332'; 	arrContactEmail[115]='helenayuk@hotmail.com';  	arrContact[116]='Lembe Zamcho'; 	arrContactId[116]='333'; 	arrContactEmail[116]='lembe62@yahoo.com';  	arrContact[117]='KUKO NDIFUANJA'; 	arrContactId[117]='348'; 	arrContactEmail[117]='kuko_bm@yahoo.co.uk';  	arrContact[118]='William Munji'; 	arrContactId[118]='340'; 	arrContactEmail[118]='wmunji@gmail.com';  	arrContact[119]='Carlson Tayong'; 	arrContactId[119]='341'; 	arrContactEmail[119]='cntayong@gmail.com';  	arrContact[120]='Ruth '; 	arrContactId[120]='342'; 	arrContactEmail[120]='njiruth@yahoo.com';  	arrContact[121]='Paul Tendoh'; 	arrContactId[121]='343'; 	arrContactEmail[121]='paultendoh@yahoo.com';  	arrContact[122]='Joshua NA'; 	arrContactId[122]='345'; 	arrContactEmail[122]='joeamaya87@yahoo.com';  	arrContact[123]='Evans Fomuso'; 	arrContactId[123]='346'; 	arrContactEmail[123]='emboti75@gmail.com';  	arrContact[124]='Olivia Ayuketah(Bolima)'; 	arrContactId[124]='379'; 	arrContactEmail[124]='ekie72@yahoo.co.uk';  	arrContact[125]='Glory Ngwa'; 	arrContactId[125]='353'; 	arrContactEmail[125]='mbong4ever@yahoo.com';  	arrContact[126]='FEH BONGNWI'; 	arrContactId[126]='360'; 	arrContactEmail[126]='sirrifeh@gmail.com';  	arrContact[127]='Tina Ndi'; 	arrContactId[127]='362'; 	arrContactEmail[127]='lumndi@yahoo.com';  	arrContact[128]='GRACE FONGOD'; 	arrContactId[128]='363'; 	arrContactEmail[128]='gfongod@gmail.com';  	arrContact[129]='Gilbert Ngwa'; 	arrContactId[129]='364'; 	arrContactEmail[129]='gilbertneba2000@yahoo.com';  	arrContact[130]='Angela Atia'; 	arrContactId[130]='365'; 	arrContactEmail[130]='angelaatia@yahoo.co.uk';  	arrContact[131]='Hippolyte Asah'; 	arrContactId[131]='366'; 	arrContactEmail[131]='hfasah@hotmail.com';  	arrContact[132]='Liza Ekole'; 	arrContactId[132]='367'; 	arrContactEmail[132]='fomumliza@yahoo.com';  	arrContact[133]='Valentine Ndakwah'; 	arrContactId[133]='381'; 	arrContactEmail[133]='vn8@chrysler.com';  	arrContact[134]='Besi Fube Ndakwah'; 	arrContactId[134]='369'; 	arrContactEmail[134]='ndakwah@sbcglobal.net';  	arrContact[135]='Sylvia Lambiv'; 	arrContactId[135]='370'; 	arrContactEmail[135]='sammakuna@yahoo.com';  	arrContact[136]='Patience Akenji'; 	arrContactId[136]='371'; 	arrContactEmail[136]='pakenji@yahoo.com';  	arrContact[137]='Pascal L Kingah'; 	arrContactId[137]='380'; 	arrContactEmail[137]='kingolio10@yahoo.com';  	arrContact[138]='EGBETABI  EYONG'; 	arrContactId[138]='373'; 	arrContactEmail[138]='enowegbetabi@yahoo.es';  	arrContact[139]='Roseline Ambe'; 	arrContactId[139]='378'; 	arrContactEmail[139]='manefor07@hotmail.com';  	arrContact[140]='Cromwell Zama'; 	arrContactId[140]='383'; 	arrContactEmail[140]='cnzama@gmail.com';  	arrContact[141]='Vivian Ngang '; 	arrContactId[141]='384'; 	arrContactEmail[141]='vivingang55@hotmail.com';  	arrContact[142]='Stanley Batcha'; 	arrContactId[142]='395'; 	arrContactEmail[142]='stanleybatcha@gmail.com';  	arrContact[143]='sharon sama'; 	arrContactId[143]='77'; 	arrContactEmail[143]='sharon8703@yahoo.com';  	arrContact[144]='Rita Sondengam'; 	arrContactId[144]='104'; 	arrContactEmail[144]='ritasonden@hotmail.com';  	arrContact[145]='Stanley Batcha'; 	arrContactId[145]='107'; 	arrContactEmail[145]='stanleybatcha@yahoo.com';  	arrContact[146]='LENNA NDOKO'; 	arrContactId[146]='185'; 	arrContactEmail[146]='lendoko@yahoo.com';  	arrContact[147]='Forkwa  Tembei'; 	arrContactId[147]='197'; 	arrContactEmail[147]='forkwakieran@yahoo.com';  	arrContact[148]='Marie Obara'; 	arrContactId[148]='198'; 	arrContactEmail[148]='mayukayah@yahoo.com';  	arrContact[149]='Denis Nyeango'; 	arrContactId[149]='199'; 	arrContactEmail[149]='nyeango@yahoo.com';  	arrContact[150]='SAMUEL FONTEH'; 	arrContactId[150]='200'; 	arrContactEmail[150]='samuelfonteh@yahoo.fr';  	arrContact[151]='Kengjiseh Sondo'; 	arrContactId[151]='202'; 	arrContactEmail[151]='ksondo@yahoo.com';  	arrContact[152]='Henry  Ayeah'; 	arrContactId[152]='203'; 	arrContactEmail[152]='ahenrynde@yahoo.fr';  	arrContact[153]='John Abam'; 	arrContactId[153]='209'; 	arrContactEmail[153]='balioldboy@yahoo.com';  	arrContact[154]='divine divine'; 	arrContactId[154]='211'; 	arrContactEmail[154]='divymaster@hotmail.com';  	arrContact[155]='Ngieh ngiehnunus'; 	arrContactId[155]='212'; 	arrContactEmail[155]='ngiehnunus@yahoo.ca';  	arrContact[156]='ESENI  Humfred'; 	arrContactId[156]='213'; 	arrContactEmail[156]='humfred.eseni@nfcbanksa.com';  	arrContact[157]='Delphine SAB'; 	arrContactId[157]='214'; 	arrContactEmail[157]='delphinesab@yahoo.com';  	arrContact[158]='Beatrice Wanji'; 	arrContactId[158]='216'; 	arrContactEmail[158]='wanjibea@yahoo.com';  	arrContact[159]='MUDOH MUDOH'; 	arrContactId[159]='217'; 	arrContactEmail[159]='cencom2001@yahoo.com';  	arrContact[160]='Charles Anyangwe'; 	arrContactId[160]='222'; 	arrContactEmail[160]='charlesndako@yahoo.com';  	arrContact[161]='Ango Fomuso Ekellem'; 	arrContactId[161]='224'; 	arrContactEmail[161]='afomuso@yahoo.com';  	arrContact[162]='Stanley Ndi'; 	arrContactId[162]='225'; 	arrContactEmail[162]='stanleyndi@yahoo.com';  	arrContact[163]='Eyong Ayuk Eyong Chris'; 	arrContactId[163]='226'; 	arrContactEmail[163]='eyongchris2002@yahoo.fr';  	arrContact[164]='Valmy Awasom'; 	arrContactId[164]='227'; 	arrContactEmail[164]='vawasom@yahoo.com';  	arrContact[165]='FON NSOH'; 	arrContactId[165]='229'; 	arrContactEmail[165]='mfonsoh@yahoo.com';  	arrContact[166]='Karin Nji'; 	arrContactId[166]='231'; 	arrContactEmail[166]='njikarin@yahoo.com';  	arrContact[167]='Vivian  Saningong'; 	arrContactId[167]='232'; 	arrContactEmail[167]='vivian.ndzi@yahoo.com';  	arrContact[168]='TRUDY NGAKO'; 	arrContactId[168]='233'; 	arrContactEmail[168]='trudytoh2002@yahoo.com';  	arrContact[169]='Ndagha ekiambere'; 	arrContactId[169]='235'; 	arrContactEmail[169]='esndagha@yahoo.com';  	arrContact[170]='ZAUMU Zaumu'; 	arrContactId[170]='236'; 	arrContactEmail[170]='jzaumu@yahoo.co.uk';  	arrContact[171]='Chick Tah'; 	arrContactId[171]='237'; 	arrContactEmail[171]='chickfelix@yahoo.com';  	arrContact[172]='priscilia wara'; 	arrContactId[172]='242'; 	arrContactEmail[172]='tsoprinah731@yahoo.fr';  	arrContact[173]='Abu Monju'; 	arrContactId[173]='243'; 	arrContactEmail[173]='alonzomonju@yahoo.com';  	arrContact[174]='Suche Mfornyam'; 	arrContactId[174]='247'; 	arrContactEmail[174]='suche20032003@yahoo.com';  	arrContact[175]='prince ndimbo'; 	arrContactId[175]='251'; 	arrContactEmail[175]='princecraig2000@yahoo.fr';  	arrContact[176]='FOUONDO none'; 	arrContactId[176]='252'; 	arrContactEmail[176]='nsv12003@yahoo.fr';  	arrContact[177]='Akwa Angwafo'; 	arrContactId[177]='253'; 	arrContactEmail[177]='akwanancy@yahoo.com';  	arrContact[178]='NCHOTEBAH JEROME'; 	arrContactId[178]='255'; 	arrContactEmail[178]='jnchotebah@yahoo.com';  	arrContact[179]='Derrick Tawah'; 	arrContactId[179]='257'; 	arrContactEmail[179]='tawahngwa@yahoo.de';  	arrContact[180]='Bamun Tata'; 	arrContactId[180]='258'; 	arrContactEmail[180]='bamuntata@gmail.com';  	arrContact[181]='Mercy Ngum-Chebe'; 	arrContactId[181]='259'; 	arrContactEmail[181]='ngummy@yahoo.com';  	arrContact[182]='Tantoh Louis '; 	arrContactId[182]='260'; 	arrContactEmail[182]='nditah2004@yahoo.com';  	arrContact[183]='William Fonbah'; 	arrContactId[183]='262'; 	arrContactEmail[183]='samax05@hotmail.com';  	arrContact[184]='Colett Asombang'; 	arrContactId[184]='263'; 	arrContactEmail[184]='casombang@yahoo.com';  	arrContact[185]='Nguh Asanji'; 	arrContactId[185]='264'; 	arrContactEmail[185]='asanjinguh@yahoo.com';  	arrContact[186]='Emmanuel Chenny'; 	arrContactId[186]='265'; 	arrContactEmail[186]='emachenny@yahoo.com';  	arrContact[187]='Jackson Atanga'; 	arrContactId[187]='266'; 	arrContactEmail[187]='jatanga@yahoo.com';  	arrContact[188]='Munang Chiandim'; 	arrContactId[188]='268'; 	arrContactEmail[188]='munangmc@yahoo.com';  	arrContact[189]='RASHE Asombang'; 	arrContactId[189]='269'; 	arrContactEmail[189]='azirash2000@yahoo.com';  	arrContact[190]='TEBOH Teboh'; 	arrContactId[190]='271'; 	arrContactEmail[190]='akompikin@yahoo.org';  	arrContact[191]='Nju Rannibelle'; 	arrContactId[191]='272'; 	arrContactEmail[191]='lady_belle15@yahoo.co.uk';  	arrContact[192]='Enow Ayukegba'; 	arrContactId[192]='274'; 	arrContactEmail[192]='enowshilton@yahoo.com';  	arrContact[193]='Jessica Ngwafor'; 	arrContactId[193]='276'; 	arrContactEmail[193]='spiceytwinkle@yahoo.co.uk';  	arrContact[194]='Julia Connemann'; 	arrContactId[194]='277'; 	arrContactEmail[194]='julia.connemann@uni-ulm.de';  	arrContact[195]='Consoler Teboh'; 	arrContactId[195]='278'; 	arrContactEmail[195]='sunnytebs@hotmail.com';  	arrContact[196]='Courage Ning-Kum'; 	arrContactId[196]='283'; 	arrContactEmail[196]='kauraje@yahoo.com';  	arrContact[197]='Donald Shey'; 	arrContactId[197]='284'; 	arrContactEmail[197]='donafoss@yahoo.fr';  	arrContact[198]='HELEN ACHA'; 	arrContactId[198]='285'; 	arrContactEmail[198]='ahelena2003@yahoo.com';  	arrContact[199]='MERCY  TEZOCK'; 	arrContactId[199]='287'; 	arrContactEmail[199]='mmtezock@gmail.com';  	arrContact[200]='giselle wirlen'; 	arrContactId[200]='288'; 	arrContactEmail[200]='boigha@yahoo.com';  	arrContact[201]='Pamela Kukwa'; 	arrContactId[201]='292'; 	arrContactEmail[201]='dibosona@yahoo.com';  	arrContact[202]=' fri moriah ngu- njwe'; 	arrContactId[202]='293'; 	arrContactEmail[202]='frimoriah@yahoo.com';  	arrContact[203]='JOYCE AKWE'; 	arrContactId[203]='295'; 	arrContactEmail[203]='joyceakwe@yahoo.com';  	arrContact[204]='nelson fomulu'; 	arrContactId[204]='298'; 	arrContactEmail[204]='nelsonjunior4u@yahoo.com';  	arrContact[205]='Joyce Forlemu'; 	arrContactId[205]='299'; 	arrContactEmail[205]='fbjoyce2001@yahoo.com';  	arrContact[206]='NJI  fru'; 	arrContactId[206]='354'; 	arrContactEmail[206]='njikingsly@gmail.com';  	arrContact[207]='joineyji joineyji'; 	arrContactId[207]='310'; 	arrContactEmail[207]='tlouplnqgg@uoqyxp.com';  	arrContact[208]='Damalice swiri'; 	arrContactId[208]='327'; 	arrContactEmail[208]='swiridam_24@yahoo.cm';  	arrContact[209]='Matsima Talongwa'; 	arrContactId[209]='344'; 	arrContactEmail[209]='mtalongwa@yahoo.com';  	arrContact[210]='Frinwei  Tichaawa '; 	arrContactId[210]='350'; 	arrContactEmail[210]='achufrizzy@yahoo.com';  	arrContact[211]=' '; 	arrContactId[211]='351'; 	arrContactEmail[211]='zeenakay100@yahoo.com';  	arrContact[212]=' '; 	arrContactId[212]='352'; 	arrContactEmail[212]='zeenakay100@gmail.com';  	arrContact[213]='Petula Kwende'; 	arrContactId[213]='355'; 	arrContactEmail[213]='petus75us@yahoo.com';  	arrContact[214]='Segala Tita'; 	arrContactId[214]='356'; 	arrContactEmail[214]='sigala.tita@yahoo.com';  	arrContact[215]='Collins Yango'; 	arrContactId[215]='357'; 	arrContactEmail[215]='ycollins2000@yahoo.com';  	arrContact[216]='Kangalla Pefok'; 	arrContactId[216]='358'; 	arrContactEmail[216]='dillon.pefok@gmail.com';  	arrContact[217]='mac_clay tabod'; 	arrContactId[217]='359'; 	arrContactEmail[217]='mac_clay2000@yahoo.com';  	arrContact[218]='Paula Mbah'; 	arrContactId[218]='361'; 	arrContactEmail[218]='paulambah@yahoo.com';  	arrContact[219]='Pemela Pefok'; 	arrContactId[219]='374'; 	arrContactEmail[219]='pampefok@yahoo.com';  	arrContact[220]='sema Pefok'; 	arrContactId[220]='375'; 	arrContactEmail[220]='sepepri@yahoo.ca';  	arrContact[221]='ELIAS warah'; 	arrContactId[221]='376'; 	arrContactEmail[221]='mclias2001@yahoo.com';  	arrContact[222]='cave aku'; 	arrContactId[222]='393'; 	arrContactEmail[222]='akucave@gmail.com';  	arrContact[223]='Clementine Fokam'; 	arrContactId[223]='385'; 	arrContactEmail[223]='clepet@yahoo.com';  	arrContact[224]='Jonas Nguh'; 	arrContactId[224]='386'; 	arrContactEmail[224]='jnguh20@hotmail.com';  	arrContact[225]='Hannah Ngati'; 	arrContactId[225]='387'; 	arrContactEmail[225]='hngati@yahoo.com';  	arrContact[226]='Lindzzi Ngati'; 	arrContactId[226]='388'; 	arrContactEmail[226]='lngati@yahoo.com';  	arrContact[227]='Vivian Mbangowah'; 	arrContactId[227]='389'; 	arrContactEmail[227]='vmbangowah@yahoo.com';  	arrContact[228]='Helene Tayong'; 	arrContactId[228]='390'; 	arrContactEmail[228]='htayong@yahoo.com';  	arrContact[229]='Ambo Anyangwe'; 	arrContactId[229]='391'; 	arrContactEmail[229]='aanyangwe@gmail.com';  	arrContact[230]='Kumli Anye'; 	arrContactId[230]='392'; 	arrContactEmail[230]='sirianye@gmail.com';  	arrContact[231]='Atemjong Manka'a'; 	arrContactId[231]='394'; 	arrContactEmail[231]='happie_sylvia@yahoo.com';  	arrContact[232]='Esona Fomuso'; 	arrContactId[232]='396'; 	arrContactEmail[232]='esofomuso@yahoo.com';       :javascript
+		var refer = null;
+		var nameTextBox = null;
+		var autoComplete = null;
+		var nameAutoComplete = null;
+
+		$(document).ready(function(){
+			autoComplete = $("#autoComplete ul");
+			nameAutoComplete = $("#nameAutoComplete ul");
+
+			nameTextBox = $("#Name");
+			refer = $("#refer");
+
+			refer.keypress(function(){
+				setTimeout("PopulateReferrer()", 100);
+			});  
 		});
-	});
+					
+		function PopulateName() { KeyPress(nameAutoComplete, nameTextBox, "GetName"); $("#Email").val(""); }
+
+		function PopulateReferrer() { $("#referEmail").val(""); KeyPress(autoComplete, refer, "GetReferrerName"); }
+
+		function KeyPress(autoCompleteContainer, textBox, clickEventName){
+			autoCompleteContainer.html("");
+			if (textBox.val() == "") { 
+				autoCompleteContainer.parent().fadeOut();
+				return;
+			}
+			for(var i = 0; i < arrContact.length; i++){
+				var arr = arrContact[i];
+				if (arr.substring(0,textBox.val().length).toLowerCase() == textBox.val().toLowerCase()) {
+					autoCompleteContainer.append(""+arr+"");
+				}
+			}
+			if (autoCompleteContainer.children("li").length > 0) autoCompleteContainer.parent().fadeIn();
+			else autoCompleteContainer.parent().fadeOut();
+		}
+
+		function GetReferrerName(thisE) {
+			refer.val(thisE.innerHTML);
+			$("#referEmail").val(thisE.id);
+			autoComplete.html("");
+			autoComplete.parent().fadeOut();
+		}
+
+		function GetName(thisE) {
+			nameTextBox.val(thisE.innerHTML);
+			$("#Email").val(thisE.id);
+			nameAutoComplete.html("");
+		}
+
+/ <form id="paypalform" action="https://www.sandbox.paypal.com/us/cgi-bin/webscr?cmd=_xclick" method="post">
+%form#paypalform{:action => "https://www.paypal.com/cgi-bin/webscr", :method => "post", :style => "float: right;"}
+	%div
+		%table
+			%tbody
+				%tr
+					%td{:style => "border-image: none;"} Amount:
+					%td{:style => "border-image: none;"}
+						%input#Amount{:name => "amount", :type => "textbox", :value => "0"}/
+				%tr
+					%td{:style => "border-image: none;"} Your Name:
+					%td{:style => "border-image: none;"}
+						%input#Name{:type => "textbox", :value => ""}/
+						#nameAutoComplete
+							%ul
+				%tr
+					%td{:style => "border-image: none;"} Your Email:
+					%td{:style => "border-image: none;"}
+						%input#Email{:type => "textbox", :value => ""}/
+				%tr
+					%td{:style => "border-image: none;"} Referrer:
+					%td{:style => "border-image: none;"}
+						%input#refer{:autocomplete => "off", :type => "text"}/
+						%input#referId{:type => "hidden"}/
+						#autoComplete{:style => "display: none;"}
+							%ul
+				%tr
+					%td{:style => "border-image: none;"} Referrer's Email:
+					%td{:style => "border-image: none;"}
+						%input#referEmail{:type => "text"}/
+	%input{:name => "cmd", :type => "hidden", :value => "_xclick"}/
+	/ <input type="hidden" name="business" value="johnch_1327857978_biz@gmail.com">
+	/ <input type="hidden" name="business" value="ieuan0_1328131572_biz@gmail.com">
+	%input{:name => "business", :type => "hidden", :value => "CMJ3UT93XD8XQ"}/
+	%input{:name => "item_name", :type => "hidden", :value => "Donation"}/
+	%input{:name => "item_number", :type => "hidden", :value => "1"}/
+	%input{:name => "no_shipping", :type => "hidden", :value => "0"}/
+	%input{:name => "no_note", :type => "hidden", :value => "1"}/
+	%input#paypalcustom{:name => "custom", :type => "hidden", :value => ""}/
+	%input{:name => "currency_code", :type => "hidden", :value => "USD"}/
+	%input{:name => "return", :type => "hidden", :value => "http://pemexausa.org/donations/thankyou.php"}/
+	%input{:name => "notify_url", :type => "hidden", :value => "http://pemexausa.org/donations/notification.php"}/
+	%input{:name => "lc", :type => "hidden", :value => "AU"}/
+	%input{:name => "bn", :type => "hidden", :value => "PP-BuyNowBF"}/
+	%br/
+	%input#submit{:alt => "PayPal - The safer, easier way to pay online.", :border => "0", :name => "submit", :src => "/img/btn_donateCC_LG.gif", :style => "float: right;", :type => "image"}/
+	%img{:border => "0", :height => "1", :src => "https://www.paypal.com/en_AU/i/scr/pixel.gif", :width => "1"}/
+	#ValidationMessage{:style => "display: none;"}
+:javascript
+var ErrString = "";
+
+function ValidateEmailAddress(email) {
+var reg = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+return reg.test(email);
+}
+
+function ValidateEntries() {
+var IsSuccessful = true;
+
+ErrString = "";
+
+if (parseFloat($("#Amount").val()) == 0) {
+	ErrString = ErrString + "Cannot Allow 0 Payment.";
+	IsSuccessful = false;
+}
+
+if ($.trim($("#Name").val()).length == 0) {
+	ErrString = ErrString + "Donor's Name is Required.";
+	IsSuccessful = false;
+}
+
+if ($.trim($("#Email").val()).length == 0) {
+	ErrString = ErrString + "Donor's Email is Required.";
+	IsSuccessful = false;
+}
+else if (ValidateEmailAddress($.trim($("#Email").val())) == false) {
+	ErrString = ErrString + "Donor's Email is Invalid.";
+	IsSuccessful = false;
+}
+
+if ($.trim($("#refer").val()).length == 0) {
+	ErrString = ErrString + "Referrer is Required.";
+	IsSuccessful = false;
+}
+
+if ($.trim($("#referEmail").val()).length == 0) {
+	ErrString = ErrString + "Referrer's Email is Required.";
+	IsSuccessful = false;
+}
+else if (ValidateEmailAddress($.trim($("#referEmail").val())) == false) {
+	ErrString = ErrString + "Donor's Email is Invalid.";
+	IsSuccessful = false;
+}
+
+return IsSuccessful;
+}
+
+$("#paypalform").ready(function() {
+						$("#submit").click(function() {
+	if (ValidateEntries() == false) {
+		$("#ValidationMessage").html(ErrString);
+		$("#ValidationMessage").css("display", "block");
+	} else {
+		ErrString = "";
+		$("#ValidationMessage").html("");
+		$("#ValidationMessage").css("display", "none");
+														$.get("Serialize.php", {
+			amount: $("#Amount").val(),
+			Name: $("#Name").val(),
+			Email: $("#Email").val(),
+			Referrer: $("#referEmail").val(),
+			refereeName:$("#refer").val()
+		}, function(data) {
+			$("#paypalcustom").val(data);
+			$("#paypalform").submit();
+		});
+	}
+	return false;
+});
+});

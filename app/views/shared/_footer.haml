@@ -3,7 +3,7 @@
 	.footer-center
 		.bottom-menu.fleft
 			%ul
-				- if current_user && (current_user.is_admin || current_user.is_super_admin)
+				- if can? :read, :admin #current_user && (current_user.admin? || current_user.super_admin?)
 					%li= link_to 'Admin', admin_home_path
 				%li
 					%a.selected{:href => "/"} Home

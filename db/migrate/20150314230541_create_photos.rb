@@ -2,6 +2,7 @@ class CreatePhotos < ActiveRecord::Migration
   def change
     create_table :photos do |t|
       t.string :name
+      t.string :image
       t.string :file_path
       t.string :image_size
       t.integer :album_id

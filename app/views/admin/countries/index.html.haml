@@ -1,19 +1,24 @@
-%h1 Listing admin_countries
-
-%table
-  %thead
-    %tr
-      %th
-      %th
-      %th
-      
-  %tbody
-    - @admin_countries.each do |admin_country|
-      %tr
-        %td= link_to 'Show', admin_country
-        %td= link_to 'Edit', edit_admin_country_path(admin_country)
-        %td= link_to 'Destroy', admin_country, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New Country', new_admin_country_path
+.admin_panel_header
+	%h1
+		= link_to 'New Country', new_admin_country_path 
+		|
+		Listing admin_countries
+.admin_panel_inner
+	%table{id: 'admin_countries', style: "width: 100%;"}
+		%thead
+			%tr
+				%th Name
+				%th Code2
+				%th Code3
+				%th Actions
+				
+		%tbody
+			- countries.each do |admin_country|
+				%tr
+					%td= admin_country.name
+					%td= admin_country.code2
+					%td= admin_country.code3
+					%td
+						= link_to 'Show', admin_country_path(admin_country)
+						= link_to 'Edit', edit_admin_country_path(admin_country)
+						= link_to 'Destroy', admin_country_path(admin_country), :method => :delete, :data => { :confirm => 'Are you sure?' }

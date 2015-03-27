@@ -1,0 +1,17 @@
+#content.rc5{style: "width: 972px; padding: 15px;"}
+	.simple-text
+		%h2 
+			You're almost done! Now create a password to securely access your account.
+			= form_for(resource, :as => resource_name, :url => confirm_path) do |f|
+				= devise_error_messages!
+				= f.hidden_field :confirmation_token
+				.control-group
+					= f.label :password, "New password", :class => 'control-label'
+					.controls
+						= f.password_field :password, autofocus: true, autocomplete: "off", :input_html => {:autofocus => true}
+				.control-group
+					= f.label :password_confirmation, "Confirm new password", :class => 'control-label'
+					.controls
+						= f.password_field :password_confirmation, autocomplete: "off"
+				.form-actions
+					= f.submit('Confirm Account', :class => "btn btnprimary")

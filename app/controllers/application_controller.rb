@@ -6,4 +6,9 @@ class ApplicationController < ActionController::Base
   expose(:all_chapters) { Chapter.active }
   expose(:user) { current_user }
   
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to '/', :alert => exception.message
+  end
+  
+  
 end

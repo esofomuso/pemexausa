@@ -18,17 +18,16 @@ background: teal;
 border-radius: 3px;
 border-color: #fff;
 }
-.admin_top-menu table tr td a[href="/donations/"] {
-background: teal !important;
-background-position: left 0px;
-}
 
 .admin_top-menu table tr td a:hover {
 background-position: left -45px;
 }
+.admin_top-menu a.selected {
+background: #49baba;
+}
 
 .admin_top-menu table tr td:first-child a {
-background: teal;
+/*background: teal;*/
 background-repeat: no-repeat;
 background-position: left 0px;
 text-align: center;

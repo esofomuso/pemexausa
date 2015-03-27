@@ -1,5 +1,11 @@
 class Users::RegistrationsController < Devise::RegistrationsController
-# before_filter :configure_sign_up_params, only: [:create]
+	expose(:user) { resource || User.new }
+	expose(:address) { user.address || Address.new }
+	expose(:all_chapters) { Chapter.active }
+	expose(:countries) { Country.all }
+	expose(:states) { State.all }
+	
+ before_filter :configure_sign_up_params, only: [:create]
 # before_filter :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
@@ -8,9 +14,14 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+   def create
+     super
+     if resource.save
+     		address.attributes = address_params
+     		address.user_id = resource.id 
+     		address.save
+     end
+   end
 
   # GET /resource/edit
   # def edit
@@ -36,25 +47,32 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  # protected
+   protected
 
-  # You can put the params you want to permit in the empty array.
-  # def configure_sign_up_params
-  #   devise_parameter_sanitizer.for(:sign_up) << :attribute
-  # end
+   # You can put the params you want to permit in the empty array.
+   def configure_sign_up_params
+     devise_parameter_sanitizer.for(:sign_up) << [:chapter_id, :role_id, :username, :password, :password_confirmation, :email, :phone, :first_name, :last_name_pss, :last_name_now, :gender, :full_time_student, :class_year, :profession, :middle_name]
+   end
 
   # You can put the params you want to permit in the empty array.
   # def configure_account_update_params
   #   devise_parameter_sanitizer.for(:account_update) << :attribute
   # end
 
-  # The path used after sign up.
-  # def after_sign_up_path_for(resource)
-  #   super(resource)
-  # end
+   # The path used after sign up.
+#   def after_sign_up_path_for(resource)
+#     super(resource)
+#   end
 
   # The path used after sign up for inactive accounts.
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
+  private
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def address_params
+      params.require(:user).require(:address).permit(:country_id, :state_id, :city, :zip, :street1, :street2)
+    end
+    
+  
 end

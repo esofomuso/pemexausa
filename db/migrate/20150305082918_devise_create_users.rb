@@ -4,10 +4,10 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :username,					  null: false
       t.string :email,              null: false
       t.string :password
-      t.string :encrypted_password, null: false
+      t.string :encrypted_password
 			t.string :first_name, null: false
 			t.string :last_name_now, null: false
-			t.string :last_name_pss, null: false
+			t.string :last_name_pss
 			t.string :middle_name
 			t.integer :class_year
 			t.integer :role_id

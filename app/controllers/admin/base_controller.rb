@@ -1,5 +1,8 @@
 class Admin::BaseController < ApplicationController
-  before_filter :is_permitted?
+   before_filter :is_permitted?
+  check_authorization :if => :admin_subdomain?
+  #load_and_authorize_resource
+  
   layout 'admin'
   
   expose(:all_chapters) { Chapter.active }
@@ -13,14 +16,21 @@ class Admin::BaseController < ApplicationController
   expose(:states) { State.all }
   expose(:users) { User.all }
   expose(:zips) { Zip.all }
+  expose(:cities) { City.all }
   
-  def is_permitted?
-  	unless current_user && (current_user.is_admin || current_user.is_super_admin)
-  		redirect_to '/'
-  	end
-  end
+   def is_permitted?
+   	if can? :read, :admin #current_user && (current_user.admin? || current_user.super_admin?)
+	   	authorize! :read, :admin
+	  else 
+	  	raise CanCan::AccessDenied
+	  end
+   end
   
   def index
   end
   
+  private
+  def admin_subdomain?
+    request.path == "/admin"
+  end
 end

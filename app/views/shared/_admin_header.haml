@@ -21,24 +21,25 @@
 		%table{:cellpadding => "0", :cellspacing => "0", :width => "100%"}
 			%tr
 				%td{:width => "117"}
-					%a.selected{:href => "/"} Home
+					= link_to 'Home', '/', class: "#{ 'selected' if request.path == '/'}"
 				%td
-					%a{:href => "/admin/users/"} Users
+					= link_to 'users', '/admin/users/', class: "#{ 'selected' if controller.controller_name == 'users'}"
 				%td
-					%a{:href => "/admin/members/"} Members
+					= link_to 'members', '/admin/members/', class: "#{ 'selected' if controller.controller_name == 'members'}"
 				%td
-					%a{:href => "/admin/chapters/"} Chapters
+					= link_to 'chapters', '/admin/chapters/', class: "#{ 'selected' if controller.controller_name == 'chapters'}"
 				%td
-					%a{:href => "/admin/projects/"} Projects
+					= link_to 'projects', '/admin/projects/', class: "#{ 'selected' if controller.controller_name == 'projects'}"
 				%td
-					%a{:href => "/admin/payment_purposes/"} Payments Purposes
+					= link_to 'payment purposes', '/admin/payment_purposes/', class: "#{ 'selected' if controller.controller_name == 'payment_purposes'}"
 				%td
-					%a{:href => "/admin/payments/"} Payments
+					= link_to 'payments', '/admin/payments/', class: "#{ 'selected' if controller.controller_name == 'payments'}"
 				%td
-					%a{:href => "/admin/photos/"} Photos
+					= link_to 'photos', '/admin/photos/', class: "#{ 'selected' if controller.controller_name == 'photos'}"
 				%td
-					%a{:href => "/admin/countries/"} Countries
+					= link_to 'countries', '/admin/countries/', class: "#{ 'selected' if controller.controller_name == 'countries'}"
 				%td
-					%a{:href => "/profile/"} Profile
+					= link_to 'profile', '/profile', class: "#{ 'selected' if request.path == '/profile'}"
 				%td{:width => "105"}
-					%a.last{:href => "/admin/convention_events/"} Convention Events
+					= link_to 'convention events', '/admin/convention_events/', class: "last #{ 'selected' if controller.controller_name == 'convention_events'}"
+					

@@ -17,15 +17,16 @@ ActiveRecord::Schema.define(version: 20150314230543) do
     t.string   "street1"
     t.string   "street2"
     t.integer  "user_id"
-    t.integer  "city_id"
+    t.string   "city"
     t.integer  "state_id"
-    t.integer  "zip_id"
+    t.integer  "zip"
     t.string   "latitude"
     t.string   "longitude"
     t.boolean  "active",     default: true
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
     t.integer  "updated_by", default: 1,    null: false
+    t.integer  "country_id", default: 1,    null: false
   end
 
   create_table "albums", force: :cascade do |t|
@@ -118,6 +119,7 @@ ActiveRecord::Schema.define(version: 20150314230543) do
     t.datetime "updated_at",                null: false
     t.integer  "updated_by", default: 1,    null: false
     t.boolean  "active",     default: true, null: false
+    t.string   "image"
   end
 
   create_table "projects", force: :cascade do |t|
@@ -150,7 +152,7 @@ ActiveRecord::Schema.define(version: 20150314230543) do
     t.string   "username",                                             null: false
     t.string   "email",                                                null: false
     t.string   "password"
-    t.string   "encrypted_password",                                   null: false
+    t.string   "encrypted_password"
     t.string   "first_name",                                           null: false
     t.string   "last_name_now",                                        null: false
     t.string   "middle_name"
@@ -175,7 +177,7 @@ ActiveRecord::Schema.define(version: 20150314230543) do
     t.datetime "created_at",                                           null: false
     t.datetime "updated_at",                                           null: false
     t.boolean  "full_time_student",      default: false,               null: false
-    t.string   "last_name_pss",          default: "Current Last Name", null: false
+    t.string   "last_name_pss",          default: "Current Last Name"
     t.integer  "updated_by",             default: 1,                   null: false
   end
 

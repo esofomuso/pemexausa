@@ -1,0 +1,70 @@
+%td
+	.span3{style: "width: 100%;"}
+		.reg-col
+			Personal Information
+		.admin_panel_inner
+			.row-fluid
+				= f.label 'first_name', 'First Name*', class: "control-label", required: true
+				= f.text_field :first_name, tabindex: 1, class: 'span12', maxlength: 20, required: true
+			.row-fluid
+				= f.label 'middle_name', 'Middle Name', class: "control-label"
+				= f.text_field :middle_name, tabindex: 2, class: 'span12', maxlength: 20
+			.row-fluid
+				= f.label 'last_name_pss', 'Last (or Surname) Name (PSS)*', class: "control-label", required: true
+				= f.text_field :last_name_pss, tabindex: 3, class: 'span12', maxlength: 20, required: true
+			.row-fluid
+				= f.label 'last_name_now', 'Last (or Surname) Name (Now)*', class: "control-label", required: true
+				= f.text_field :last_name_now, tabindex: 4, class: 'span12', maxlength: 20, required: true
+			.row-fluid
+				= f.label 'class_year', 'Class Of', class: "control-label"
+				= f.select :class_year, (1983..Date.today.year).to_a, {include_blank: '--Please Select--'}, tabindex: 5, class: 'span12'
+			.row-fluid
+				= f.label 'gender', 'Gender*', class: "control-label", required: true
+				= f.select :gender, ['female', 'male'], {include_blank: '--Please Select--'}, tabindex: 6, class: 'span12', required: true
+%td
+	.span3{style: "width: 100%;"}
+		.reg-col
+			Contact Information
+		= f.fields_for address do |a|
+			.admin_panel_inner
+				.row-fluid
+					= a.label 'country_id', 'Country*', class: "control-label", required: true
+					= a.select :country_id, countries.map{|c| [c.name, c.id]}, {include_blank: '--Please Select--'}, tabindex: 8, class: 'span12', required: true
+				.row-fluid
+					= a.label 'state_id', 'State*', class: "control-label"
+					= a.select :state_id, states.map{|c| [c.name, c.id]}, {include_blank: '--Please Select--'}, tabindex: 9, class: 'span12', required: true
+				.row-fluid
+					= a.label 'street1', 'Address Line 1*', class: "control-label", required: true
+					= a.text_field :street1, tabindex: 10, class: 'span12', maxlength: 30, required: true
+				.row-fluid
+					= a.label 'street2', 'Address Line 2', class: "control-label"
+					= a.text_field :street2, tabindex: 11, class: 'span12', maxlength: 20
+				.row-fluid
+					= a.label 'city', 'City*', class: "control-label", required: true
+					= a.text_field :city, tabindex: 12, class: 'span12', maxlength: 20, required: true
+				.row-fluid
+					= a.label 'zip', 'Zip*', class: "control-label", required: true
+					= a.text_field :zip, tabindex: 13, class: 'span12', maxlength: 20, required: true
+%td{style: "width: 33%;"}
+	.span3{style: "width: 100%;"}
+		.reg-col
+			Membership Information
+		.admin_panel_inner
+			.row-fluid
+				= f.label 'phone', 'Cell Phone', class: "control-label"
+				= f.text_field :phone, tabindex: 14, class: 'span12', maxlength: 75
+			.row-fluid
+				= f.label 'full_time_student', 'Full Time Student*', class: "control-label", required: true
+				= f.select :full_time_student, [['No', false],['Yes', true]], {include_blank: '--Please Select--'}, tabindex: 15, class: 'span12', required: true
+			.row-fluid
+				= f.label 'profession', 'Profession', class: "control-label"
+				= f.text_area :profession, tabindex: 16, class: 'span12', maxlength: 75
+			.row-fluid
+				= f.label 'chapter_id', 'Chapter', class: "control-label"
+				= f.select :chapter_id, all_chapters.map{|c| [c.name, c.id]}, {include_blank: '--Please Select--'}, tabindex: 17, class: 'span12'
+			.row-fluid
+				= f.label 'username', 'Login (min. 3 characters)*', class: "control-label", required: true
+				= f.text_field :username, tabindex: 18, class: 'span12', minlength: 3, maxlength: 25, required: true
+			.row-fluid
+				= f.label 'email', 'Email*', class: "control-label", required: true
+				= f.text_field :email, tabindex: 19, class: 'span12', maxlength: 75, required: true

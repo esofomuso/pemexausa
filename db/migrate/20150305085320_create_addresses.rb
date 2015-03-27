@@ -4,9 +4,10 @@ class CreateAddresses < ActiveRecord::Migration
       t.string :street1
       t.string :street2
       t.integer :user_id
-      t.integer :city_id
+      t.string :city
       t.integer :state_id
-      t.integer :zip_id
+      t.integer :country_id
+      t.integer :zip
       t.string  :latitude
       t.string	:longitude
       t.boolean :active, default: true

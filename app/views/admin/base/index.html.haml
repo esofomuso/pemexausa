@@ -1,19 +1,29 @@
-.row-fluid
-	.center-panel
-		= form_for current_user, url: admin_user_path(current_user) do |f|
-			.span12{style: "margin: 0px; width:96%"}
-				.admin_panel
-					.admin_panel_header
-						Welcome Admin 
-						= current_user.name
-					.admin_panel_inner
-						.control-group
-							.controls
-								%b
-									Email :  
-								= current_user.email
-						.control-group
-							.controls
-								%b
-									Role :  
-								= current_user.role.name
+- user = current_user
+- address = user.address
+.admin_panel_header
+	%h1
+		= link_to 'Edit Your Profile', edit_admin_user_path(user) 
+		|
+		Your Profile Details
+.admin_panel_inner
+	%table{ cellpadding: '0', cellspacing: '0', width: '96%' }
+		%tbody
+			%tr{width: '100%' }
+				= render :partial => '/shared/user_details', locals: {user: user, address: address}
+			%tr{width: '100%' }
+				%td
+					.span3{style: "width: 100%;"}
+						.admin_panel_inner
+							.row-fluid
+								%b Updated By:
+								= user.updated_by.name rescue ''
+							.row-fluid
+								%b Confirmation Sent On:
+								= user.confirmation_sent_at.strftime("%b %d, %Y %H:%M:%S") rescue ''
+							.row-fluid
+								%b Confirmed:
+								= user.confirmed_at.strftime("%b %d, %Y %H:%M:%S") rescue ''
+							.row-fluid
+								%b Role:
+								= user.role.name
+					

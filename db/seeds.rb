@@ -1,7 +1,7 @@
 Rails.cache.clear
 
-['Super Admin', 'Admin', 'Registered User', 'Paid User', 'Guest'].each do |r|
-	Role.where( name: r, description: r).first_or_create
+{'regular' => 'Regular User', 'registered' => 'Registered User', 'paid' => 'Paid User', 'chapter_admin' => 'Chapter Admin', 'admin' => 'National Admin', 'super_admin' => 'Super Admin', 'developer' => 'Developer'}.each do |k, v|
+	Role.where( name: k, description: v).first_or_create
 end
 
 {'Atlanta - No chapter' => 'Atlanta, GA', 'Birmingham' =>	'Birmingham, AL', 'Dallas' =>	'Dallas, TX', 'Houston' =>	'Houston, TX', 'Michigan' =>	'Detroit, MI', 'The Carolinas' =>	'Charlotte, NC', 'WMA' =>	'Washignton D.C.' }.each do |key, value|
@@ -30,4 +30,4 @@ Dir[Rails.root.join('db', 'seeds', '*', '*seeds.rb').to_s].sort.each do |file|
 end
 
 
-Address.create street1: '3082 Peachtree Rd', city_id: City.find_by_name('Atlanta').id, state_id: State.find_by_code('GA'), zip_id: Zip.find_by_code(30002), user_id: super_admin.id 
+Address.create street1: '3082 Peachtree Rd', city: 'Atlanta', state_id: State.find_by_code('GA'), zip: 30002, user_id: super_admin.id 

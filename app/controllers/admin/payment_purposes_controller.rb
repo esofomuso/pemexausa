@@ -4,7 +4,7 @@ class Admin::PaymentPurposesController < Admin::BaseController
   # GET /admin/payment_purposes
   # GET /admin/payment_purposes.json
   def index
-    @admin_payment_purposes = Admin::PaymentPurpose.all
+    payment_purposes = PaymentPurpose.all
   end
 
   # GET /admin/payment_purposes/1
@@ -14,7 +14,7 @@ class Admin::PaymentPurposesController < Admin::BaseController
 
   # GET /admin/payment_purposes/new
   def new
-    @admin_payment_purpose = Admin::PaymentPurpose.new
+    payment_purpose = PaymentPurpose.new
   end
 
   # GET /admin/payment_purposes/1/edit
@@ -24,15 +24,15 @@ class Admin::PaymentPurposesController < Admin::BaseController
   # POST /admin/payment_purposes
   # POST /admin/payment_purposes.json
   def create
-    @admin_payment_purpose = Admin::PaymentPurpose.new(admin_payment_purpose_params)
+    payment_purpose = PaymentPurpose.new(admin_payment_purpose_params)
 
     respond_to do |format|
-      if @admin_payment_purpose.save
-        format.html { redirect_to @admin_payment_purpose, notice: 'Payment purpose was successfully created.' }
-        format.json { render :show, status: :created, location: @admin_payment_purpose }
+      if payment_purpose.save
+        format.html { redirect_to payment_purpose, notice: 'Payment purpose was successfully created.' }
+        format.json { render :show, status: :created, location: payment_purpose }
       else
         format.html { render :new }
-        format.json { render json: @admin_payment_purpose.errors, status: :unprocessable_entity }
+        format.json { render json: payment_purpose.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -41,12 +41,12 @@ class Admin::PaymentPurposesController < Admin::BaseController
   # PATCH/PUT /admin/payment_purposes/1.json
   def update
     respond_to do |format|
-      if @admin_payment_purpose.update(admin_payment_purpose_params)
-        format.html { redirect_to @admin_payment_purpose, notice: 'Payment purpose was successfully updated.' }
-        format.json { render :show, status: :ok, location: @admin_payment_purpose }
+      if payment_purpose.update(admin_payment_purpose_params)
+        format.html { redirect_to payment_purpose, notice: 'Payment purpose was successfully updated.' }
+        format.json { render :show, status: :ok, location: payment_purpose }
       else
         format.html { render :edit }
-        format.json { render json: @admin_payment_purpose.errors, status: :unprocessable_entity }
+        format.json { render json: payment_purpose.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -54,7 +54,7 @@ class Admin::PaymentPurposesController < Admin::BaseController
   # DELETE /admin/payment_purposes/1
   # DELETE /admin/payment_purposes/1.json
   def destroy
-    @admin_payment_purpose.destroy
+    payment_purpose.destroy
     respond_to do |format|
       format.html { redirect_to admin_payment_purposes_url, notice: 'Payment purpose was successfully destroyed.' }
       format.json { head :no_content }
@@ -64,7 +64,7 @@ class Admin::PaymentPurposesController < Admin::BaseController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_admin_payment_purpose
-      @admin_payment_purpose = Admin::PaymentPurpose.find(params[:id])
+      payment_purpose = PaymentPurpose.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

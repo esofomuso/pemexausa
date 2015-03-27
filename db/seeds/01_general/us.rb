@@ -49,6 +49,7 @@ class UsSeed < ConfigScript
        self.city_from_line(line)
        self.zip_from_line(line)
      end
+     State.where( name: '').destroy_all
      puts "Completed!!!"
    end
 

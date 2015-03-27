@@ -1,12 +1,18 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: {
-    users: 'sessions'
-  }
   devise_scope :user do 
 	  get '/auth', to: 'devise/sessions#new', as: :auth
 	  get '/login', to: 'devise/sessions#new', as: :login
 	  get '/logout', to: 'devise/sessions#destroy', as: :logout
+	  match "/confirm", to: "users/confirmations#confirm", via: [:get, :post, :patch] #as: :confirm
   end
+      
+  devise_for :users, controllers: {
+    users: 'users/sessions',
+    :passwords => 'users/passwords',
+    :registrations => 'users/registrations',
+    :confirmations => 'users/confirmations'
+  }
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -14,6 +20,9 @@ Rails.application.routes.draw do
    root 'welcome#index'
    get '/', to: 'welcome#:index', as: :home
    get '/profile', to: 'profile#new', as: :profile
+   get '/edit_profile', to: 'profile#edit', as: :edit_profile
+   put '/edit_profile', to: 'profile#update', as: :update_profile
+   get '/change_password', to: 'profile#change_password', as: :change_password
    
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

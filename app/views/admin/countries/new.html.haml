@@ -1,5 +1,8 @@
-%h1 New admin_country
-
-= render 'form'
-
-= link_to 'Back', admin_countries_path
+.admin_panel_header
+	%h1
+		= link_to 'All Countries', admin_countries_path 
+		|
+		New Country
+.admin_panel_inner
+	= form_for country, url: admin_countries_path, method: :post do |f|
+		= render :partial => 'form', :locals => { :f => f }
