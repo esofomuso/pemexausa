@@ -34,10 +34,10 @@
 		.admin_panel_inner
 			.row-fluid
 				%b Country:
-				= address.country.name
+				= address.country.name rescue ''
 			.row-fluid
 				%b State:
-				= address.state.name
+				= address.state.name rescue ''
 			.row-fluid
 				%b Address Line 1:
 				= address.street1
@@ -69,7 +69,7 @@
 				= user.profession
 			.row-fluid
 				%b Chapter:
-				= user.chapter.name
+				= user.chapter.name rescue ''
 			.row-fluid
 				%b Login:
 				= user.username

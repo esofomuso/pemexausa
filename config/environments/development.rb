@@ -25,7 +25,8 @@ Rails.application.configure do
     :password => 'Pa$$4eso'
   }
     
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3002 }
+  #config.action_mailer.default_url_options = { host: 'localhost', port: 3002 }
+  config.action_mailer.default_url_options = { host: 'pemexausa-efomuso-1.c9.io', protocol: 'https' }
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 

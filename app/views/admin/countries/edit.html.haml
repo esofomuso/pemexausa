@@ -6,5 +6,5 @@
 		|
 		Editing Country
 .admin_panel_inner
-	= form_for country, url: admin_country_path(country), method: :post do |f|
+	= form_for country, url: admin_country_path(country), method: :put do |f|
 		= render :partial => 'form', :locals => { :f => f }

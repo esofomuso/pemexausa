@@ -27,7 +27,8 @@ class Admin::UsersController < Admin::BaseController
   def update
     respond_to do |format|
       if user.update_without_password(user_params)
-      	address.update_attributes(address_params)
+      	address.update_attributes(address_params) 
+      	user.address = Address.create(address_params) if user.address.blank?
         format.html { redirect_to admin_user_path(user), notice: 'User was successfully updated.' }
         format.json { render :show, status: :ok, location: user }
       else
