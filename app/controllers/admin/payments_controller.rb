@@ -1,34 +1,14 @@
 class Admin::PaymentsController < Admin::BaseController
-  before_action :set_admin_payment, only: [:show, :edit, :update, :destroy]
-
-  # GET /admin/payments
-  # GET /admin/payments.json
-  def index
-    payments = Payment.all
-  end
-
-  # GET /admin/payments/1
-  # GET /admin/payments/1.json
-  def show
-  end
-
-  # GET /admin/payments/new
-  def new
-    payment = Payment.new
-  end
-
-  # GET /admin/payments/1/edit
-  def edit
-  end
-
+  expose(:payment) {Payment.find_by_id(params[:id]) || Payment.new}
+  
   # POST /admin/payments
   # POST /admin/payments.json
   def create
-    payment = Payment.new(admin_payment_params)
+    payment.attributes = payment_params
 
     respond_to do |format|
       if payment.save
-        format.html { redirect_to payment, notice: 'Payment was successfully created.' }
+        format.html { redirect_to admin_payments_path, notice: 'Payment was successfully created.' }
         format.json { render :show, status: :created, location: payment }
       else
         format.html { render :new }
@@ -42,7 +22,7 @@ class Admin::PaymentsController < Admin::BaseController
   def update
     respond_to do |format|
       if payment.update(admin_payment_params)
-        format.html { redirect_to payment, notice: 'Payment was successfully updated.' }
+        format.html { redirect_to admin_payment_path(payment), notice: 'Payment was successfully updated.' }
         format.json { render :show, status: :ok, location: payment }
       else
         format.html { render :edit }
@@ -62,13 +42,8 @@ class Admin::PaymentsController < Admin::BaseController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_admin_payment
-      payment = Payment.find(params[:id])
-    end
-
     # Never trust parameters from the scary internet, only allow the white list through.
-    def admin_payment_params
-      params[:admin_payment]
+    def payment_params
+      params[:payment]
     end
 end

@@ -1,13 +1,12 @@
 class Admin::ChaptersController < Admin::BaseController
   expose(:chapter) { Chapter.find(params[:id]) || Chapter.new }
-  expose(:chapters) { Chapter.all }
-	
+  
   # POST /admin/chapters
   # POST /admin/chapters.json
   def create
     respond_to do |format|
       if chapter.save
-        format.html { redirect_to chapter, notice: 'Chapter was successfully created.' }
+        format.html { redirect_to admin_chapters_path, notice: 'Chapter was successfully created.' }
         format.json { render :show, status: :created, location: chapter }
       else
         format.html { render :new }
@@ -20,8 +19,8 @@ class Admin::ChaptersController < Admin::BaseController
   # PATCH/PUT /admin/chapters/1.json
   def update
     respond_to do |format|
-      if chapter.update(admin_chapter_params)
-        format.html { redirect_to chapter, notice: 'Chapter was successfully updated.' }
+      if chapter.update(chapter_params)
+        format.html { redirect_to admin_chapter_path(chapter), notice: 'Chapter was successfully updated.' }
         format.json { render :show, status: :ok, location: chapter }
       else
         format.html { render :edit }
@@ -42,7 +41,7 @@ class Admin::ChaptersController < Admin::BaseController
 
   private
     # Never trust parameters from the scary internet, only allow the white list through.
-    def admin_chapter_params
-      params[:admin_chapter]
+    def chapter_params
+      params[:chapter]
     end
 end

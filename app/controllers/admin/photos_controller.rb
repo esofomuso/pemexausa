@@ -1,34 +1,14 @@
 class Admin::PhotosController < Admin::BaseController
-  before_action :set_admin_photo, only: [:show, :edit, :update, :destroy]
-
-  # GET /admin/photos
-  # GET /admin/photos.json
-  def index
-    photos = Photo.all
-  end
-
-  # GET /admin/photos/1
-  # GET /admin/photos/1.json
-  def show
-  end
-
-  # GET /admin/photos/new
-  def new
-    photo = Photo.new
-  end
-
-  # GET /admin/photos/1/edit
-  def edit
-  end
-
+  expose(:photo) {Photo.find_by_id(params[:id]) || Photo.new}
+  
   # POST /admin/photos
   # POST /admin/photos.json
   def create
-    photo = Photo.new(admin_photo_params)
+    photo.attributes = photo_params
 
     respond_to do |format|
       if photo.save
-        format.html { redirect_to photo, notice: 'Photo was successfully created.' }
+        format.html { redirect_to admin_photos_path, notice: 'Photo was successfully created.' }
         format.json { render :show, status: :created, location: photo }
       else
         format.html { render :new }
@@ -41,8 +21,8 @@ class Admin::PhotosController < Admin::BaseController
   # PATCH/PUT /admin/photos/1.json
   def update
     respond_to do |format|
-      if photo.update(admin_photo_params)
-        format.html { redirect_to photo, notice: 'Photo was successfully updated.' }
+      if photo.update(photo_params)
+        format.html { redirect_to admin_photo_path(photo), notice: 'Photo was successfully updated.' }
         format.json { render :show, status: :ok, location: photo }
       else
         format.html { render :edit }
@@ -62,13 +42,8 @@ class Admin::PhotosController < Admin::BaseController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_admin_photo
-      photo = Photo.find(params[:id])
-    end
-
     # Never trust parameters from the scary internet, only allow the white list through.
-    def admin_photo_params
-      params[:admin_photo]
+    def photo_params
+      params[:photo]
     end
 end

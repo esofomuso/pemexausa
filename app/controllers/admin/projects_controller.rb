@@ -1,16 +1,15 @@
 class Admin::ProjectsController < Admin::BaseController
-  expose(:projects) { Project.all }
-  expose(:project) {Project.find_by_id(params[:id] || Project.new}
+  expose(:project) {Project.find_by_id(params[:id]) || Project.new}
   
 
   # POST /admin/projects
   # POST /admin/projects.json
   def create
-    project.attributes = admin_project_params
+    project.attributes = project_params
 
     respond_to do |format|
       if project.save
-        format.html { redirect_to project, notice: 'Project was successfully created.' }
+        format.html { redirect_to admin_projects_path, notice: 'Project was successfully created.' }
         format.json { render :show, status: :created, location: project }
       else
         format.html { render :new }
@@ -23,8 +22,8 @@ class Admin::ProjectsController < Admin::BaseController
   # PATCH/PUT /admin/projects/1.json
   def update
     respond_to do |format|
-      if project.update(admin_project_params)
-        format.html { redirect_to project, notice: 'Project was successfully updated.' }
+      if project.update(project_params)
+        format.html { redirect_to admin_project_path(project), notice: 'Project was successfully updated.' }
         format.json { render :show, status: :ok, location: project }
       else
         format.html { render :edit }
@@ -44,13 +43,8 @@ class Admin::ProjectsController < Admin::BaseController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_admin_project
-      project = Project.find(params[:id])
-    end
-
     # Never trust parameters from the scary internet, only allow the white list through.
-    def admin_project_params
-      params[:admin_project]
+    def project_params
+      params[:project]
     end
 end

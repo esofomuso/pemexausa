@@ -1,19 +1,25 @@
-%h1 Listing admin_states
-
-%table
-  %thead
-    %tr
-      %th
-      %th
-      %th
-      
-  %tbody
-    - @admin_states.each do |admin_state|
-      %tr
-        %td= link_to 'Show', admin_state
-        %td= link_to 'Edit', edit_admin_state_path(admin_state)
-        %td= link_to 'Destroy', admin_state, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New State', new_admin_state_path
+.admin_panel_header
+	%h1
+		= link_to 'All States', admin_states_path 
+		|
+		= link_to 'State Details', admin_state_path(state) 
+		|
+		Listing states
+.admin_panel_inner
+	%table{id: 'admin_states', style: "width: 100%;"}
+	  %thead
+	    %tr
+	      %th
+	      %th
+	      %th
+	      
+	  %tbody
+	    - states.each do |admin_state|
+	      %tr
+	        %td= link_to 'Show', admin_state
+	        %td= link_to 'Edit', edit_admin_state_path(admin_state)
+	        %td= link_to 'Destroy', admin_state, :method => :delete, :data => { :confirm => 'Are you sure?' }
+	
+	%br
+	
+	= link_to 'New State', new_admin_state_path

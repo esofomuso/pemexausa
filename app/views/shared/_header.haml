@@ -16,30 +16,11 @@
 					= link_to 'Admin', admin_home_path
 		.search.fright
 			.auth.fleft
-				%a#show_login_form.login-link{:href => "javascript:void(0)"} Login
-				%form#login_form.rc5{:action => "/?login=yes", :method => "post", :target => "_top"}
-					%input{:name => "backurl", :type => "hidden", :value => "/"}/
-					%input{:name => "AUTH_FORM", :type => "hidden", :value => "Y"}/
-					%input{:name => "TYPE", :type => "hidden", :value => "AUTH"}/
-					%table{:width => "100%"}
-						%tr
-							%td{:colspan => "2", :style => "vertical-align:top"}
-								#close.fright
-									%a{:href => "javascript:void(0)"} X
-								Login:
-								%br/
-								%input{:maxlength => "50", :name => "USER_LOGIN", :size => "17", :type => "text", :value => ""}/
-						%tr
-							%td{:colspan => "2"}
-								Password:
-								%br/
-								%input{:maxlength => "50", :name => "USER_PASSWORD", :size => "17", :type => "password"}/
-						%tr
-							%td{:style => "padding-top:5px"}
-								%input{:name => "Login", :type => "submit", :value => "Login"}/
-							%td{:style => "padding-top:5px"}
-								%noindex
-									%a{:href => "/auth/?forgot_password=yes&amp;backurl=%2F", :rel => "nofollow"} Forgot your password?
+				- if current_user
+					= link_to 'Logout', '/logout', class: 'login-link'
+				- else
+					-#= link_to "Login",'#loginModal', :data => {:toggle => "modal"}, id: 'show_login_form', class: 'login-link'
+					= link_to 'Login', user_session_path, {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#loginModal', :class => 'login-link', 'data-type' => "html" }
 			.fleft
 				%form{:action => "/search/index.php"}
 					%input.search-input.fleft{:name => "q", :onblur => "javascript:if(this.value=='')this.value='Search'", :onfocus => "javascript:if(this.value=='Search')this.value=''", :type => "text", :value => "Search"}/
@@ -67,7 +48,7 @@
 				%td
 					= link_to 'gallery', '/gallery', class: "#{ 'selected' if request.path == '/gallery'}"
 				%td{class: 'donation'}
-					- u = current_user ? 'Donors' : Donations
+					- u = current_user ? 'Donors' : 'Donations'
 					%a{:href => "/donations/"}= u
 				%td
 					= link_to 'map', '/map', class: "#{ 'selected' if request.path == '/map'}"

@@ -1,6 +1,6 @@
-%h1 Listing admin_photos
+%h1 Listing photos
 
-%table
+%table{id: 'admin_photos', style: "width: 100%;"}
   %thead
     %tr
       %th
@@ -8,7 +8,7 @@
       %th
       
   %tbody
-    - @admin_photos.each do |admin_photo|
+    - photos.each do |admin_photo|
       %tr
         %td= link_to 'Show', admin_photo
         %td= link_to 'Edit', edit_admin_photo_path(admin_photo)

@@ -1,6 +1,6 @@
-%h1 Listing admin_zips
+%h1 Listing zips
 
-%table
+%table{id: 'admin_zips', style: "width: 100%;"}
   %thead
     %tr
       %th
@@ -8,7 +8,7 @@
       %th
       
   %tbody
-    - @admin_zips.each do |admin_zip|
+    - zips.each do |admin_zip|
       %tr
         %td= link_to 'Show', admin_zip
         %td= link_to 'Edit', edit_admin_zip_path(admin_zip)

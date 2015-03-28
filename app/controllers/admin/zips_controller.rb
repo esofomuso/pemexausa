@@ -1,34 +1,15 @@
 class Admin::ZipsController < Admin::BaseController
-  before_action :set_admin_zip, only: [:show, :edit, :update, :destroy]
-
-  # GET /admin/zips
-  # GET /admin/zips.json
-  def index
-    zips = Zip.all
-  end
-
-  # GET /admin/zips/1
-  # GET /admin/zips/1.json
-  def show
-  end
-
-  # GET /admin/zips/new
-  def new
-    zip = Zip.new
-  end
-
-  # GET /admin/zips/1/edit
-  def edit
-  end
+  expose(:zip) { Zip.find_by_id(params[:id]) || Zip.new}
+  
 
   # POST /admin/zips
   # POST /admin/zips.json
   def create
-    zip = Zip.new(admin_zip_params)
+    zip.attributes = zip_params
 
     respond_to do |format|
       if zip.save
-        format.html { redirect_to zip, notice: 'Zip was successfully created.' }
+        format.html { redirect_to admin_zips_path, notice: 'Zip was successfully created.' }
         format.json { render :show, status: :created, location: zip }
       else
         format.html { render :new }
@@ -41,8 +22,8 @@ class Admin::ZipsController < Admin::BaseController
   # PATCH/PUT /admin/zips/1.json
   def update
     respond_to do |format|
-      if zip.update(admin_zip_params)
-        format.html { redirect_to zip, notice: 'Zip was successfully updated.' }
+      if zip.update(zip_params)
+        format.html { redirect_to admin_zip_path(zip), notice: 'Zip was successfully updated.' }
         format.json { render :show, status: :ok, location: zip }
       else
         format.html { render :edit }
@@ -62,13 +43,8 @@ class Admin::ZipsController < Admin::BaseController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_admin_zip
-      zip = Zip.find(params[:id])
-    end
-
     # Never trust parameters from the scary internet, only allow the white list through.
-    def admin_zip_params
-      params[:admin_zip]
+    def zip_params
+      params[:zip]
     end
 end

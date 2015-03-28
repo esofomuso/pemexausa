@@ -1,6 +1,5 @@
 class Admin::CountriesController < Admin::BaseController
   
-  expose(:countries) { Country.all }
   expose(:country) { Country.find_by_id(params[:id]) || Country.new }
 
   # POST /admin/countries

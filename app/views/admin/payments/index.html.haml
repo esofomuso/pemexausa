@@ -1,6 +1,6 @@
-%h1 Listing admin_payments
+%h1 Listing payments
 
-%table
+%table{id: 'admin_payments', style: "width: 100%;"}
   %thead
     %tr
       %th
@@ -8,7 +8,7 @@
       %th
       
   %tbody
-    - @admin_payments.each do |admin_payment|
+    - payments.each do |admin_payment|
       %tr
         %td= link_to 'Show', admin_payment
         %td= link_to 'Edit', edit_admin_payment_path(admin_payment)

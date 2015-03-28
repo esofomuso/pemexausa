@@ -17,6 +17,8 @@
 //= require owl.carousel
 //= require turbolinks
 //= require_tree .
+//= require bootstrap-modal
+//= require bootstrap-modalmanager
 
 var ready = function () {
 	//alert("document is ready");
@@ -31,14 +33,10 @@ var ready = function () {
 		 autoHeight : true,
 		 transitionStyle:"fade"
 	});
+	$('.owl-pagination').hide();
 	
-	$('#admin_users_list').dataTable( {
-	  "columnDefs": [
-	    { "orderable": false, "targets": [6] },
-	    { "searchable": false, "targets": [6] }
-	  ]
-	});
-	$('.owl-pagination').hide()
+	$('#loginModal').modal('options')
+	  var body = $( 'show' );
 }
 
 $(document).on('page:load ready', ready);

@@ -2,27 +2,6 @@ class Admin::UsersController < Admin::BaseController
   expose(:user) { User.find_by_id(params[:id]) || User.new }
   expose(:address) { user.address || Address.new }
   expose(:users) { User.all }
-#  expose(:states_for_select) { State.all.map{|c| [c.name, c.id]} }
-#  expose(:cities_for_select) { City.all.map{|c| [c.name, c.id]} }
-#  expose(:zips_for_select) { Zip.all.map{|c| [c.code, c.id]} }
-  
-  # GET /admin/users
-  # GET /admin/users.json
-  def index
-  end
-
-  # GET /admin/users/1
-  # GET /admin/users/1.json
-  def show
-  end
-
-  # GET /admin/users/new
-  def new
-  end
-
-  # GET /admin/users/1/edit
-  def edit
-  end
 
   # POST /admin/users
   # POST /admin/users.json

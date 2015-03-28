@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'bootstrap-modal-rails'
 gem "cancan"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -25,7 +26,7 @@ gem 'pdfkit'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+#gem 'sass-rails', '~> 5.0'
 gem "simple_calendar", "~> 1.1.0"
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
@@ -39,6 +40,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Unicorn as the app server
 # gem 'unicorn'
+
+group :assets do
+    gem 'sass-rails', '4.0.1'
+#    gem 'bootstrap-sass', '3.0.2.0'
+#    gem 'rails-assets-bootstrap', require: false
+end
 
 group :development do
   gem 'annotate', '2.5.0'

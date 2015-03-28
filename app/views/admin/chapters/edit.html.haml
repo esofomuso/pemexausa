@@ -1,7 +1,7 @@
-%h1 Editing admin_chapter
+%h1 Editing chapter
 
 = render 'form'
 
-= link_to 'Show', @admin_chapter
+= link_to 'Show', admin_chapter_path(chapter)
 \|
-= link_to 'Back', admin_chapters_path
+= link_to 'Back', :back
