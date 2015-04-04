@@ -17,3 +17,4 @@
 /tmp
 db/allCountries.txt
 db/20150315094826_update_users.rb
+public/uploads/
