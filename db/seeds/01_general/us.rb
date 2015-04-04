@@ -46,8 +46,9 @@ class UsSeed < ConfigScript
   def bring_up
      puts "Processing ....."
      self.parsed.each do |line|
-       self.city_from_line(line)
-       self.zip_from_line(line)
+      # self.city_from_line(line)
+      # self.zip_from_line(line)
+      self.state_from_line(line)
      end
      State.where( name: '').destroy_all
      puts "Completed!!!"
@@ -56,8 +57,8 @@ class UsSeed < ConfigScript
   def bring_down
     puts "Processing undo ....."
     self.parsed.each do |line|
-      self.zip_from_line(line).destroy rescue nil
-      self.city_from_line(line).destroy rescue nil
+      # self.zip_from_line(line).destroy rescue nil
+      # self.city_from_line(line).destroy rescue nil
       self.state_from_line(line).destroy rescue nil
     end
     puts "Undo Successful!!!"

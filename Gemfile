@@ -4,12 +4,16 @@ gem 'bootstrap-modal-rails'
 gem "cancan"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+# file upload solution
+gem 'carrierwave'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails' 
 gem 'decent_exposure', '~> 2.3.0'
 gem 'devise'
 gem 'fnordmetric'
+# for aws cloud storage
+gem 'fog'
 gem 'geocoder', '1.1.0'
 gem 'haml'
 gem 'haml-rails'
@@ -18,6 +22,8 @@ gem 'jbuilder', '~> 2.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
+# photo resizing
+gem "mini_magick"
 gem 'mysql2', '0.3.11'
 gem 'owlcarousel-rails'
 gem 'paypal-express', '0.5.0'
@@ -63,7 +69,7 @@ group :development, :test do
   gem 'faker'
 	gem 'factory_girl', '~> 4.2'
 	gem 'factory_girl_rails', '~> 4.2'
-	gem 'fuubar'
+	#gem 'fuubar'
 	gem 'pry'
   gem 'pry-nav'
   gem 'pry-remote'
